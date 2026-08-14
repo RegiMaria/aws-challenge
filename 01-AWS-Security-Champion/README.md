@@ -64,23 +64,23 @@ Ao final da trilha, faço o **AWS Security Champion Badge Assessment** (nota mí
 
 | Dia | Data | Tópico | Descrição | Certificado (repo) | Link AWS |
 |----|------|--------|-----------|---------------------|----------|
-| 01 | 14/08 | AWS Security Fundamentals | Conceitos fundamentais de segurança na AWS: controle de acesso, criptografia e segurança de rede. | [Ver certificado](https://github.com/RegiMaria/aws-challenge/blob/main/AWS-Security-Champion/day-01-security-fundamental.png) | [Abrir curso](https://skillbuilder.aws/learn/S2N5PM41ZK/aws-security-fundamentals/E71QQGTCRZ?parentId=QGY41BBUDQ) |
-| 02 | - | AWS Shared Responsibility Model | O que é responsabilidade da AWS e o que é responsabilidade do cliente. | _pendente_ | _pendente_ |
-| 03 | - | Introduction to AWS IAM | Fundamentos de autenticação e autorização com IAM. | _pendente_ | _pendente_ |
-| 04 | - | AWS IAM - Troubleshooting | Diagnóstico e resolução de problemas comuns de IAM. | _pendente_ | _pendente_ |
-| 05 | - | Lab - Troubleshooting - IAM Access Issues | Lab prático de assumir roles IAM e aplicar least privilege. | _pendente_ | _pendente_ |
-| 06 | - | Introduction to AWS Key Management Service | Lab prático de criação e uso de chaves no KMS. | _pendente_ | _pendente_ |
-| 07 | - | Threat Modeling for Builders Workshop | Workshop de modelagem de ameaças e mitigação. | _pendente_ | _pendente_ |
-| 08 | - | Security Governance at Scale – Technical | Automação de governança em escala na nuvem. | _pendente_ | _pendente_ |
-| 09 | - | Performing a Basic Audit of your AWS Environment | Lab prático de auditoria de recursos AWS. | _pendente_ | _pendente_ |
-| 10 | - | AWS Security Best Practices: Monitoring and Alerting | Boas práticas de monitoramento, logging e alertas. | _pendente_ | _pendente_ |
-| 11 | - | AWS Security Best Practices: Network Infrastructure | Boas práticas de segurança de infraestrutura de rede. | _pendente_ | _pendente_ |
-| 12 | - | Protect Your Web-facing Workloads with AWS Security Services | Proteção de workloads expostos à web. | _pendente_ | _pendente_ |
-| 13 | - | Implementing and Controlling Network Traffic on AWS | Lab prático de VPC com subnets, security groups, ACLs e flow logs. | _pendente_ | _pendente_ |
-| 14 | - | AWS Security Incident Response Overview | Workflow de resposta a incidentes de segurança. | _pendente_ | _pendente_ |
-| 15 | - | AWS Security Incident Response - Compromised IAM Credentials | Estudo de caso: credenciais IAM comprometidas. | _pendente_ | _pendente_ |
-| 16 | - | AWS SimuLearn: Core Security Concepts | Cenário simulado com IA para praticar segurança na prática. | _pendente_ | _pendente_ |
-| 17 | - | AWS Security Champion Badge Assessment | Avaliação final para conquistar o badge. | _pendente_ | _pendente_ |
+| 01 | 14/08 | AWS Security Fundamentals | Conceitos fundamentais de segurança na AWS: controle de acesso, criptografia e segurança de rede. | [Ver certificado](https://github.com/RegiMaria/aws-challenge/blob/main/AWS-Security-Champion/day-01-security-fundamental.png) | [Abrir-curso](https://skillbuilder.aws/learn/S2N5PM41ZK/aws-security-fundamentals/E71QQGTCRZ?parentId=QGY41BBUDQ) |
+| 02 | - | AWS Shared Responsibility Model | O que é responsabilidade da AWS e o que é responsabilidade do cliente. | _pendente_ |[ Abrir-curso](https://skillbuilder.aws/learn/S2N5PM41ZK/aws-security-fundamentals/E71QQGTCRZ?parentId=QGY41BBUDQ) |
+| 03 | - | Introduction to AWS IAM | Fundamentos de autenticação e autorização com IAM. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/M1QWQ1MURQ/introduction-to-aws-identity-and-access-management-iam/W4W2NQF2AR?parentId=QGY41BBUDQ) |
+| 04 | - | AWS IAM - Troubleshooting | Diagnóstico e resolução de problemas comuns de IAM. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/ESGHTNXQFZ/aws-identity-and-access-management-iam--troubleshooting/3MQXNQUUQ4?parentId=QGY41BBUDQ) |
+| 05 | - | 💸Lab - Troubleshooting - IAM Access Issues | Lab prático de assumir roles IAM e aplicar least privilege. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/68UNZXPYUZ/lab--troubleshooting--iam-access-issues/WY4PZE7HRV?parentId=QGY41BBUDQ) |
+| 06 | - | Introduction to AWS Key Management Service | Lab prático de criação e uso de chaves no KMS. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/QB1JNWN5HM/introduction-to-aws-key-management-service/44ZCC2JN2Y?parentId=QGY41BBUDQ) |
+| 07 | - | Threat Modeling for Builders Workshop | Workshop de modelagem de ameaças e mitigação. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/H3BU3X1M82/threat-modeling-for-builders-workshop/HZJDJ7M6PX?parentId=QGY41BBUDQ) |
+| 08 | - | Security Governance at Scale – Technical | Automação de governança em escala na nuvem. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/C4F4Y6N8MN/security-governance-at-scale--technical-digital/GCMZNTCAHH?parentId=QGY41BBUDQ) |
+| 09 | - | Performing a Basic Audit of your AWS Environment | Lab prático de auditoria de recursos AWS. | _pendente_ |[ Abrir-curso](https://skillbuilder.aws/learn/3M2AHK66HV/performing-a-basic-audit-of-your-aws-environment/KNPKUSD4HQ?parentId=QGY41BBUDQ) |
+| 10 | - | AWS Security Best Practices: Monitoring and Alerting | Boas práticas de monitoramento, logging e alertas. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/S8ZA3HS5C9/aws-security-best-practices-monitoring-and-alerting/RUKNSXH4C5?parentId=QGY41BBUDQ) |
+| 11 | - | AWS Security Best Practices: Network Infrastructure | Boas práticas de segurança de infraestrutura de rede. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/ZEU6RZPQFP/aws-security-best-practices-network-infrastructure/7KE866QKDQ?parentId=QGY41BBUDQ) |
+| 12 | - | Protect Your Web-facing Workloads with AWS Security Services | Proteção de workloads expostos à web. | _pendente_ | [Abrir-curso ](https://skillbuilder.aws/learn/GF8XVNCTHF/protect-your-webfacing-workloads-with-aws-security-services/BX2BQPBSGP?parentId=QGY41BBUDQ)|
+| 13 | - | 💸Implementing and Controlling Network Traffic on AWS | Lab prático de VPC com subnets, security groups, ACLs e flow logs. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/BQTYG4FDFG/implementing-and-controlling-network-traffic-on-aws/CVG5QM5B9V?parentId=QGY41BBUDQ) |
+| 14 | - | AWS Security Incident Response Overview | Workflow de resposta a incidentes de segurança. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/FHZ7BM28M8/aws-security-incident-response-overview/54PT8DVCPY?parentId=QGY41BBUDQ) |
+| 15 | - | AWS Security Incident Response - Compromised IAM Credentials | Estudo de caso: credenciais IAM comprometidas. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/FH6E3GSRR8/aws-security-incident-response--compromised-iam-credentials-use-case/39HYTK3S54?parentId=QGY41BBUDQ) |
+| 16 | - | AWS SimuLearn: Core Security Concepts | Cenário simulado com IA para praticar segurança na prática. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/3KYWQBTSTV/aws-simulearn-core-security-concepts/Q29T2DWZPK?parentId=QGY41BBUDQ) |
+| 17 | - | AWS Security Champion Badge Assessment | Avaliação final para conquistar o badge. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/2FSGQQ4FH7/aws-security-champion-badge-assessment/G8PN86ZGNS?parentId=QGY41BBUDQ) |
 
 ---
 
