@@ -56,20 +56,20 @@ Ao final da trilha, faço o **Compute Knowledge Badge Assessment** (nota mínima
 
 | Dia | Data | Tópico | Descrição | Certificado (repo) | Link AWS |
 |----|------|--------|-----------|---------------------|----------|
-| 01 | - | AWS Compute Services Overview | Visão geral de EC2, Containers e Serverless. | _pendente_ | _pendente_ |
-| 02 | - | Amazon EC2 Basics | Famílias e tipos de instância EC2. | _pendente_ | _pendente_ |
-| 03 | - | AWS Graviton Processors Fundamentals | Processadores Graviton da AWS. | _pendente_ | _pendente_ |
-| 04 | - | AWS AI Chips - Trainium and Inferentia Fundamentals | Chips de IA Trainium e Inferentia. | _pendente_ | _pendente_ |
-| 05 | - | AWS Nitro System Deep Dive | Arquitetura do Nitro System. | _pendente_ | _pendente_ |
-| 06 | - | Build with Amazon EC2 | Configuração, lançamento e acesso a instâncias EC2. | _pendente_ | _pendente_ |
-| 07 | - | AWS Lambda Foundations | Fundamentos de compute serverless com Lambda. | _pendente_ | _pendente_ |
-| 08 | - | Compute Cost Optimization Services | Modelos de compra e otimização de custo em compute. | _pendente_ | _pendente_ |
-| 09 | - | Introduction to Capacity Manager for Amazon EC2 | Gestão de capacidade EC2/Spot entre contas e regiões. | _pendente_ | _pendente_ |
-| 10 | - | Amazon EC2 Observability, Monitoring, and Troubleshooting | Observabilidade e troubleshooting de instâncias EC2. | _pendente_ | _pendente_ |
-| 11 | - | Right Size Your Amazon EC2 Workload | Rightsizing de instâncias EC2. | _pendente_ | _pendente_ |
-| 12 | - | Innovations in Amazon EC2 | Evolução e inovações do Amazon EC2. | _pendente_ | _pendente_ |
-| 13 | - | Confidential Computing with AWS Compute | Proteção de dados em processamento com Nitro Enclaves. | _pendente_ | _pendente_ |
-| 14 | - | Compute Knowledge Badge Assessment | Avaliação final para conquistar o badge. | _pendente_ | _pendente_ |
+| 01 | - | AWS Compute Services Overview | Visão geral de EC2, Containers e Serverless. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/QV37EUK5Y7/aws-compute-services-overview/EG41UCZ2T3?parentId=6BA8EVB278) |
+| 02 | - | Amazon EC2 Basics | Famílias e tipos de instância EC2. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/V59J92TZE2/amazon-ec2-basics/N1KVF1P1AV?parentId=6BA8EVB278) |
+| 03 | - | AWS Graviton Processors Fundamentals | Processadores Graviton da AWS. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/98663WHXPT/aws-graviton-processors-fundamentals/WG7ZVWK5ET?parentId=6BA8EVB278) |
+| 04 | - | AWS AI Chips - Trainium and Inferentia Fundamentals | Chips de IA Trainium e Inferentia. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/MC65SWUD7Q/aws-ai-chips--trainium-and-inferentia-fundamentals/ARNDCQYXAE?parentId=6BA8EVB278) |
+| 05 | - | AWS Nitro System Deep Dive | Arquitetura do Nitro System. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/Q98ZU6KC7Y/aws-nitro-system-deep-dive/XDVTSTZ6V2?parentId=6BA8EVB278) |
+| 06 | - | Build with Amazon EC2 | Configuração, lançamento e acesso a instâncias EC2. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/DMG1BSGQNN/build-with-amazon-ec2/B7FZRSJADX?parentId=6BA8EVB278) |
+| 07 | - | AWS Lambda Foundations | Fundamentos de compute serverless com Lambda. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/XHRS91KKK6/aws-lambda-foundations/R85JRN3APC?parentId=6BA8EVB278) |
+| 08 | - | Compute Cost Optimization Services | Modelos de compra e otimização de custo em compute. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/QX26YW54GN/compute-cost-optimization-services/AEKWF7RN91?parentId=6BA8EVB278) |
+| 09 | - | Introduction to Capacity Manager for Amazon EC2 | Gestão de capacidade EC2/Spot entre contas e regiões. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/SJVFKEADMA/introduction-to-capacity-manager-for-amazon-ec2/5JZ8T43BDV?parentId=6BA8EVB278) |
+| 10 | - | Amazon EC2 Observability, Monitoring, and Troubleshooting | Observabilidade e troubleshooting de instâncias EC2. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/NVQMVRTS5H/amazon-ec2-observability-monitoring-and-troubleshooting/RC947H252R?parentId=6BA8EVB278) |
+| 11 | - | Right Size Your Amazon EC2 Workload | Rightsizing de instâncias EC2. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/3FDW7B71FQ/right-size-your-amazon-ec2-workload/JZN3P7E241?parentId=6BA8EVB278) |
+| 12 | - | Innovations in Amazon EC2 | Evolução e inovações do Amazon EC2. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/PV5WQUJC5H/innovations-in-amazon-ec2/8RR3SJS1FS?parentId=6BA8EVB278) |
+| 13 | - | Confidential Computing with AWS Compute | Proteção de dados em processamento com Nitro Enclaves. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/2KZWM1CWFS/confidential-computing-with-aws-compute/A9XS2F6W91?parentId=6BA8EVB278) |
+| 14 | - | Compute Knowledge Badge Assessment | Avaliação final para conquistar o badge. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/A91Y54Z1GG/compute-knowledge-badge-assessment/XHC6R4RCF7?parentId=6BA8EVB278) |
 
 > ℹ️ Ainda não tenho o link do repositório para os certificados nem os links diretos de cada curso - vou preenchendo a tabela conforme completo cada dia (o link direto de cada treinamento fica disponível na página da trilha no Skill Builder, linkada acima).
 
