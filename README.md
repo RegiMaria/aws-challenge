@@ -29,11 +29,11 @@ Aqui eu documento, dia após dia, as principais trilhas de conhecimento (Knowled
 
 | # | Trilha | Foco | Status |
 |---|--------|------|--------|
-| 00 | [Cloud Essentials](./AWS-Cloud-Essentials) | Fundamentos gerais da nuvem AWS | 🟡 Em andamento |
-| 01 | [Security Champion](./AWS-Security-Champion) | IAM, criptografia, monitoramento, resposta a incidentes | 🟡 Em andamento |
-| 02 | [Compute](./AWS-Compute) | EC2, Lambda, containers, Graviton | 🟡 Em andamento |
-| 03 | [Object Storage](./AWS-Object-Storage) | Amazon S3 a fundo | 🟡 Em andamento |
-| 04 | [Networking Core](./AWS-Networking-Core) | VPC, load balancers, CloudFront, conectividade | 🟡 Em andamento |
+| 00 | [Cloud Essentials](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials) | Fundamentos gerais da nuvem AWS | 🟡 Em andamento |
+| 01 | [Security Champion](https://github.com/RegiMaria/aws-challenge/tree/main/01-AWS-Security-Champion) | IAM, criptografia, monitoramento, resposta a incidentes | 🟡 Em andamento |
+| 02 | [Compute](https://github.com/RegiMaria/aws-challenge/tree/main/03-AWS-Compute-Knowledge) | EC2, Lambda, containers, Graviton | 🟡 Em andamento |
+| 03 | [Object Storage](https://github.com/RegiMaria/aws-challenge/tree/main/04-AWS-Object-Storage-Knowledge) | Amazon S3 a fundo | 🟡 Em andamento |
+| 04 | [Networking Core](https://github.com/RegiMaria/aws-challenge/tree/main/02-AWS-Networking-Core-Knowledge) | VPC, load balancers, CloudFront, conectividade | 🟡 Em andamento |
 | — | [AWS Educate](./aws-educate) | Badges introdutórios (Cloud 101, Storage, Security...) | 🟡 Em andamento |
 
 > Próximas trilhas planejadas: **Databases**, **Storage Data Protection and Disaster Recovery**, **Cloud Operations**, entre outras, o desafio vai crescendo conforme eu avanço.
