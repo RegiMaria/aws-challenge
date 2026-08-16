@@ -43,7 +43,7 @@ A cada dia eu completo um treinamento, tiro um print/certificado de conclusão e
 
 | Dia | Data | Tópico | Nível | Duração | Certificado (repo) | Link AWS |
 |----|------|--------|-------|---------|---------------------|----------|
-| 01 | - | AWS Identity and Access Management - Identity Center Getting Started | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/FNSWD5KQ6D/aws-identity-and-access-management--identity-center-getting-started/UJPMQR327J) |
+| 01 | 16/08 | AWS Identity and Access Management - Identity Center Getting Started | Fundamental | 1h | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/05-AWS-IAM-Deep-Dive/day-01-IAM-Getting-Started.png) | [Abrir curso](https://skillbuilder.aws/learn/FNSWD5KQ6D/aws-identity-and-access-management--identity-center-getting-started/UJPMQR327J) |
 | 02 | - | Introduction to AWS Identity and Access Management (IAM) | Fundamental | 45min | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/XFPX3M7HAQ/introduction-to-aws-identity-and-access-management-iam/DQJ3N5QRRU) |
 | 03 | - | AWS Identity and Access Management - Architecture and Terminology | Fundamental | 15min | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/JUU8UTHZAC/aws-identity-and-access-management--architecture-and-terminology/GZNZAF17KZ) |
 | 04 | - | AWS Identity and Access Management - Access Analyzer Getting Started | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/TRVKDBK35D/aws-identity-and-access-management--access-analyzer-getting-started/T4XH5UHBQ4) |
