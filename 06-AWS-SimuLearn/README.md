@@ -29,12 +29,12 @@ Existem **12 planos de aprendizagem** no total. Dois são gratuitos (Cloud Pract
 
 | # | Plano de aprendizagem | Link AWS Skill Builder | Minhas anotações | Status |
 |---|---|---|---|---|
-| 00 | Cloud Practitioner (Cloud Essentials) | [AWS Skill Builder](https://skillbuilder.aws) | [00-AWS-Cloud-Essentials](./00-AWS-Cloud-Essentials) | ✅ Finalizado |
-| 01 | Security | [AWS Skill Builder](https://skillbuilder.aws) | [01-AWS-Security-Champion](./01-AWS-Security-Champion) | 🔄 Em andamento |
-| 02 | Networking | [AWS Skill Builder](https://skillbuilder.aws) | [02-AWS-Networking-Core-Knowledge](./02-AWS-Networking-Core-Knowledge) | ⬜ Não iniciado |
-| 03 | Solutions Architect (Compute) | [AWS Skill Builder](https://skillbuilder.aws) | [03-AWS-Compute-Knowledge](./03-AWS-Compute-Knowledge) | ⬜ Não iniciado |
-| 04 | Solutions Architect (Object Storage) | [AWS Skill Builder](https://skillbuilder.aws) | [04-AWS-Object-Storage-Knowledge](./04-AWS-Object-Storage-Knowledge) | ⬜ Não iniciado |
-| 05 | Solutions Architect (IAM) | [AWS Skill Builder](https://skillbuilder.aws) | [05-AWS-IAM-Deep-Dive](./05-AWS-IAM-Deep-Dive) | ⬜ Não iniciado |
+| 00 | Cloud Practitioner (Cloud Essentials) | [AWS Skill Builder](https://skillbuilder.aws) | [Ver-certificado](./00-AWS-Cloud-Essentials) | ✅ Finalizado |
+| 01 | Security | [AWS Skill Builder](https://skillbuilder.aws) | [Ver-certificado](./01-AWS-Security-Champion) | 🔄 Em andamento |
+| 02 | Networking | [AWS Skill Builder](https://skillbuilder.aws) | [Ver-certificado](./02-AWS-Networking-Core-Knowledge) | ⬜ Não iniciado |
+| 03 | Solutions Architect (Compute) | [AWS Skill Builder](https://skillbuilder.aws) | [Ver-certificado](./03-AWS-Compute-Knowledge) | ⬜ Não iniciado |
+| 04 | Solutions Architect (Object Storage) | [AWS Skill Builder](https://skillbuilder.aws) | [Ver-certificado](./04-AWS-Object-Storage-Knowledge) | ⬜ Não iniciado |
+| 05 | Solutions Architect (IAM) | [AWS Skill Builder](https://skillbuilder.aws) | [Ver-certificado](./05-AWS-IAM-Deep-Dive) | ⬜ Não iniciado |
 | 06 | AI Practitioner | [AWS Skill Builder](https://skillbuilder.aws) | — | ⬜ Não iniciado |
 | 07 | Serverless Developer | [AWS Skill Builder](https://skillbuilder.aws) | — | ⬜ Não iniciado |
 | 08 | Generative AI Architect | [AWS Skill Builder](https://skillbuilder.aws) | — | ⬜ Não iniciado |
