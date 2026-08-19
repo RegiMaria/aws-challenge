@@ -47,7 +47,7 @@ A cada dia eu completo um treinamento, tiro um print/certificado de conclusão e
 | 02 | 16/08 | 💡 LAB-Introduction to AWS Identity and Access Management (IAM) | Fundamental | 45min | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/05-AWS-IAM-Deep-Dive/day-02-LAB-IAM.png) | [Abrir curso](https://skillbuilder.aws/learn/XFPX3M7HAQ/introduction-to-aws-identity-and-access-management-iam/DQJ3N5QRRU) |
 | 03 | 17/08 | AWS Identity and Access Management - Architecture and Terminology | Fundamental | 15min | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/05-AWS-IAM-Deep-Dive/day-03-IAM-Architecture-Terminology.png) | [Abrir curso](https://skillbuilder.aws/learn/JUU8UTHZAC/aws-identity-and-access-management--architecture-and-terminology/GZNZAF17KZ) |
 | 04 | 18/08 | AWS Identity and Access Management - Access Analyzer Getting Started | Fundamental | 1h | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/05-AWS-IAM-Deep-Dive/day-04-IAM-%20Access%20Analyzer.png) | [Abrir curso](https://skillbuilder.aws/learn/TRVKDBK35D/aws-identity-and-access-management--access-analyzer-getting-started/T4XH5UHBQ4) |
-| 05 | - | Authentication and Authorization with AWS Identity and Access Management | Fundamental | 15min | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/B14DZR1P26/authentication-and-authorization-with-aws-identity-and-access-management/AAFD2QRC3C) |
+| 05 | 19/08 | Authentication and Authorization with AWS Identity and Access Management | Fundamental | 15min | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/05-AWS-IAM-Deep-Dive/day-05-IAM-Authentication-Authorization.png) | [Abrir curso](https://skillbuilder.aws/learn/B14DZR1P26/authentication-and-authorization-with-aws-identity-and-access-management/AAFD2QRC3C) |
 | 06 | - | AWS Identity and Access Management (IAM) - Troubleshooting | Intermediário | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/ESGHTNXQFZ/aws-identity-and-access-management-iam--troubleshooting/3MQXNQUUQ4) |
 | 07 | - | Deep Dive with Security: AWS Identity and Access Management (IAM) | Avançado | 8h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/525X5QYY33/deep-dive-with-security-aws-identity-and-access-management-iam/EJR97RFJZ3) |
 | 08 | - | Implementing SaaS Tenant Isolation with ABAC and AWS IAM | Avançado | 45min | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/B2E9EMZZU2/implementing-saas-tenant-isolation-with-abac-and-aws-iam/5PENCY3QD7) |
@@ -62,6 +62,7 @@ Materiais de referência (sem certificado, mas ótimos complementos sobre federa
 
 - [AWS IAM – Identity Providers and Federation (User Guide)](https://docs.aws.amazon.com/pt_br/IAM/latest/UserGuide/id_roles_providers.html)
 - [Configurando federação na AWS a partir do Azure DevOps usando OpenID Connect](https://aws.amazon.com/pt/blogs/aws-brasil/configurando-federacao-na-aws-a-partir-do-azure-devops-usando-openid-connect/)
+- [AWS IAM - How IAM works](https://docs.aws.amazon.com/IAM/latest/UserGuide/intro-structure.html)
 
 ---
 
