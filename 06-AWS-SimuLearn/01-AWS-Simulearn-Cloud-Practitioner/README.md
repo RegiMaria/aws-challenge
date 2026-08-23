@@ -54,16 +54,16 @@ A cada dia eu completo uma simulação, tiro um print/certificado de conclusão 
 |----|------|--------|-------|---------|---------------------|----------|
 | 01 | 17/08 | AWS SimuLearn: Cloud Computing Essentials | Fundamental | 1h | _[Ver certificado](https://github.com/RegiMaria/aws-challenge/blob/main/06-AWS-SimuLearn/01-AWS-Simulearn-Cloud-Practitioner/day-01-AWS-Simulearn-cloud-essentials.png)_ | [Abrir curso](https://skillbuilder.aws/learn/JUV48NHGQY/aws-simulearn-cloud-computing-essentials/QB768XECES?parentId=1UQVR262ZB) |
 | 02 | 19/08 | AWS SimuLearn: Cloud First Steps | Fundamental | 1h | [Ver certificado](https://github.com/RegiMaria/aws-challenge/blob/main/06-AWS-SimuLearn/01-AWS-Simulearn-Cloud-Practitioner/day-02-cloud-first-steps.png) | [Abrir curso](https://skillbuilder.aws/learn/W94AYNMYDS/aws-simulearn-cloud-first-steps/B8K46VES8S?parentId=1UQVR262ZB) |
-| 03 | - | AWS SimuLearn: Computing Solutions | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/NZ6D7QYABD/aws-simulearn-computing-solutions/YQA9623D5T?parentId=1UQVR262ZB) |
-| 04 | - | AWS SimuLearn: First NoSQL Database | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/BF6P6UBMK7/aws-simulearn-first-nosql-database/2BYZJD6PTB?parentId=1UQVR262ZB) |
-| 05 | - | AWS SimuLearn: Networking Concepts | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/XCEMH2NXKJ/aws-simulearn-networking-concepts/QN5P4AJMUV?parentId=1UQVR262ZB) |
-| 06 | - | AWS SimuLearn: Cloud Economics | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/34JD3AJ1GA/aws-simulearn-cloud-economics/ETYKA5GAU4?parentId=1UQVR262ZB) |
-| 07 | - | AWS SimuLearn: File Systems in the Cloud | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/A5M8X2CHM3/aws-simulearn-file-systems-in-the-cloud/RAJVAUNMHR?parentId=1UQVR262ZB) |
-| 08 | - | AWS SimuLearn: Databases in Practice | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/6VTV7UQ6CY/aws-simulearn-databases-in-practice/3M6ZTC32MX?parentId=1UQVR262ZB) |
-| 09 | - | AWS SimuLearn: Core Security Concepts | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/3KYWQBTSTV/aws-simulearn-core-security-concepts/Q29T2DWZPK?parentId=1UQVR262ZB) |
-| 10 | - | AWS SimuLearn: Auto-Healing and Scaling Applications | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/ND78HW21FD/aws-simulearn-autohealing-and-scaling-applications/1C6SZU2GKX?parentId=1UQVR262ZB) |
-| 11 | - | AWS SimuLearn: Highly Available Web Applications | Intermediário | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/MSNJKZ17FF/aws-simulearn-highly-available-web-applications/7MVYAZPHY4?parentId=1UQVR262ZB) |
-| 12 | - | AWS SimuLearn: Connecting VPCs | Fundamental | 1h | _[Ver certificado]()_ | [Abrir curso](https://skillbuilder.aws/learn/46NC4HQFUY/aws-simulearn-connecting-vpcs/J7QJJRTCTG?parentId=1UQVR262ZB) |
+| 03 | - | AWS SimuLearn: Computing Solutions | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/NZ6D7QYABD/aws-simulearn-computing-solutions/YQA9623D5T?parentId=1UQVR262ZB) |
+| 04 | - | AWS SimuLearn: First NoSQL Database | Fundamental | 1h |  _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/BF6P6UBMK7/aws-simulearn-first-nosql-database/2BYZJD6PTB?parentId=1UQVR262ZB) |
+| 05 | - | AWS SimuLearn: Networking Concepts | Fundamental | 1h |  _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/XCEMH2NXKJ/aws-simulearn-networking-concepts/QN5P4AJMUV?parentId=1UQVR262ZB) |
+| 06 | - | AWS SimuLearn: Cloud Economics | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/34JD3AJ1GA/aws-simulearn-cloud-economics/ETYKA5GAU4?parentId=1UQVR262ZB) |
+| 07 | - | AWS SimuLearn: File Systems in the Cloud | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/A5M8X2CHM3/aws-simulearn-file-systems-in-the-cloud/RAJVAUNMHR?parentId=1UQVR262ZB) |
+| 08 | - | AWS SimuLearn: Databases in Practice | Fundamental | 1h |_pendente_ | [Abrir curso](https://skillbuilder.aws/learn/6VTV7UQ6CY/aws-simulearn-databases-in-practice/3M6ZTC32MX?parentId=1UQVR262ZB) |
+| 09 | - | AWS SimuLearn: Core Security Concepts | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/3KYWQBTSTV/aws-simulearn-core-security-concepts/Q29T2DWZPK?parentId=1UQVR262ZB) |
+| 10 | - | AWS SimuLearn: Auto-Healing and Scaling Applications | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/ND78HW21FD/aws-simulearn-autohealing-and-scaling-applications/1C6SZU2GKX?parentId=1UQVR262ZB) |
+| 11 | - | AWS SimuLearn: Highly Available Web Applications | Intermediário | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/MSNJKZ17FF/aws-simulearn-highly-available-web-applications/7MVYAZPHY4?parentId=1UQVR262ZB) |
+| 12 | - | AWS SimuLearn: Connecting VPCs | Fundamental | 1h | _pendente_ | [Abrir curso](https://skillbuilder.aws/learn/46NC4HQFUY/aws-simulearn-connecting-vpcs/J7QJJRTCTG?parentId=1UQVR262ZB) |
 
 > ℹ️ Ainda não tenho o link do repositório para os certificados, Vou preenchendo a coluna "Ver certificado" conforme completo cada dia.
 
