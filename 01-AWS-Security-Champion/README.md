@@ -79,8 +79,8 @@ Ao final da trilha, faço o **AWS Security Champion Badge Assessment** (nota mí
 | 13 | - | 💸Implementing and Controlling Network Traffic on AWS | Lab prático de VPC com subnets, security groups, ACLs e flow logs. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/BQTYG4FDFG/implementing-and-controlling-network-traffic-on-aws/CVG5QM5B9V?parentId=QGY41BBUDQ) |
 | 14 | 25/08 | AWS Security Incident Response Overview | Workflow de resposta a incidentes de segurança. | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/01-AWS-Security-Champion/day-11-Security-Incident-Response.png) | [Abrir-curso](https://skillbuilder.aws/learn/FHZ7BM28M8/aws-security-incident-response-overview/54PT8DVCPY?parentId=QGY41BBUDQ) |
 | 15 | 26/08 | AWS Security Incident Response - Compromised IAM Credentials | Estudo de caso: credenciais IAM comprometidas. | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/01-AWS-Security-Champion/day-11-Security-Incident-Response.png) | [Abrir-curso](https://skillbuilder.aws/learn/FH6E3GSRR8/aws-security-incident-response--compromised-iam-credentials-use-case/39HYTK3S54?parentId=QGY41BBUDQ) |
-| 16 | - | AWS SimuLearn: Core Security Concepts | Cenário simulado com IA para praticar segurança na prática. | [Ver-tarefa](https://github.com/RegiMaria/aws-challenge/blob/main/01-AWS-Security-Champion/day-12-task-CoreSecurityConcepts.png) | [Abrir-curso](https://skillbuilder.aws/learn/3KYWQBTSTV/aws-simulearn-core-security-concepts/Q29T2DWZPK?parentId=QGY41BBUDQ) |
-| 17 | - | AWS Security Champion Badge Assessment | Avaliação final para conquistar o badge. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/2FSGQQ4FH7/aws-security-champion-badge-assessment/G8PN86ZGNS?parentId=QGY41BBUDQ) |
+| 16 | 27/08 | AWS SimuLearn: Core Security Concepts | Cenário simulado com IA para praticar segurança na prática. | [Ver-tarefa](https://github.com/RegiMaria/aws-challenge/blob/main/01-AWS-Security-Champion/day-12-task-CoreSecurityConcepts.png) | [Abrir-curso](https://skillbuilder.aws/learn/3KYWQBTSTV/aws-simulearn-core-security-concepts/Q29T2DWZPK?parentId=QGY41BBUDQ) |
+| 17 | 28/08 | AWS Security Champion Badge Assessment | Avaliação final para conquistar o badge. | [Ver-Bagde](https://www.credly.com/badges/3a2937ad-2db8-4149-85d5-63e1dd46ba6e/public_url) | [Abrir-curso](https://skillbuilder.aws/learn/2FSGQQ4FH7/aws-security-champion-badge-assessment/G8PN86ZGNS?parentId=QGY41BBUDQ) |
 
 ---
 
@@ -88,3 +88,19 @@ Ao final da trilha, faço o **AWS Security Champion Badge Assessment** (nota mí
 
 Completar os 17 treinamentos e passar no assessment com nota ≥ 80% para conquistar o **AWS Security Champion Knowledge Badge**.
 <div align="center"> <img width="50" alt="Image" src="https://github.com/user-attachments/assets/5ba6d8d8-e8ac-4ed2-bc9e-317644393816" /> </div>
+
+## 🏆 Conquista
+
+Trilha concluída com sucesso! 🎉
+
+Completei os **17 treinamentos** do AWS Security Champion Knowledge Badge Readiness Path e conquistei a **AWS Knowledge: Security Champion - Training Badge**.
+
+<div align="center">
+
+<img width="340" alt="AWS Knowledge: Security Champion - Training Badge" src="https://github.com/user-attachments/assets/8b050b24-8270-4a1b-b611-14d9763b9d83" />
+
+</div>
+
+**Veja minha credencial aqui:** [AWS Knowledge: Security Champion - Training Badge ](https://www.credly.com/badges/3a2937ad-2db8-4149-85d5-63e1dd46ba6e/public_url)
+
+**Status:** ✅ Badge conquistada
