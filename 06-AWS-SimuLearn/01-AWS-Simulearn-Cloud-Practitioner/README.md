@@ -75,10 +75,26 @@ Completar as 12 simulações do AWS SimuLearn: Cloud Practitioner, praticando ta
 
 ---
 
+
+## 🏅 Conquista alcançada
+
+<div align="center">
+
+<a href="https://www.credly.com/badges/d1ddab25-4c5e-4ef3-9754-590ff30dbe53/public_url">
+  <img width="200" height="200" alt="AWS SimuLearn - Cloud Practitioner Badge" src="https://github.com/user-attachments/assets/6f9c50cb-7d93-4446-9f26-8ad2d3862098"/>
+</a>
+
+<br/>
+
+🔗 [Veja aqui minha conquista](https://www.credly.com/badges/d1ddab25-4c5e-4ef3-9754-590ff30dbe53/public_url)
+
+</div>
+
+---
 <div align="center">
 
 Se gostou, não esqueça de deixar uma ⭐
 
-<img width="200" alt="Image" src="https://github.com/user-attachments/assets/aca57b06-3ea1-49e4-96fb-b2a00b8f8918" />
+<img width="150" alt="Image" src="https://github.com/user-attachments/assets/aca57b06-3ea1-49e4-96fb-b2a00b8f8918" />
 
 </div>
