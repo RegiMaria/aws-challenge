@@ -62,7 +62,7 @@ Ao final da trilha, faço o **Cloud Essentials Knowledge Badge Assessment** (not
 
 | Dia | Data | Tópico | Descrição | Certificado (repo) | Link AWS |
 |----|------|--------|-----------|---------------------|----------|
-| 01 | - | Job Roles in the Cloud | Papéis de trabalho na nuvem vs. on-premises. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/VTPP3S2SG8/job-roles-in-the-cloud/DEMT7MTJ7W?parentId=Y4YASRJEVX) |
+| 01 | 04/09 | Job Roles in the Cloud | Papéis de trabalho na nuvem vs. on-premises. | [Ver-certificado](https://github.com/RegiMaria/aws-challenge/blob/main/00-AWS-Cloud-Essentials/day-01-Job-Roles-in-the-Cloud.png) | [Abrir-curso](https://skillbuilder.aws/learn/VTPP3S2SG8/job-roles-in-the-cloud/DEMT7MTJ7W?parentId=Y4YASRJEVX) |
 | 02 | - | AWS Cloud Practitioner Essentials | Fundamentos de serviços, preço, segurança e arquitetura AWS. | _pendente_ | [Abrir-curso ](https://skillbuilder.aws/learn/94T2BEN85A/aws-cloud-practitioner-essentials/8D79F3AVR7?parentId=Y4YASRJEVX)|
 | 03 | - | Getting Started with Cloud Acquisition | Como comprar e adotar AWS Cloud de forma eficaz. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/FA5X6S6416/getting-started-with-cloud-acquisition/MGU933DZ8T?parentId=Y4YASRJEVX) |
 | 04 | - | AWS Billing and Cost Management | Análise e gestão de gastos na AWS. | _pendente_ | [Abrir-curso](https://skillbuilder.aws/learn/J59SS92GUN/aws-billing-and-cost-management/25JXE6WYAY?parentId=Y4YASRJEVX) |
