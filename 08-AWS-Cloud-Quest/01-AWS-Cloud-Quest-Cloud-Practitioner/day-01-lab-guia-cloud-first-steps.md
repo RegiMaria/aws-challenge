@@ -291,8 +291,14 @@ Sua primeira recompensa é:
 
 <div align="center"> <img width="400" alt="Image" src="https://github.com/user-attachments/assets/fada3f79-4662-4bc7-b81c-29a26e61c5de" /> </div>
 
+---
+### Próximos passos:
 
+⬅️ [Missões Secundárias na Ilha de Quest](https://github.com/RegiMaria/aws-challenge/tree/main/08-AWS-Cloud-Quest/01-AWS-Cloud-Quest-Cloud-Practitioner/00-Miss%C3%B5es-Secund%C3%A1rias)
 
+➡️  Próximo Laboratório
+
+  
 
 
 
