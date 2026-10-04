@@ -47,6 +47,71 @@ Os quizzes dos Pets e Drones funcionam como um **simulado interativo de altíssi
 * **Cenários do Dia a Dia:** Apresentam situações práticas (ex: "um desenvolvedor quer hospedar um site estático gastando o mínimo possível") em vez de mera memorização de termos.
 * **Revisão Ativa e Imediata:** Permitem fixar limites de serviços (ex: uploads máximos no console S3), modelos de implantação em nuvem e princípios de segurança (como Security Groups).
 
+## Domínio oficiais AWS Certified Cloud Practitioner - CLF-C02
+
+Além disso, os quizzes dos pets no AWS Cloud Quest estão **alinhados com os 4 Domínios Oficiais da AWS** (especialmente do exame AWS Certified Cloud Practitioner - CLF-C02), desdobrados em serviços específicos.
+
+Abaixo está o mapeamento detalhado de como você pode categorizar cada um dos 19 pets por domínio e foco de serviço:
+
+### Domínio 1 - Conceitos de Nuvem (Cloud Concepts)
+
+| Pet            | Animal           | Quizzes | Foco                                                                |
+| -------------- | ---------------- | ------: | ------------------------------------------------------------------- |
+| 🐂 **Bubbles** | Boi              |       1 | Modelos de implantação e Nuvem Híbrida                              |
+| 🐕 **Radar**   | Dobermann Marrom |       1 | Infraestrutura Global da AWS -Regiões vs. Zonas de Disponibilidade |
+| 🐇 **Racer**   | Coelho           |       3 | Princípios de Arquitetura em Nuvem -AWS Well-Architected Framework |
+
+
+### Domínio 2 - Segurança e Conformidade (Security & Compliance)
+
+| Pet              | Animal | Quizzes | Foco                                                                 |
+| ---------------- | ------ | ------: | -------------------------------------------------------------------- |
+| 🐍 **Smiley**    | Cobra  |       3 | Security Groups e Network ACLs                                       |
+| 🕷️ **Dr. Webb** | Aranha |       6 | AWS IAM -Políticas, Usuários, Roles e Princípio do Menor Privilégio |
+| 🐺 **Twilight**  | Lobo   |       6 | Modelo de Responsabilidade Compartilhada e Criptografia -AWS KMS    |
+
+
+### Domínio 3 - Tecnologia e Serviços em Nuvem (Cloud Technology & Services)
+
+| Pet              | Animal     |                      Quizzes | Foco                                                                          |
+| ---------------- | ---------- | ---------------------------: | ----------------------------------------------------------------------------- |
+| 🐻 **Mr. Honey** | Urso Pardo | 1 no jogo / 6 no repositório | Amazon S3 -Classes de Armazenamento, Limites e Hospedagem de Sites Estáticos |
+| 🪼 **Pearl**     | Água-viva  |                            6 | Armazenamento em Bloco e Arquivos -Amazon EBS e Amazon EFS                   |
+
+**Computação (Compute)**
+| Pet                 | Animal  | Quizzes | Foco                                                                                   |
+| ------------------- | ------- | ------: | -------------------------------------------------------------------------------------- |
+| 🦍 **Mrs. Gorilla** | Gorila  |      12 | Amazon EC2 -Tipos de Instâncias, modelos de compra, Spot, On-Demand, AMIs e User Data |
+| 🐧 **Pepper**       | Pinguim |       3 | Computação Serverless -AWS Lambda e microsserviços                                    |
+| 🐴 **Peanut**       | Cavalo  |       6 | Escalabilidade e Elasticidade -Auto Scaling e Elastic Load Balancing (ELB)            |
+
+**Redes (Networking)**
+
+| Pet           | Animal   | Quizzes | Foco                                                                                   |
+| ------------- | -------- | ------: | -------------------------------------------------------------------------------------- |
+| 🐘 **Sparky** | Elefante |      12 | Amazon VPC -Sub-redes Públicas/Privadas, Internet Gateways, NAT Gateways e Roteamento |
+| 🐦 **Seagul** | Gaivota  |       3 | Entrega de Conteúdo e DNS -Amazon CloudFront e Route 53                               |
+
+
+**Bancos de Dados (Databases)**
+| Pet           | Animal    | Quizzes | Foco                                                                                 |
+| ------------- | --------- | ------: | ------------------------------------------------------------------------------------ |
+| 🐊 **Crocky** | Crocodilo |      12 | Bancos de Dados Relacionais e Não Relacionais -Amazon RDS, Amazon Aurora e DynamoDB |
+
+### Domínio 4 - Faturamento, Preços e Gestão (Billing, Pricing & Management)
+
+| Pet                  | Animal           | Quizzes | Foco                                                                             |
+| -------------------- | ---------------- | ------: | -------------------------------------------------------------------------------- |
+| 🐕 **Golden Nugget** | Golden Retriever |       1 | Ferramentas de Gestão Financeira -AWS Cost Explorer, Budgets e Alocação de Tags |
+| 🐕 **Cookie**        | Dobermann Preto  |       3 | Monitoramento e Logs -Amazon CloudWatch e AWS CloudTrail                        |
+| 🐈 **Zazzy**         | Gato             |       2 | Planos de Suporte AWS e Recomendações do AWS Trusted Advisor                     |
+| 🦌 **Bucky**         | Cervo            |       3 | Governança e Automação -AWS Organizations e AWS CloudFormation                  |
+| 🐻‍❄️ **Sarge**      | Urso Polar       |       6 | Auditoria e Conformidade de Recursos -AWS Config e AWS Artifact                 |
+
+
+> Ao todo são 85 perguntas para ganhar um novo pet e aprender sobre AWS!
+
+
 ---
 
 # 🐶 Missão secundária: Encontre os Pets
