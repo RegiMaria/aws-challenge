@@ -6,6 +6,7 @@
 
 </div>
 
+[**Perfil público da The Boot Girls do AWS - SkillBuilder**](https://skillsprofile.skillbuilder.aws/user/regilenemariano/cloudquest)
 
 **Nível:** Iniciante | **Foco:** Prática na AWS
 
@@ -298,7 +299,8 @@ Sua primeira recompensa é:
 
 ➡️  Próximo Laboratório
 
-  
+### Perfil No AWS Skill Builder
 
+[The boot Girl - Regilene Mariano](https://skillsprofile.skillbuilder.aws/user/regilenemariano/cloudquest)
 
 
