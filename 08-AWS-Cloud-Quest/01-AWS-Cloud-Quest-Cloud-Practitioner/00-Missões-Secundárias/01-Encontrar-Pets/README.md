@@ -1,1 +1,99 @@
-## encontrar pets
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/76705396-9ef5-41ad-a89d-ceb5ea2a8d7a"  />
+</div>
+
+---
+
+# 🎮 Missões Secundárias no AWS Cloud Quest
+
+Enquanto as missões principais do **AWS Cloud Quest** focam na construção prática de soluções dentro do console da AWS (*Learn, Plan, Practice e DIY*), o jogo conta com um rico ecossistema de **missões secundárias** espalhadas pela cidade virtual.
+
+Essas atividades paralelas utilizam elementos de gamificação para acelerar o aprendizado teórico, recompensando a exploração e o conhecimento com Gemas, Pontos de Reputação e colecionáveis.
+
+---
+
+## 🧭 O que são e quais são as missões secundárias?
+
+Existem quatro frentes principais de atividades secundárias no mapa:
+
+1. **🧩 Diagramas de Arquitetura (*Challenge Diagrams*):**
+   * Desbloqueados ao interagir com drones amarelos. 
+   * Desafiam o jogador a organizar blocos e arquiteturas lógicas corretas da AWS para resolver cenários propostos de infraestrutura.
+
+2. **🃏 Cartas de Serviços (*Service Cards*):**
+   * Coletadas ao abater drones azuis com a ferramenta *Drone Capture*.
+   * Funcionam como cartões de estudo (flashcards) com resumos técnicos, limites e casos de uso de cada serviço AWS.
+
+3. **🛹 Veículos e Mobilidade:**
+   * Recompensas cosméticas e funcionais (como hoverboards e patinetes elétricos).
+   * Aumentam a velocidade de locomoção pela cidade para agilizar a navegação entre clientes e missões.
+
+4. **🐾 Coleção de Pets (Animais de Estimação):**
+   * A categoria escolhida para este registro!
+   * Animais selvagens perambulam pelo mapa e precisam ser domesticados por meio de respostas corretas a perguntas teóricas da AWS.
+   * Quando completados, os animais passam a habitar a fazenda da sua ilha pessoal (*Player Island*).
+
+
+<img width="1478" height="807" alt="Image" src="https://github.com/user-attachments/assets/35e186a3-340c-4fb3-9eec-8325800dce77" />
+
+
+---
+
+## 🎯 Por que encarar os Quizzes como um Simulado?
+
+Os quizzes dos Pets e Drones funcionam como um **simulado interativo de altíssimo valor para certificações** (como a *AWS Certified Cloud Practitioner - CLF-C02* e *Solutions Architect Associate - SAA-C03*):
+
+* **Formato Real de Exame:** As perguntas seguem o mesmo estilo de múltipla escolha e múltipla seleção cobrados nas provas oficiais da AWS.
+* **Cenários do Dia a Dia:** Apresentam situações práticas (ex: "um desenvolvedor quer hospedar um site estático gastando o mínimo possível") em vez de mera memorização de termos.
+* **Revisão Ativa e Imediata:** Permitem fixar limites de serviços (ex: uploads máximos no console S3), modelos de implantação em nuvem e princípios de segurança (como Security Groups).
+
+---
+
+# 🐶 Missão secundária: Encontre os Pets
+
+
+<img width="733" height="871" alt="Image" src="https://github.com/user-attachments/assets/ae4f7c1c-81e8-43ec-8d48-99fd735e9db5" />
+
+
+
+## ⚙️ Regras do Jogo e Mecânica de Aparição dos Pets (*Spawn Engine*)
+
+> **Dúvida comum solucionada na prática:** *"Fiquei procurando a cobra por um tempão e não achava. Por que ela só apareceu depois que comecei a responder e acertar os quizzes dos outros bichos?"*
+
+O sistema de aparição dos pets possui uma lógica bem definida:
+
+* **Limite de animais simultâneos no mapa:** O jogo não carrega os 19 animais ao mesmo tempo na cidade. Existe um teto de pets ativos nas ruas (normalmente entre 3 e 5 por vez).
+* **Ciclo de Domesticação (*Despawn* e *Respawn*):** Se o jogador apenas andar pela cidade sem interagir ou responder às perguntas, o mapa continuará mantendo exatamente os mesmos animais que já estão lá.
+* **Liberando a fila de aparição:** Ao interagir com um animal e acertar as perguntas até adotá-lo (ou preencher sua barra de progresso), você "desocupa" a vaga dele no mapa. Isso força o motor do jogo a sortear e gerar (*dar spawn*) em um novo animal da lista de pendentes.
+* **Animais raros na rotação:** A **cobra (*Snake*)**, o camelo e alguns animais menores têm taxas de aparição mais baixas ou ficam no final da fila de rotação. A única forma eficiente de fazê-los aparecer é domesticar os que já estão andando na rua para limpar a fila!
+
+---
+
+## 🐾 Coleção Oficial dos 19 Pets - AWS Cloud Quest
+
+| # | Nome no Jogo | Animal | Total de Quizzes |
+|---|--------------|--------|------------------|
+| 1 | **Mr. Honey** | 🐻 Urso Pardo (*Grizzly Bear*) | Concluído (1/1) |
+| 2 | **Bubbles** | 🐂 Boi / Touro (*Bull*) | 1 |
+| 3 | **Golden Nugget** | 🐕 Golden Retriever | 1 |
+| 4 | **Radar** | 🐕 Dobermann Marrom | 1 |
+| 5 | **Zazzy** | 🐱 Gato (*Cat*) | 2 |
+| 6 | **Crocky** | 🐊 Crocodilo / Jacaré (*Crocodile*) | 12 |
+| 7 | **Bucky** | 🦌 Cervo / Veado (*Deer*) | 3 |
+| 8 | **Cookie** | 🐕 Dobermann Preto | 3 |
+| 9 | **Sparky** | 🐘 Elefante (*Elephant*) | 12 |
+| 10 | **Mrs. Gorilla** | 🦍 Gorila (*Gorilla*) | 12 |
+| 11 | **Peanut** | 🐴 Cavalo (*Horse*) | 6 |
+| 12 | **Pearl** | 🪼 Água-Viva (*Jellyfish*) | 6 |
+| 13 | **Pepper** | 🐧 Pinguim (*Penguin*) | 3 |
+| 14 | **Sarge** | 🐻‍❄️ Urso Polar (*Polar Bear*) | 6 |
+| 15 | **Racer** | 🐰 Coelho (*Rabbit*) | 3 |
+| 16 | **Seagul** | 🕊️ Gaivota (*Seagull*) | 3 |
+| 17 | **Smiley** | 🐍 Cobra (*Snake*) | 3 |
+| 18 | **Dr. Webb** | 🕷️ Aranha (*Spider*) | 6 |
+| 19 | **Twilight** | 🐺 Lobo / Cão Escuro (*Wolf*) | 6 |
+
+---
+
+## 📝 Banco de Questões dos Quizzes (Simulados Práticos)
+> a ser implementado
