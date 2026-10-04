@@ -266,6 +266,30 @@ o Security Group e o script de User Data.
 - Usar HTTPS em vez de HTTP: O laboratório libera a porta 80 (HTTP). Se tentar abrir com https://, a conexão dará tempo limite (timeout).
 
 
+## Recompenas
+
+Sua primeira recompensa é:
+
+<img width="1532" height="786" alt="Image" src="https://github.com/user-attachments/assets/f5fd42ef-32de-4ce6-9ec2-f6dfff164838" />
+
+---
+
+<div align="center">
+
+<h1>🏡✨ Sua casa própria na Ilha de Quest! ✨🏡</h1>
+
+<p>
+  <strong>🎉 PARABÉNS! 🎉</strong>
+</p>
+
+<p>
+  🗝️ Você conquistou sua própria casa!<br>
+  🌴 Agora a Ilha de Quest também é sua. 💜
+</p>
+
+</div>
+
+<div align="center"> <img width="400" alt="Image" src="https://github.com/user-attachments/assets/fada3f79-4662-4bc7-b81c-29a26e61c5de" /> </div>
 
 
 
