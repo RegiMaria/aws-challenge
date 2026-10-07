@@ -11,7 +11,7 @@
 - **Domínio AWS:** Armazenamento e Gerenciamento de Dados (*Storage*)
 - **Serviço Central:** Amazon Simple Storage Service (Amazon S3)
 - **Total de Quizzes:** 6
-- **Status:** Domesticado ✅
+- **Status:** Adotado ✅
 - **Conferir status:* [Perfil estudante AWS Skill Builder](https://skillsprofile.skillbuilder.aws/user/regileneataide/cloudquest)
 
 ---
