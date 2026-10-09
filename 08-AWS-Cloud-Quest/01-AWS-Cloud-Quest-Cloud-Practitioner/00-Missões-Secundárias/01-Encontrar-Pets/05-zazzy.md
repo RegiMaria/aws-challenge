@@ -8,7 +8,7 @@
 - **Domínio AWS:** Faturamento, Preços e Gestão (*Billing, Pricing & Management*)
 - **Tópico Principal:** Planos de Suporte AWS e AWS Trusted Advisor
 - **Total de Quizzes:** 2 (Expandido para 5 para estudo prático)
-- **Status:** Domesticado ✅
+- **Status:** Adotada ✅
 
 ---
 
