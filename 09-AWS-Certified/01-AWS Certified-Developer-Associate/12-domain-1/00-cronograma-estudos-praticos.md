@@ -136,3 +136,17 @@ Você já tem o ementário detalhado e o nosso guia de revisão DVA-C02, a melho
 
 - Consulte a documentação oficial da AWS: 
 Ao estudar cada módulo, pesquise no Google por: "AWS Documentation [Nome do Serviço] developer guide".
+ 
+ ---
+
+Seguindo este cronograma com disciplina e realizando a parte prática, 
+você terá uma excelente preparação para passar no exame AWS Certified Developer - Associate (DVA-C02).
+
+O ementário é o esqueleto exato dos cursos oficiais da AWS para desenvolvedores. 
+Ao executar a prática por conta própria, você ganha vantagens estratégicas para a prova:
+
+- Fixação dos Conceitos Mais Cobrados: A prova DVA-C02 é extremamente focada nos fluxos de Serverless (API Gateway + Lambda + DynamoDB), Segurança (IAM + Cognito + KMS) e CI/CD (SAM + CodePipeline). Montar esses ambientes na prática faz você memorizar a arquitetura sem precisar decorá-la.
+
+- Entendimento dos Erros e Exceções: Muitas questões de prova perguntam "Qual erro ocorreu e como resolver?" (como erros de Throttling no DynamoDB ou permissões de Bucket Policy no S3). Ao fazer os scripts em código e errar no console/CLI, você aprende a diagnosticar esses cenários rapidamente.
+
+- Domínio de Parâmetros de Código/CLI: Escrever scripts com o SDK (boto3) ou usar a CLI fixa os nomes de parâmetros, variáveis de ambiente e arquivos de configuração (buildspec.yml, appspec.yml, template.yaml) que aparecem diretamente nas alternativas da prova.
