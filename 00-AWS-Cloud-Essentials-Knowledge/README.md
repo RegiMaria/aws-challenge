@@ -39,7 +39,7 @@ AWS Skill Builder e passa em um teste final (Assessment) de múltipla escolha co
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
 | ⬜ | AWS Knowledge: Compute | *_A_definir_* | *_A_definir_* |
-| ⬜ | AWS Knowledge: Serverless | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Serverless | *_A_definir_* | [Ver-repositório](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials-Knowledge/00-Serverless-Knowledge) |
 | ⬜ | AWS Knowledge: Amazon EKS | *_A_definir_* | *_A_definir_* |
 | ⬜ | AWS Knowledge: Amazon ECS | *_A_definir_* | *_A_definir_* |
 | ⬜ | AWS Knowledge: AWS Graviton | *_A_definir_* | *_A_definir_* |
