@@ -82,3 +82,5 @@ Comece do zero até obter a certificação seguindo o plano de preparação no *
 ---
 
 🔗 **Link Principal e Inscrições:** [Página Oficial da Certificação AWS Certified Developer - Associate](https://aws.amazon.com/pt/certification/certified-developer-associate/)
+
+🔗 **Trilha completa no AWS Skill Builder:** [AWS Skill Builder - Exam Prep Plan: AWS Certified Developer - Associate (DVA-C02)](https://skillbuilder.aws/learning-plan/ZWHYYQBTUK/exam-prep-plan-aws-certified-developer--associate-dvac02--english/NG34SRVV2G)
