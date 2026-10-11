@@ -31,14 +31,14 @@ AWS Skill Builder e passa em um teste final (Assessment) de múltipla escolha co
 |---|---|---|---|
 | 🟩 | AWS Knowledge: Cloud Essentials | [Ver-Bagde ](https://www.credly.com/badges/f3fffedc-ea12-4e0a-baf3-147ad6d6935f/public_url)| [Ver repositório](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials-Knowledge/00-Cloud-essentials-Knowledge) |
 | ⬜ | Well-Architected Proficient | *_A_definir_* | *_A_definir_* |
-| ⬜ | AWS Knowledge: Security Champion | *_A_definir_* | *_A_definir_* |
+| 🟩 | AWS Knowledge: Security Champion | [Ver-bagde](https://www.credly.com/badges/3a2937ad-2db8-4149-85d5-63e1dd46ba6e/public_url) | [Ver-repositorio](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Essential-Knowledge-Bagdes/02-Security-Champion) |
 | ⬜ | AWS Knowledge: Data Protection & Disaster Recovery | *_A_definir_* | *_A_definir_* |
 
 ### Compute e Containers
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Compute | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Compute | *_A_definir_* | [Ver-repositorio ](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Essential-Knowledge-Bagdes/03-Compute-Knowledge)|
 | ⬜ | AWS Knowledge: Serverless | *_A_definir_* | [Ver-repositório](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials-Knowledge/00-Serverless-Knowledge) |
 | ⬜ | AWS Knowledge: Amazon EKS | *_A_definir_* | *_A_definir_* |
 | ⬜ | AWS Knowledge: Amazon ECS | *_A_definir_* | *_A_definir_* |
@@ -48,13 +48,13 @@ AWS Skill Builder e passa em um teste final (Assessment) de múltipla escolha co
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Networking Core | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Networking Core | *_A_definir_* | [Ver-repositorio](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Essential-Knowledge-Bagdes/05-Networking-Core-Knowledge) |
 
 ### Armazenamento (Storage)
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Object Storage | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Object Storage | *_A_definir_* | [Ver-repositorio](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Essential-Knowledge-Bagdes/04-Object-Storage-Knowledge) |
 | ⬜ | AWS Knowledge: File Storage | *_A_definir_* | *_A_definir_* |
 | ⬜ | AWS Knowledge: Block Storage | *_A_definir_* | *_A_definir_* |
 
