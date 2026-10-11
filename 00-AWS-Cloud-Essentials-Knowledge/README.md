@@ -29,7 +29,7 @@ AWS Skill Builder e passa em um teste final (Assessment) de múltipla escolha co
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Cloud Essentials | *_A_definir_* | [Ver repositório](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials-Knowledge/00-Cloud-essentials-Knowledge) |
+| 🟩 | AWS Knowledge: Cloud Essentials | [Ver-Bagde ](https://www.credly.com/badges/f3fffedc-ea12-4e0a-baf3-147ad6d6935f/public_url)| [Ver repositório](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials-Knowledge/00-Cloud-essentials-Knowledge) |
 | ⬜ | Well-Architected Proficient | *_A_definir_* | *_A_definir_* |
 | ⬜ | AWS Knowledge: Security Champion | *_A_definir_* | *_A_definir_* |
 | ⬜ | AWS Knowledge: Data Protection & Disaster Recovery | *_A_definir_* | *_A_definir_* |
