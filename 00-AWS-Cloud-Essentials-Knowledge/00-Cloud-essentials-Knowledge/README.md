@@ -92,3 +92,4 @@ Se gostou, não esqueça de deixar uma ⭐
 <img width="200" alt="Image" src="https://github.com/user-attachments/assets/aca57b06-3ea1-49e4-96fb-b2a00b8f8918" />
 
 </div>
+
