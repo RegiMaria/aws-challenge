@@ -1,4 +1,11 @@
-# Serverless - Knowledge 
+<div align="center">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width="220" alt="AWS Logo"/>
+
+# ☁️ 01 - Serverless - Knowledge Badge Readiness Path
+
+</div>
+
 
 Este repositório documenta a minha jornada de estudos na trilha **Serverless Knowledge Badge Readiness Path** 
 da AWS. O objetivo é adquirir conhecimentos profundos sobre arquiteturas serverless,
@@ -6,7 +13,7 @@ computação orientada a eventos, segurança, observabilidade e boas práticas c
 
 ---
 
-## 📊 Visão Geral da Trilha
+## Visão Geral da Trilha
 
 - **Nome da Trilha:** Serverless Knowledge Badge Readiness Path (includes Labs)
 - **Duração Total:** 14 horas e 15 minutos
@@ -15,7 +22,7 @@ computação orientada a eventos, segurança, observabilidade e boas práticas c
 
 ---
 
-## 📋 Trilha de Cursos e Laboratórios (Checklist)
+##  Trilha de Cursos e Laboratórios (Checklist)
 
 Aqui estão listados todos os módulos que compõem este plano de aprendizado:
 
