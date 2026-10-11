@@ -74,7 +74,7 @@ Comece do zero até obter a certificação seguindo o plano de preparação no *
 | **09-networking-content-delivery** | A definir | Ver_repositorio |
 | **10-security-identity-compliance** | A definir | Ver_repositorio |
 | **11-storage** | A definir | Ver_repositorio |
-| **12-domain-1** | Desenvolvimento com Serviços AWS | Ver_repositorio |
+| **12-domain-1** | Desenvolvimento com Serviços AWS | [Ver_repositorio](https://github.com/RegiMaria/aws-challenge/tree/main/09-AWS-Certified/01-AWS%20Certified-Developer-Associate/12-domain-1) |
 | **13-domain-2** | Segurança | Ver_repositorio |
 | **14-domain-3** | Implantação (*Deployment*) | Ver_repositorio |
 | **15-domain-4** | Solução de Problemas e Otimização** (*Troubleshooting and Optimization*) | Ver_repositorio |
