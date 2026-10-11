@@ -1,35 +1,15 @@
 <div align="center">
-<img src="https://github.com/user-attachments/assets/60fc9cc4-4c5d-4c57-9a98-d3476d96788d" width="220" alt="AWS Logo"/>
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width="220" alt="AWS Logo"/>
 
-# AWS Certified Developer - Associate
+# AWS Trilhas de estudos
 
-**Um repositório de estudos com as principais trilhas da AWS - pra entender a nuvem de verdade, evoluir na carreira e nunca parar de aprender.**
+**Um repositório de estudos com as principais trilhas da AWS para exames de certificação .**
 
 </div>
 
-A certificação **AWS Certified Developer - Associate** destaca habilidades e conhecimentos de desenvolvimento, otimização, empacotamento e implantação de aplicações, usando fluxos de trabalho de CI/CD e identificando e resolvendo problemas de aplicações. Ela é um bom ponto de partida na jornada de AWS Certification para indivíduos em funções de desenvolvimento de TI ou nuvem.
-
-> ⚠️ **Aviso de Transição de Exame (DVA-C02 → DVA-C03)**
-> Este exame está sendo atualizado:
-> - **Início das inscrições para a nova versão (DVA-C03):** 27 de outubro de 2026
-> - **Último dia para realizar o exame atual (DVA-C02):** 1º de dezembro de 2026
-
 ---
 
-## 📋 Visão Geral do Exame
-
-| Parâmetro | Detalhe |
-| :--- | :--- |
-| **Categoria** | Associate |
-| **Duração do Exame** | 130 minutos |
-| **Formato** | 65 questões (múltipla escolha ou múltipla resposta) |
-| **Custo** | USD 150 *(consulte os preços oficiais da AWS para taxas e impostos locais)* |
-| **Opções de Teste** | Centro de testes Pearson VUE ou exame on-line supervisionado |
-| **Idiomas Oferecidos** | Inglês, japonês, coreano, português (Brasil), chinês simplificado e espanhol (América Latina) |
-
----
-
-## 🎯 Plano de Preparação para o Exame
+## 🎯 Plano de Preparação para qualquer Exame
 
 Comece do zero até obter a certificação seguindo o plano de preparação no **AWS Skill Builder**:
 
@@ -55,30 +35,10 @@ Comece do zero até obter a certificação seguindo o plano de preparação no *
 
 ## Sessões do repositório
 
-### AWS Certified Developer - Associate (DVA-C02)
+### 01-AWS Certified Developer - Associate (DVA-C02)
 ➡️ [Ver repositório aqui](https://github.com/RegiMaria/aws-challenge/tree/main/09-AWS-Certified/01-AWS%20Certified-Developer-Associate)
-
-| Repositório | Detalhe | Link |
-| :--- | :--- | :--- |
-| **01-core-concepts** | Básico de infraestrutura e servicos | [Ver_repositório](https://github.com/RegiMaria/aws-challenge/tree/main/09-AWS-Certified/01-AWS%20Certified-Developer-Associate/01-core-concepts) |
-| **02-analytics** | A definir | Ver_repositorio |
-| **03-application-integration** | A definir | Ver_repositorio |
-| **04-Compute** | A definir |Ver_repositorio |
-| **05-container** | A definir | Ver_repositorio |
-| **06-database** | A definir | Ver_repositorio |
-| **07-developer-tools** | A definir | Ver_repositorio |
-| **08-management-governance** | A definir | Ver_repositorio |
-| **09-networking-content-delivery** | A definir | Ver_repositorio |
-| **10-security-identity-compliance** | A definir | Ver_repositorio |
-| **11-storage** | A definir | Ver_repositorio |
-| **12-domain-1** | Desenvolvimento com Serviços AWS | Ver_repositorio |
-| **13-domain-2** | Segurança | Ver_repositorio |
-| **14-domain-3** | Implantação (*Deployment*) | Ver_repositorio |
-| **15-domain-4** | Solução de Problemas e Otimização** (*Troubleshooting and Optimization*) | Ver_repositorio |
-
----
-
 🔗 **Link Principal e Inscrições:** [Página Oficial da Certificação AWS Certified Developer - Associate](https://aws.amazon.com/pt/certification/certified-developer-associate/)
 
 ---
+
 ### AWS Certified a definir
