@@ -29,84 +29,83 @@ AWS Skill Builder e passa em um teste final (Assessment) de múltipla escolha co
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Cloud Essentials | | |
-| ⬜ | Well-Architected Proficient | | |
-| ⬜ | AWS Knowledge: Security Champion | | |
-| ⬜ | AWS Knowledge: Data Protection & Disaster Recovery | | |
+| ⬜ | AWS Knowledge: Cloud Essentials | *_A_definir_* | [Ver repositório](https://github.com/RegiMaria/aws-challenge/tree/main/00-AWS-Cloud-Essentials-Knowledge/00-Cloud-essentials-Knowledge) |
+| ⬜ | Well-Architected Proficient | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Security Champion | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Data Protection & Disaster Recovery | *_A_definir_* | *_A_definir_* |
 
 ### Compute e Containers
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Compute | | |
-| ⬜ | AWS Knowledge: Serverless | | |
-| ⬜ | AWS Knowledge: Amazon EKS | | |
-| ⬜ | AWS Knowledge: Amazon ECS | | |
-| ⬜ | AWS Knowledge: AWS Graviton | | |
+| ⬜ | AWS Knowledge: Compute | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Serverless | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon EKS | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon ECS | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: AWS Graviton | *_A_definir_* | *_A_definir_* |
 
 ### Redes e Conectividade
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Networking Core | | |
+| ⬜ | AWS Knowledge: Networking Core | *_A_definir_* | *_A_definir_* |
 
 ### Armazenamento (Storage)
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Object Storage | | |
-| ⬜ | AWS Knowledge: File Storage | | |
-| ⬜ | AWS Knowledge: Block Storage | | |
+| ⬜ | AWS Knowledge: Object Storage | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: File Storage | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Block Storage | *_A_definir_* | *_A_definir_* |
 
 ### Integrações, Eventos e Migração
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Events and Workflows | | |
-| ⬜ | AWS Knowledge: Migration Foundations | | |
-| ⬜ | AWS Knowledge: Data Migration | | |
-| ⬜ | AWS Knowledge: Amazon WorkSpaces Migrations | | |
-| ⬜ | AWS Knowledge: AWS Transform Fundamentals | | |
+| ⬜ | AWS Knowledge: Events and Workflows | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Migration Foundations | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Data Migration | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon WorkSpaces Migrations | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: AWS Transform Fundamentals | *_A_definir_* | *_A_definir_* |
 
 ### Inteligência Artificial, Generativa e Desenvolvimento
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: AI Basics | | |
-| ⬜ | AWS Knowledge: AI Driven Development Lifecycle Foundations | | |
-| ⬜ | AWS Knowledge: Amazon Q Developer Fundamentals | | |
-| ⬜ | AWS Knowledge: Architecting Vector Databases | | |
-| ⬜ | AWS Knowledge: AI-Powered Video Advertising & Operations | | |
+| ⬜ | AWS Knowledge: AI Basics | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: AI Driven Development Lifecycle Foundations | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Q Developer Fundamentals | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Architecting Vector Databases | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: AI-Powered Video Advertising & Operations | *_A_definir_* | *_A_definir_* |
 
 ### Atendimento ao Cliente e Comunicação (Amazon Connect)
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Amazon Connect Fundamentals | | |
-| ⬜ | AWS Knowledge: Amazon Connect Developer | | |
-| ⬜ | AWS Knowledge: Amazon Connect AI Fundamentals | | |
-| ⬜ | AWS Knowledge: Amazon Connect Outbound Communications | | |
-| ⬜ | AWS Knowledge: Amazon Connect Communications Specialist | | |
-| ⬜ | AWS Knowledge: Amazon Connect Reporting & Analytics | | |
-| ⬜ | AWS Knowledge: AWS Communication Developer Services Fundamentals | | |
+| ⬜ | AWS Knowledge: Amazon Connect Fundamentals | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Connect Developer | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Connect AI Fundamentals | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Connect Outbound Communications | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Connect Communications Specialist | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Connect Reporting & Analytics | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: AWS Communication Developer Services Fundamentals | *_A_definir_* | *_A_definir_* |
 
 ### Dados, Analytics e Banco de Dados
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: Business Intelligence | | |
-| ⬜ | AWS Knowledge: Advanced PostgreSQL for Amazon Aurora and Amazon RDS | | |
+| ⬜ | AWS Knowledge: Business Intelligence | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Advanced PostgreSQL for Amazon Aurora and Amazon RDS | *_A_definir_* | *_A_definir_* |
 
 ### Mídia, Entretenimento, Jogos e Outros Serviços
 
 | Badge | Nome | Link para badge | Link repositório |
 |---|---|---|---|
-| ⬜ | AWS Knowledge: AWS for Games: Cloud Game Development | | |
-| ⬜ | AWS Knowledge: Media & Entertainment: Direct-to-Consumer and Broadcast Foundations | | |
-| ⬜ | AWS Knowledge: Media & Entertainment Content Production Foundations | | |
-| ⬜ | AWS Knowledge: AWS End User Computing | | |
-| ⬜ | AWS Knowledge: Amazon Braket | | |
-
+| ⬜ | AWS Knowledge: AWS for Games: Cloud Game Development | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Media & Entertainment: Direct-to-Consumer and Broadcast Foundations | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Media & Entertainment Content Production Foundations | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: AWS End User Computing | *_A_definir_* | *_A_definir_* |
+| ⬜ | AWS Knowledge: Amazon Braket | *_A_definir_* | *_A_definir_* |
 
 ---
 
