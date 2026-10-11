@@ -25,12 +25,87 @@ AWS Skill Builder e passa em um teste final (Assessment) de múltipla escolha co
 
 ## Lista Completa das 37 AWS Knowledge Badges 
 
+### Fundamentos e Arquitetura Geral
 
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Cloud Essentials | | |
+| ⬜ | Well-Architected Proficient | | |
+| ⬜ | AWS Knowledge: Security Champion | | |
+| ⬜ | AWS Knowledge: Data Protection & Disaster Recovery | | |
 
+### Compute e Containers
 
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Compute | | |
+| ⬜ | AWS Knowledge: Serverless | | |
+| ⬜ | AWS Knowledge: Amazon EKS | | |
+| ⬜ | AWS Knowledge: Amazon ECS | | |
+| ⬜ | AWS Knowledge: AWS Graviton | | |
 
+### Redes e Conectividade
 
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Networking Core | | |
 
+### Armazenamento (Storage)
+
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Object Storage | | |
+| ⬜ | AWS Knowledge: File Storage | | |
+| ⬜ | AWS Knowledge: Block Storage | | |
+
+### Integrações, Eventos e Migração
+
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Events and Workflows | | |
+| ⬜ | AWS Knowledge: Migration Foundations | | |
+| ⬜ | AWS Knowledge: Data Migration | | |
+| ⬜ | AWS Knowledge: Amazon WorkSpaces Migrations | | |
+| ⬜ | AWS Knowledge: AWS Transform Fundamentals | | |
+
+### Inteligência Artificial, Generativa e Desenvolvimento
+
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: AI Basics | | |
+| ⬜ | AWS Knowledge: AI Driven Development Lifecycle Foundations | | |
+| ⬜ | AWS Knowledge: Amazon Q Developer Fundamentals | | |
+| ⬜ | AWS Knowledge: Architecting Vector Databases | | |
+| ⬜ | AWS Knowledge: AI-Powered Video Advertising & Operations | | |
+
+### Atendimento ao Cliente e Comunicação (Amazon Connect)
+
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Amazon Connect Fundamentals | | |
+| ⬜ | AWS Knowledge: Amazon Connect Developer | | |
+| ⬜ | AWS Knowledge: Amazon Connect AI Fundamentals | | |
+| ⬜ | AWS Knowledge: Amazon Connect Outbound Communications | | |
+| ⬜ | AWS Knowledge: Amazon Connect Communications Specialist | | |
+| ⬜ | AWS Knowledge: Amazon Connect Reporting & Analytics | | |
+| ⬜ | AWS Knowledge: AWS Communication Developer Services Fundamentals | | |
+
+### Dados, Analytics e Banco de Dados
+
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: Business Intelligence | | |
+| ⬜ | AWS Knowledge: Advanced PostgreSQL for Amazon Aurora and Amazon RDS | | |
+
+### Mídia, Entretenimento, Jogos e Outros Serviços
+
+| Badge | Nome | Link para badge | Link repositório |
+|---|---|---|---|
+| ⬜ | AWS Knowledge: AWS for Games: Cloud Game Development | | |
+| ⬜ | AWS Knowledge: Media & Entertainment: Direct-to-Consumer and Broadcast Foundations | | |
+| ⬜ | AWS Knowledge: Media & Entertainment Content Production Foundations | | |
+| ⬜ | AWS Knowledge: AWS End User Computing | | |
+| ⬜ | AWS Knowledge: Amazon Braket | | |
 
 
 ---
