@@ -55,6 +55,9 @@ Comece do zero até obter a certificação seguindo o plano de preparação no *
 
 ## Sessões do repositório
 
+### AWS Certified Developer - Associate (DVA-C02)
+➡️ [Ver repositório aqui](https://github.com/RegiMaria/aws-challenge/tree/main/09-AWS-Certified/01-AWS%20Certified-Developer-Associate)
+
 | Repositório | Detalhe | Link |
 | :--- | :--- | :--- |
 | **01-core-concepts** | Básico de infraestrutura e servicos | [Ver_repositório](https://github.com/RegiMaria/aws-challenge/tree/main/09-AWS-Certified/01-AWS%20Certified-Developer-Associate/01-core-concepts) |
@@ -73,10 +76,9 @@ Comece do zero até obter a certificação seguindo o plano de preparação no *
 | **14-domain-3** | Implantação (*Deployment*) | Ver_repositorio |
 | **15-domain-4** | Solução de Problemas e Otimização** (*Troubleshooting and Optimization*) | Ver_repositorio |
 
-
-
-
-
 ---
 
 🔗 **Link Principal e Inscrições:** [Página Oficial da Certificação AWS Certified Developer - Associate](https://aws.amazon.com/pt/certification/certified-developer-associate/)
+
+---
+### AWS Certified a definir
