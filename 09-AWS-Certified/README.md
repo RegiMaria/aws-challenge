@@ -53,4 +53,30 @@ Comece do zero até obter a certificação seguindo o plano de preparação no *
 
 ---
 
+## Sessões do repositório
+
+| Repositório | Detalhe | Link |
+| :--- | :--- | :--- |
+| **01-core-concepts** | Básico de infraestrutura e servicos | [Ver_repositório](https://github.com/RegiMaria/aws-challenge/tree/main/09-AWS-Certified/01-AWS%20Certified-Developer-Associate/01-core-concepts) |
+| **02-analytics** | A definir | Ver_repositorio |
+| **03-application-integration** | A definir | Ver_repositorio |
+| **04-Compute** | A definir |Ver_repositorio |
+| **05-container** | A definir | Ver_repositorio |
+| **06-database** | A definir | Ver_repositorio |
+| **07-developer-tools** | A definir | Ver_repositorio |
+| **08-management-governance** | A definir | Ver_repositorio |
+| **09-networking-content-delivery** | A definir | Ver_repositorio |
+| **10-security-identity-compliance** | A definir | Ver_repositorio |
+| **11-storage** | A definir | Ver_repositorio |
+| **12-domain-1** | Desenvolvimento com Serviços AWS | Ver_repositorio |
+| **13-domain-2** | Segurança | Ver_repositorio |
+| **14-domain-3** | Implantação (*Deployment*) | Ver_repositorio |
+| **15-domain-4** | Solução de Problemas e Otimização** (*Troubleshooting and Optimization*) | Ver_repositorio |
+
+
+
+
+
+---
+
 🔗 **Link Principal e Inscrições:** [Página Oficial da Certificação AWS Certified Developer - Associate](https://aws.amazon.com/pt/certification/certified-developer-associate/)
