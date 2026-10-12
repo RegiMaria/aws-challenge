@@ -1,27 +1,27 @@
 # 01 - A Familiar Architecture
 
-Nessa primeiro aula (A Familiar Architecture), 
+Nessa primeira aula (A Familiar Architecture), 
 o Mike Deck apresenta o cenário tradicional de infraestrutura na nuvem 
 e os problemas gerados por ele para, no final, introduzir a razão de existir (o porquê) 
-do Serverless.
+da arquitetura Serverless.
 
 Em resumo, ele apresenta a evolução de uma arquitetura tradicional em 5 etapas:
 
-1.A Aplicação Inicial (1 EC2 + Banco de Dados): O ponto de partida mais
+1. A Aplicação Inicial (1 EC2 + Banco de Dados): O ponto de partida mais
 simples para rodar uma aplicação HTTP.
 
-2.Escalabilidade Vertical e seus Limites: O problema de tentar resolver 
+2. Escalabilidade Vertical *Scaling Up* e seus Limites: O problema de tentar resolver 
 o aumento de tráfego apenas aumentando o tamanho daquela única máquina EC2.
 
-3.Escalabilidade Horizontal (Load Balancer + Várias EC2s): A solução de colocar 
+3. Escalabilidade Horizontal (Load Balancer + Várias EC2s): A solução de colocar 
 um balanceador de carga para distribuir tráfego entre múltiplos servidores e o 
 surgimento do problema de gestão de custos (pagar por máquinas paradas fora do horário de pico).
 
-4.Elasticidade e Alta Disponibilidade (Auto Scaling + Zonas de Disponibilidade): A adição
+4. Elasticidade e Alta Disponibilidade (Auto Scaling + Zonas de Disponibilidade): A adição
 do Auto Scaling para ligar/desligar instâncias conforme o tráfego e a distribuição 
 em múltiplas AZs para suportar falhas em data centers.
 
-5.O Problema Final: "Undifferentiated Heavy Lifting" (Trabalho Pesado Não Diferenciado): 
+5. O Problema Final: "Undifferentiated Heavy Lifting" (Trabalho Pesado Não Diferenciado): 
 Ele mostra que, mesmo essa arquitetura sendo excelente e usada por milhares de empresas, 
 ela exige que você perca tempo gerenciando infraestrutura (provisionamento, saúde dos servidores, 
 métricas de escala, patches).
@@ -36,7 +36,16 @@ Configuramos um de banco de dados para persistir os dados.
   <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/9ee92526-b728-4da1-8e3d-fa899bef374e" />
 </p>
 
-## Mas o que acontece quando você começa a receber mais usuários e mais tráfego?
+---
+
+<div align="center">
+  <img src="https://github.com/user-attachments/assets/ad6ee311-9160-4240-a15d-58408d49c32c"  width="1000"/>
+</div>
+
+
+
+---
+
 
 ## Solução 1: Scaling UP (Escalar verticalmente)
 
@@ -103,8 +112,7 @@ O site cai por mais 3 a 5 minutos.
 Seu público/clientes teriam dois momentos de **indisponibilidade garantidos** todos os dias úteis.
 
 2. O tráfego do mundo real não segue horários perfeitos
-3. 
-E se um post do seu produto viralizar às 21h de uma quarta-feira?
+3. E se um post do seu produto viralizar às 21h de uma quarta-feira?
 Ou se você fizer uma campanha de marketing que traga milhares de acessos num domingo à tarde?
 
 - Com 1 servidor agendado: A máquina estará "pequena" no horário agendado.
@@ -278,6 +286,191 @@ Adicionar mais servidores do mesmo tamanho (em vez de 1 servidor, colocar 5 serv
 
 ## Solução 3: Architectura Serveless
 
+<p align="center">
+  <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/3cda25aa-db04-4220-8649-fc7e0645f957"  />
+</p>
+
+
 A grande sacada do modelo Serverless é justamente
-NÃO precisar usar nem Load Balancer nem Auto Scaling manuais,
+**NÃO precisar usar nem Load Balancer nem Auto Scaling manuais**,
 porque a própria AWS assume esse trabalho por você.
+
+**Arquitetura serveless: Duas Formas de Resolver o Mesmo Problema**
+
+Quando a sua aplicação cresce e recebe muito tráfego, você tem dois caminhos de arquitetura na AWS:
+
+1. O Caminho Tradicional (IaaS - Infraestrutura como Serviço)
+EC2 + Load Balancer + Auto Scaling
+
+Como funciona: Você aluga e gerencia os servidores virtuais (EC2).
+
+Trabalho do Arquiteto/Dev: Você precisa configurar o Load Balancer para distribuir o tráfego,
+criar o Auto Scaling para ligar/desligar instâncias quando a CPU subir, configurar Health Checks, 
+cuidar de patches do sistema operacional, etc.
+
+O que você paga: Paga pelo tempo que as máquinas ficarem ligadas (mesmo se ninguém estiver usando o site na madrugada).
+
+2. O Caminho Serverless (FaaS / PaaS - Função como Serviço)
+API Gateway + AWS Lambda + DynamoDB
+
+Como funciona: Você NÃO aluga servidores. Você apenas envia o seu código (sua função) para a AWS.
+
+Trabalho do Arquiteto/Dev: Você só escreve a regra de negócio do seu sistema.
+
+**O que acontece quando o tráfego aumenta?**
+
+- Se entra 1 usuário, a AWS executa 1 função Lambda.
+
+- Se entram 10.000 usuários ao mesmo tempo, a AWS automaticamente dispara 10.000 invocações paralelas do Lambda de forma instantânea.
+
+- Você NÃO precisa criar Load Balancer nem Auto Scaling. A própria infraestrutura gerenciada da AWS faz o balanceamento e a escala invisível para você.
+
+O que você paga: Paga estritamente por milissegundo de execução do seu código. Se o site receber 0 acessos na madrugada, você paga R$ 0,00.
+
+**Cenário serveless: API Gateway + Lambda**
+
+No cenário Serverless, o API Gateway e o AWS Lambda entram para SUBSTITUIR de vez a dupla Load Balancer + EC2.
+
+O De-Para das Arquiteturas:
+
+| Função no Sistema | Arquitetura Tradicional (EC2) | Arquitetura Serverless |
+|---|---|---|
+| Porta de Entrada (Receber HTTP e rotear) | Load Balancer (ALB) | Amazon API Gateway |
+| Executar a aplicação (Processar o código) | Servidores EC2 | AWS Lambda |
+| Escalabilidade e Saúde | Auto Scaling Group | Automático pelo próprio Lambda |
+
+---
+
+**Como funciona na prática o cenário do Serverless?**
+
+Imagine que um usuário clica em "Comprar produto" no seu site:
+
+1. A requisição chega no Amazon API Gateway:
+
+- Ele funciona como a porta de entrada pública do seu sistema (a URL da sua API).
+
+- Ele recebe a chamada HTTP, valida se a requisição está correta (ex: checa autenticação/tokens) e chama a função Lambda correspondente.
+
+2. O AWS Lambda processa a requisição:
+
+- A AWS cria instantaneamente um micro-container, roda a sua função (o código que processa a compra) e salva o resultado no banco de dados.
+
+- Assim que a resposta é entregue para o cliente, esse micro-container desliga ou fica congelado.
+
+**Por que o API Gateway + Lambda eliminam o Auto Scaling?**
+
+No modelo tradicional com EC2:
+
+Se entrarem 1.000 requisições simultâneas, o Auto Scaling tem que perceber o uso de CPU subindo,
+ligar novas máquinas EC2 (processo que leva minutos) e o Load Balancer tem que atualizar a lista de servidores.
+
+No modelo Serverless:
+
+Se entrarem 1.000 requisições simultâneas:
+
+- O API Gateway recebe as 1.000 chamadas de uma vez.
+
+- O AWS Lambda aciona 1.000 execuções da sua função ao mesmo tempo em milissegundos.
+
+Não existe regra de Auto Scaling para criar, nem métrica de CPU para configurar.
+O próprio serviço cria **instâncias do seu código em paralelo** conforme a demanda chega.
+
+Resumo em uma frase
+No cenário da aula do Mike Deck:
+
+- Load Balancer + EC2 + Auto Scaling: É como alugar uma frota de ônibus para o seu negócio
+(você precisa ajustar quantos ônibus ficam na rua de acordo com a hora do dia).
+
+- API Gateway + AWS Lambda (Serverless): É como chamar um Uber para cada passageiro exatamente
+no segundo em que ele precisa viajar (você não gerencia frota nenhuma, a plataforma simplesmente
+atende cada chamada individualmente e escala sozinha).
+
+
+## Cenário: 50.000 requisições em 1 hora
+> Pergunta:
+> Se temos 50 mil requisições por hora, são 50 mil lambdas com mico-container em paralelo?
+
+Resposta: Depende de quantas requisições acontecem no MESMO MILISSEGUNDO (ao mesmo tempo).
+
+O Lambda não cria 1 container por requisição total do dia, ele cria 1 container por execução SIMULTÂNEA (concorrência).
+
+Imagine que cada chamada da sua função Lambda seja rápida e leve apenas 100 milissegundos (0,1 segundo) para responder.
+
+**Cenário A: O tráfego vem "espalhado" ao longo da hora**
+
+50.000 requisições divididas em 1 hora dão uma média de ~14 requisições por segundo.
+
+- Como a sua função responde super rápido (0,1s), um único container Lambda
+consegue processar 10 requisições por segundo, uma atrás da outra.
+
+- Nesse caso, para atender 50 mil requisições na hora, a AWS vai precisar de apenas
+2 ou 3 containers Lambda rodando em paralelo (eles vão sendo reutilizados no modo Warm).
+
+**Cenário B: O "Pico de Black Friday" (TUDO NO MESMO SEGUNDO)**
+
+Agora imagine que uma promoção começou e as 50.000 requisições chegaram TODAS no exato mesmo segundo!
+
+- Aí sim! Como a AWS precisa processar 50 mil coisas no mesmo instante,
+o AWS Lambda vai criar milhares de micro-containers em paralelo em questão de
+segundos para processar tudo de uma vez.
+
+- Assim que todas as 50.000 requisições forem respondidas, esses micro-containers congelam e são destruídos.
+
+**O Conceito-Chave: Concorrência (Concurrency)**
+No mundo Serverless, o limite que você monitora se chama Concorrência (quantas funções estão rodando no mesmo exato milissegundo).
+
+```
+Concorrência = Requisições por segundo xTempo de execução da função (em segundos)
+```
+
+- Se você recebe 1.000 requisições/seg e cada uma demora 0,1s --> Você precisa de 100 Lambdas em paralelo.
+- Se você recebe 1.000 requisições/seg e cada uma demora 2,0s (uma função mais pesada) --> Você precisa de 2.000 Lambdas em paralelo.
+
+- Por padrão, a AWS dá um limite inicial de 1.000 execuções simultâneas/concorrentes por região para a sua conta (que você pode pedir para aumentar com um clique se precisar de mais).
+
+É por isso que o modelo Serverless é tão poderoso: se o seu código for rápido, um punhado de containers reaproveitados consegue responder centenas de milhares de pessoas sem você gastar quase nada!
+
+**Conconrrência vs Paralelismo**
+O cientista da computação Rob Pike (um dos criadores do Go) resume isso em uma frase perfeita:
+"Concorrência é sobre lidar com muitas coisas ao mesmo tempo. Paralelismo é sobre fazer muitas coisas ao mesmo tempo."
+
+Para entender a diferença de forma bem visual, imagine uma cafeteria:
+
+1. Concorrência (Lidar com várias coisas)
+Significa que o seu sistema foi projetado para gerenciar múltiplas tarefas que
+estão em andamento no mesmo período, mas elas não precisam estar sendo executadas
+no mesmo exato milissegundo.
+
+A metáfora do Café: Pense em 1 barbearia com 1 barbeiro e 5 clientes na fila. 
+O barbeiro atende o Cliente A por 5 minutos (faz a barba), manda ele esperar no sofá 
+para secar a toalha quente, e enquanto isso atende o Cliente B (corta o cabelo).
+
+Ele está lidando com vários clientes ao mesmo tempo (concorrência), mas como ele só tem 2 mãos,
+ele só executa uma tarefa por vez trocando rapidamente entre elas.
+
+<p align="center">
+  <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/b29ea253-6911-45ec-b623-f9980e24e2c0"  />
+</p>
+
+--- 
+
+2. Paralelismo (Fazer várias coisas ao mesmo tempo)
+Significa que você tem hardware físico suficiente (múltiplos núcleos de CPU ou múltiplos containers)
+para executar mais de uma tarefa no mesmo exato instante físico.
+
+A metáfora do Café: Pense em 5 barbeiros trabalhando em paralelo em 5 cadeiras, cortando o cabelo 
+de 5 clientes exatamente no mesmo segundo.
+
+<p align="center">
+  <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/6a05069d-6242-4e50-a166-e4659ed0137f"  />
+</p>
+
+
+Como isso se aplica no AWS Lambda?
+No AWS Lambda, ocorrem as duas coisas juntas, mas a métrica principal que a AWS mede é a Concorrência:
+
+Cada micro-container do Lambda é Single-Threaded por padrão para uma requisição: Ele pega 1 requisição, processa e devolve. Ele não faz paralelismo dentro do mesmo container para requisições diferentes.
+
+Quando chegam 100 requisições no mesmo milissegundo: A AWS usa o Paralelismo de Infraestrutura — ela cria 100 micro-containers em núcleos/máquinas físicas diferentes para rodar todos juntos ao mesmo tempo.
+
+À medida que a resposta de um termina: Esse container fica livre ("morno") e o sistema de Concorrência da AWS redireciona a próxima requisição da fila para ele.
