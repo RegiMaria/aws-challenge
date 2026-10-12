@@ -75,7 +75,7 @@ Cada pasta/arquivo neste repositório representa uma missão e segue o padrão p
 * **DIY (Faça Você Mesmo):** Desafio final de validação resolvido.
 
 Também tem as **Missões secundárias** documentadas:
-- Pets: encontre pets -  🟨 Em andamento
-- Diagramas
+- Pets: encontre pets -  🟩  Concluída
+- Diagramas de architetura - 🟨  Em andamento
 - Flashcards
 - Veículos e mobilidade
