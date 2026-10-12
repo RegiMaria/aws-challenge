@@ -68,6 +68,22 @@ e paga apenas pelos segundos utilizados.
 
 ---
 
+Exemplo do vídeo
+
+
+Este cliente desenvolveu um mecanismo para transcodificar segmentos individuais de um arquivo maior em paralelo
+e juntar as partes novamente no backend. O Amazon S3 é usado como uma área de preparação (staging area) para 
+enviar os arquivos de origem, e eles utilizam range gets dentro do Amazon S3 para extrair subsegmentos 
+específicos de cada arquivo de vídeo individual. Assim, eles conseguem transcodificar cada pequena fatia
+de um arquivo em paralelo. Em seguida, eles pegam essas fatias individuais transcodificadas, 
+colocam-nas em um bucket intermediário e executam outra função Lambda para mesclar as partes.
+
+---
+
+<img width="800" height="350" alt="Image" src="https://github.com/user-attachments/assets/b1cfa763-dc33-4db1-8acf-9a0cd692f3c1" />
+
+---
+
 Resumo do aprendizado
 
 | Métrica / Visão | Processamento Tradicional (EC2) | Processamento Serverless (Lambda) |
