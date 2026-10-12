@@ -1,4 +1,4 @@
-# A Familiar Architecture
+# 01 - A Familiar Architecture
 
 Nessa primeiro aula (A Familiar Architecture), 
 o Mike Deck apresenta o cenário tradicional de infraestrutura na nuvem 
@@ -21,7 +21,4 @@ surgimento do problema de gestão de custos (pagar por máquinas paradas fora do
 do Auto Scaling para ligar/desligar instâncias conforme o tráfego e a distribuição 
 em múltiplas AZs para suportar falhas em data centers.
 
-5.O Problema Final: "Undifferentiated Heavy Lifting" (Trabalho Pesado Não Diferenciado): 
-Ele mostra que, mesmo essa arquitetura sendo excelente e usada por milhares de empresas, 
-ela exige que você perca tempo gerenciando infraestrutura (provisionamento, saúde dos servidores, 
-métricas de escala, patches).
+
