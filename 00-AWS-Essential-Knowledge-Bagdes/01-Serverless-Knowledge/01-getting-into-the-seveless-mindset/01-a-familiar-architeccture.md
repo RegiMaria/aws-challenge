@@ -784,14 +784,14 @@ Se a sua aplicação precisa de respostas em tempo real sem nenhuma variação d
 
 ## Resumo visual: Abordagem tradicional vs Abrodagem Serveless
 
-```bash
+```Bash
 
- ┌─────────────────────────────────────────────────────────┐
- │               ABORDAGEM TRADICIONAL                     │
- │  Clientes ──► [ Load Balancer ] ──► [ Auto Scaling ]    │
- │                                       ├── EC2 (Servidor 1)│
- │                                       └── EC2 (Servidor 2)│
- └─────────────────────────────────────────────────────────┘
+ ┌──────────────────────────────────────────────────────────────┐
+ │               ABORDAGEM TRADICIONAL                          │
+ │  Clientes ──► [ Load Balancer ] ──► [ Auto Scaling ]         │
+ │                                       ├── EC2 (Servidor 1)   │
+ │                                       └── EC2 (Servidor 2)   │
+ └──────────────────────────────────────────────────────────────┘
    * Você configura, monitora e gerencia os servidores.
 
 
