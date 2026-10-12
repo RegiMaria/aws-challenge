@@ -86,3 +86,14 @@ ou segundos porque roda tudo em paralelo.
 (dev, staging, teste-feature) sem pagar nada a mais por infraestrutura parada.
 
 - Isso permite que a equipe teste mais ideias, erre rápido sem custo alto e inove muito mais.
+
+## Certificado dessa trilha
+
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/49f253a9-a9ab-42cf-8ae9-eaaadcdc928b" width="420" alt="AWS Logo"/>
+
+</div>
+
+
