@@ -295,11 +295,11 @@ A grande sacada do modelo Serverless é justamente
 **NÃO precisar usar nem Load Balancer nem Auto Scaling manuais**,
 porque a própria AWS assume esse trabalho por você.
 
-**Arquitetura serveless: Duas Formas de Resolver o Mesmo Problema**
+**Arquitetura serveless: Duas formas de resolver o mesmo problema**
 
 Quando a sua aplicação cresce e recebe muito tráfego, você tem dois caminhos de arquitetura na AWS:
 
-1. O Caminho Tradicional (IaaS - Infraestrutura como Serviço)
+**1. O Caminho Tradicional (IaaS - Infraestrutura como Serviço)**
 EC2 + Load Balancer + Auto Scaling
 
 Como funciona: Você aluga e gerencia os servidores virtuais (EC2).
@@ -310,7 +310,7 @@ cuidar de patches do sistema operacional, etc.
 
 O que você paga: Paga pelo tempo que as máquinas ficarem ligadas (mesmo se ninguém estiver usando o site na madrugada).
 
-2. O Caminho Serverless (FaaS / PaaS - Função como Serviço)
+**2. O Caminho Serverless (FaaS / PaaS - Função como Serviço)**
 API Gateway + AWS Lambda + DynamoDB
 
 Como funciona: Você NÃO aluga servidores. Você apenas envia o seu código (sua função) para a AWS.
@@ -327,7 +327,7 @@ Trabalho do Arquiteto/Dev: Você só escreve a regra de negócio do seu sistema.
 
 O que você paga: Paga estritamente por milissegundo de execução do seu código. Se o site receber 0 acessos na madrugada, você paga R$ 0,00.
 
-**Cenário serveless: API Gateway + Lambda**
+### Cenário serveless: API Gateway + Lambda
 
 No cenário Serverless, o API Gateway e o AWS Lambda entram para SUBSTITUIR de vez a dupla Load Balancer + EC2.
 
@@ -353,7 +353,7 @@ Imagine que um usuário clica em "Comprar produto" no seu site:
 
 2. O AWS Lambda processa a requisição:
 
-- A AWS cria instantaneamente um micro-container, roda a sua função (o código que processa a compra) e salva o resultado no banco de dados.
+- A AWS cria instantaneamente um **micro-container**, roda a sua função (o código que processa a compra) e salva o resultado no banco de dados.
 
 - Assim que a resposta é entregue para o cliente, esse micro-container desliga ou fica congelado.
 
@@ -387,6 +387,13 @@ atende cada chamada individualmente e escala sozinha).
 
 
 ## Cenário: 50.000 requisições em 1 hora
+
+<p align="center">
+  <img width="1000" height="250" alt="Image" src="https://github.com/user-attachments/assets/a0cdb95e-fab5-4c29-990f-dad1a3db2810"   />
+</p>
+
+
+
 > Pergunta:
 > Se temos 50 mil requisições por hora, são 50 mil lambdas com mico-container em paralelo?
 
@@ -395,6 +402,8 @@ Resposta: Depende de quantas requisições acontecem no MESMO MILISSEGUNDO (ao m
 O Lambda não cria 1 container por requisição total do dia, ele cria 1 container por execução SIMULTÂNEA (concorrência).
 
 Imagine que cada chamada da sua função Lambda seja rápida e leve apenas 100 milissegundos (0,1 segundo) para responder.
+
+--- 
 
 **Cenário A: O tráfego vem "espalhado" ao longo da hora**
 
@@ -406,6 +415,8 @@ consegue processar 10 requisições por segundo, uma atrás da outra.
 - Nesse caso, para atender 50 mil requisições na hora, a AWS vai precisar de apenas
 2 ou 3 containers Lambda rodando em paralelo (eles vão sendo reutilizados no modo Warm).
 
+---
+
 **Cenário B: O "Pico de Black Friday" (TUDO NO MESMO SEGUNDO)**
 
 Agora imagine que uma promoção começou e as 50.000 requisições chegaram TODAS no exato mesmo segundo!
@@ -415,6 +426,8 @@ o AWS Lambda vai criar milhares de micro-containers em paralelo em questão de
 segundos para processar tudo de uma vez.
 
 - Assim que todas as 50.000 requisições forem respondidas, esses micro-containers congelam e são destruídos.
+
+---
 
 **O Conceito-Chave: Concorrência (Concurrency)**
 No mundo Serverless, o limite que você monitora se chama Concorrência (quantas funções estão rodando no mesmo exato milissegundo).
@@ -429,6 +442,8 @@ Concorrência = Requisições por segundo xTempo de execução da função (em s
 - Por padrão, a AWS dá um limite inicial de 1.000 execuções simultâneas/concorrentes por região para a sua conta (que você pode pedir para aumentar com um clique se precisar de mais).
 
 É por isso que o modelo Serverless é tão poderoso: se o seu código for rápido, um punhado de containers reaproveitados consegue responder centenas de milhares de pessoas sem você gastar quase nada!
+
+---
 
 **Conconrrência vs Paralelismo**
 O cientista da computação Rob Pike (um dos criadores do Go) resume isso em uma frase perfeita:
@@ -465,6 +480,7 @@ de 5 clientes exatamente no mesmo segundo.
   <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/6a05069d-6242-4e50-a166-e4659ed0137f"  />
 </p>
 
+---
 
 Como isso se aplica no AWS Lambda?
 No AWS Lambda, ocorrem as duas coisas juntas, mas a métrica principal que a AWS mede é a Concorrência:
@@ -474,3 +490,5 @@ Cada micro-container do Lambda é Single-Threaded por padrão para uma requisiç
 Quando chegam 100 requisições no mesmo milissegundo: A AWS usa o Paralelismo de Infraestrutura — ela cria 100 micro-containers em núcleos/máquinas físicas diferentes para rodar todos juntos ao mesmo tempo.
 
 À medida que a resposta de um termina: Esse container fica livre ("morno") e o sistema de Concorrência da AWS redireciona a próxima requisição da fila para ele.
+
+
