@@ -37,6 +37,8 @@ Scaling para ligar/desligar instâncias conforme o tráfego e a distribuição e
 ---
 
 ## 2. How can Serverless help?
+- Link [para as notas de estudos aqui](https://github.com/RegiMaria/aws-challenge/blob/main/00-AWS-Essential-Knowledge-Bagdes/01-Serverless-Knowledge/01-getting-into-the-seveless-mindset/02-how-can-serverless-help.md)
+  
 Aqui o curso vai mostrar os benefícios reais para o negócio e para o desenvolvedor. 
 Você já entendeu a parte técnica, agora vai ver o impacto prático:
 
