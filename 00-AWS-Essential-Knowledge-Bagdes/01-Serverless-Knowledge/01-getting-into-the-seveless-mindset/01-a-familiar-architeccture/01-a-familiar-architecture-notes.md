@@ -21,4 +21,16 @@ surgimento do problema de gestão de custos (pagar por máquinas paradas fora do
 do Auto Scaling para ligar/desligar instâncias conforme o tráfego e a distribuição 
 em múltiplas AZs para suportar falhas em data centers.
 
+5.O Problema Final: "Undifferentiated Heavy Lifting" (Trabalho Pesado Não Diferenciado): 
+Ele mostra que, mesmo essa arquitetura sendo excelente e usada por milhares de empresas, 
+ela exige que você perca tempo gerenciando infraestrutura (provisionamento, saúde dos servidores, 
+métricas de escala, patches).
 
+## Cenário
+
+Um serviço web muito simples, no qual os clientes se comunicam com o seu serviço via HTTP.
+A arquitetura é bem simples, implantamos uma aplicação web em um único servidor, como uma instância do Amazon EC2.
+Configuramo um de banco de dados para persistir os dados.
+
+
+## Mas o que acontece quando você começa a receber mais usuários e mais tráfego?
