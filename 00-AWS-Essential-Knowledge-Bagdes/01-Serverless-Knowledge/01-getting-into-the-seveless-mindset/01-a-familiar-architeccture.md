@@ -1,4 +1,10 @@
+<div align="center">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width="220" alt="AWS Logo"/>
+
 # 01 - A Familiar Architecture
+
+</div>
 
 Nessa primeira aula (A Familiar Architecture), 
 o Mike Deck apresenta o cenário tradicional de infraestrutura na nuvem 
