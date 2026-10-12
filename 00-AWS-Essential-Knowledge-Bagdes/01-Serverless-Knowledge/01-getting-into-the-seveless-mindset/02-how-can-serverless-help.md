@@ -1,4 +1,11 @@
 
+<div align="center">
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/9/93/Amazon_Web_Services_Logo.svg" width="220" alt="AWS Logo"/>
+
+#  02 - How Can Serverless Help?
+
+</div>
 
 Neste capítulo (How Can Serverless Help?), o Mike Deck
 nos faz refletir sobre o que é o Serverless de verdade e
