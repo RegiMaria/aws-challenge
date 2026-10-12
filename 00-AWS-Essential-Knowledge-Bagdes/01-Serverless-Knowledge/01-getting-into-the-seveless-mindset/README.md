@@ -54,6 +54,8 @@ de uma equipe dedicada só para manter servidores vivos.
 
 ## 3. Managed services connected by functions
 
+- [Link para as notas de estudos aqui](https://github.com/RegiMaria/aws-challenge/blob/main/00-AWS-Essential-Knowledge-Bagdes/01-Serverless-Knowledge/01-getting-into-the-seveless-mindset/03-managed-services-connected-by-functions.md)
+
 Aqui vamos aprender que o Serverless não é só o Lambda.
 
 - O Lambda é o "cérebro" que executa o código, mas ele se conecta com vários outros serviços gerenciados da AWS.
