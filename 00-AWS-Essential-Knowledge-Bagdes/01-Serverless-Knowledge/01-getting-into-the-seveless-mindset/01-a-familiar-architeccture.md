@@ -504,7 +504,7 @@ Quando chegam 100 requisições no mesmo milissegundo: A AWS usa o Paralelismo d
 ## Iniciaização de servidores: Estados Cold, Hot e Warm-Up
 
 <p align="center">
-  <img width="600" height="350" alt="Image" src="https://github.com/user-attachments/assets/442dde1a-5664-4485-9ef6-665896d0fada"   />
+  <img width="1000" height="250" alt="Image" src="https://github.com/user-attachments/assets/442dde1a-5664-4485-9ef6-665896d0fada"   />
 </p>
 
 ---
