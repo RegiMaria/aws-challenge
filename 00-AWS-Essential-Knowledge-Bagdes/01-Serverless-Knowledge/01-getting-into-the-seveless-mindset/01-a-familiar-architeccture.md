@@ -389,7 +389,7 @@ atende cada chamada individualmente e escala sozinha).
 ## Cenário: 50.000 requisições em 1 hora
 
 <p align="center">
-  <img width="1000" height="250" alt="Image" src="https://github.com/user-attachments/assets/a0cdb95e-fab5-4c29-990f-dad1a3db2810"   />
+  <img width="1000" height="250" alt="Image" src="https://github.com/user-attachments/assets/d165c0b2-c13c-4986-9d0c-52bd676333d8"  />
 </p>
 
 
