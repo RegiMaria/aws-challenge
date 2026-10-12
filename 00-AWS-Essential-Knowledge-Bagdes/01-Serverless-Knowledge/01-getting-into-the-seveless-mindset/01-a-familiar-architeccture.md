@@ -392,7 +392,7 @@ atende cada chamada individualmente e escala sozinha).
   <img width="1000" height="250" alt="Image" src="https://github.com/user-attachments/assets/d165c0b2-c13c-4986-9d0c-52bd676333d8"  />
 </p>
 
-
+---
 
 > Pergunta:
 > Se temos 50 mil requisições por hora, são 50 mil lambdas com mico-container em paralelo?
@@ -428,6 +428,13 @@ segundos para processar tudo de uma vez.
 - Assim que todas as 50.000 requisições forem respondidas, esses micro-containers congelam e são destruídos.
 
 ---
+
+<p align="center">
+  <img width="1000" height="250" alt="Image" src="https://github.com/user-attachments/assets/9717577c-ead6-4a84-a1d7-7435baac932e"  />
+</p>
+
+---
+
 
 **O Conceito-Chave: Concorrência (Concurrency)**
 No mundo Serverless, o limite que você monitora se chama Concorrência (quantas funções estão rodando no mesmo exato milissegundo).
