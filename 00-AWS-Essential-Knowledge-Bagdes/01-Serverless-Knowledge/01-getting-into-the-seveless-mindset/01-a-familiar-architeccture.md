@@ -780,6 +780,30 @@ Se a sua aplicação precisa de respostas em tempo real sem nenhuma variação d
 | **Como o tráfego é afetado?** | O Load Balancer bloqueia o tráfego até o servidor ficar *Hot*. | O usuário que disparou a requisição aguarda o tempo do *Cold Start*. |
 | **Gerenciamento** | Você configura regras de Auto Scaling e AMI. | 100% gerenciado e transparente pela AWS. |
 
+---
+
+## Resumo visual: Abordagem tradicional vs Abrodagem Serveless
+
+```bash
+
+ ┌─────────────────────────────────────────────────────────┐
+ │               ABORDAGEM TRADICIONAL                     │
+ │  Clientes ──► [ Load Balancer ] ──► [ Auto Scaling ]    │
+ │                                       ├── EC2 (Servidor 1)│
+ │                                       └── EC2 (Servidor 2)│
+ └─────────────────────────────────────────────────────────┘
+   * Você configura, monitora e gerencia os servidores.
+
+
+ ┌─────────────────────────────────────────────────────────┐
+ │               ABORDAGEM SERVERLESS                      │
+ │  Clientes ──► [ API Gateway ] ──► [ AWS Lambda ]        │
+ └─────────────────────────────────────────────────────────┘
+   * Zero servidores para gerenciar. 
+   * A AWS escala de 0 a milhares automaticamente.
+
+
+```
 
 
 
