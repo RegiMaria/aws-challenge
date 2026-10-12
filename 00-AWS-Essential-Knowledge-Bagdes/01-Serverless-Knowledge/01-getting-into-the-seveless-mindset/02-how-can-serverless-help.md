@@ -21,6 +21,8 @@ O AWS Lambda adota exatamente esse modelo. Você só precisa escrever a função
 
 ---
 
+## Event-oriented Architecture
+
 <p align="center">
   <img width="800" height="350" alt="Image" src="https://github.com/user-attachments/assets/943590df-fd9e-4272-a9a8-0b5b308b6564" />
 </p>
