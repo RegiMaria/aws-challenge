@@ -71,6 +71,9 @@ API Gateway (Entrada)---> Lambda (Lógica)---> DynamoDB (Banco de Dados NoSQL) -
 ---
 
 ## 4. From hours to minutes with parallelization
+
+[- Link para notas dos estudos aqui](https://github.com/RegiMaria/aws-challenge/blob/main/00-AWS-Essential-Knowledge-Bagdes/01-Serverless-Knowledge/01-getting-into-the-seveless-mindset/04-parallelization-from-hours-to-minutes.md)
+
 Vamos relembrar nossa conversa sobre Concorrência e Paralelismo do tópico 1.
 Esse tópico vai aprofundar exatamente nisso!
 
@@ -83,6 +86,9 @@ ou segundos porque roda tudo em paralelo.
 ---
 
 ## 5. More environments, more innovations
+
+-Link para nots dos estudos aqui
+
 - Como é muito barato e fácil criar recursos Serverless 
 (você só paga quando usa), você pode criar múltiplos ambientes de teste
 (dev, staging, teste-feature) sem pagar nada a mais por infraestrutura parada.
