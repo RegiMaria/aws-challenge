@@ -53,3 +53,34 @@ Serviços AWS Assíncronos:
 - Amazon S3
 
 - Amazon EventBridge
+
+3. Invocação por Sondagem (Polling / Event Source Mapping)
+
+Projetado para integrar com serviços de streaming e filas da AWS sem gerenciar servidores ou escrever código de conexão.
+
+- Como funciona: A própria AWS gerencia um "sondador" (poller) que monitora o serviço de origem,
+busca os eventos novos e invoca a sua função Lambda de forma síncrona em seu nome.
+
+- Mapeamento de Fonte de Eventos (Event Source Mapping): É a configuração que conecta o serviço de origem à função Lambda e concede as permissões necessárias via IAM.
+
+- Tratamento de Erros: As regras de retentativa variam de acordo com o serviço de origem e sua configuração específica.
+
+Serviços Suportados pelo Event Source Mapping:
+- Amazon SQS
+
+- Amazon Kinesis
+
+- Amazon DynamoDB Streams
+
+- Amazon MQ
+
+- Amazon Managed Streaming for Apache Kafka (MSK) / Apache Kafka auto-gerenciado
+
+
+Resumo Comparativo dos Modelos de Invocação
+
+| **Modelo de Invocação** | **O solicitante espera resposta?** | **Retentativas automáticas?** | **Principais Serviços Integrados** |
+| ----------------------- | ---------------------------------- | --------------------------------------------- | ------------------------------------------- |
+| **Síncrono** | **SIM** | Não (gerenciado na aplicação) | API Gateway, Cognito, CloudFormation, Alexa |
+| **Assíncrono** | **NÃO** | Sim (gerenciado pelo Lambda) + *Destinations* | Amazon S3, SNS, EventBridge |
+| **Sondagem (Polling)** | **NÃO** (AWS faz a sondagem) | Depende da fonte de eventos | SQS, Kinesis, DynamoDB Streams, MSK |
