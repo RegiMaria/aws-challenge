@@ -66,15 +66,15 @@ Aqui está a tabela em formato Markdown com todos os módulos do curso:
 
 | Módulo | Status | Link |
 | --- | --- | --- |
-| **Introduction to Serverless** | Em andamento | [Ver repositório](https://www.google.com/search?q=./) |
-| **How AWS Lambda Works** | Em andamento | [Ver repositório](https://www.google.com/search?q=./) |
-| **AWS Lambda Function Permissions** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
-| **Authoring AWS Lambda Functions** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
-| **Configuring Your Lambda Functions** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
-| **Deploying and Testing Serverless Applications** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
-| **Monitoring and Troubleshooting** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
-| **Additional Resources** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
-| **Knowledge Check** | A iniciar | [Ver repositório](https://www.google.com/search?q=./) |
+| **Introduction to Serverless** | Concluído |  [Ver-notas](https://github.com/RegiMaria/aws-challenge/blob/main/00-AWS-Essential-Knowledge-Bagdes/01-Serverless-Knowledge/02-AWS-lambda-foundations/01-Introduction-to-serverless-notes.md) |
+| **How AWS Lambda Works** | Em andamento | [Ver-notas](https://www.google.com/search?q=./) |
+| **AWS Lambda Function Permissions** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
+| **Authoring AWS Lambda Functions** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
+| **Configuring Your Lambda Functions** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
+| **Deploying and Testing Serverless Applications** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
+| **Monitoring and Troubleshooting** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
+| **Additional Resources** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
+| **Knowledge Check** | A iniciar | [Ver-notas](https://www.google.com/search?q=./) |
 
 
 
