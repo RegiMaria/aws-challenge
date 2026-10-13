@@ -87,7 +87,7 @@ ou segundos porque roda tudo em paralelo.
 
 ## 5. More environments, more innovations
 
--Link para nots dos estudos aqui
+- Link [para notas dos estudos aqui](https://github.com/RegiMaria/aws-challenge/blob/main/00-AWS-Essential-Knowledge-Bagdes/01-Serverless-Knowledge/01-getting-into-the-seveless-mindset/05-more-environments-more-innovation.md)
 
 - Como é muito barato e fácil criar recursos Serverless 
 (você só paga quando usa), você pode criar múltiplos ambientes de teste
