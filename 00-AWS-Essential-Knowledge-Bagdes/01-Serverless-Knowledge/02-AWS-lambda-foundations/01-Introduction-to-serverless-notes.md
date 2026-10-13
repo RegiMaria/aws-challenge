@@ -87,3 +87,15 @@ o serviço já é tolerante a falhas por padrão em múltiplas zonas sem necessi
 6. Pagamento por valor/uso (Pay for value): Você só paga pelo tempo de computação consumido enquanto
 o código é executado, faturado em incrementos de 1 milissegundo (ms). Se a função não é invocada, o custo é zero.
 
+---
+
+## 6. Arquiteturas Orientadas a Eventos (Event-Driven Architectures)
+
+Em uma arquitetura orientada a eventos, as **ações e comunicações entre serviços desacoplados
+são iniciadas por eventos** (mudança de estado, requisição de usuário ou atualização, como colocar
+um item no carrinho de compras).
+
+- Os eventos são observáveis (ex: uma nova mensagem num log) em vez de dirigidos (ex: um comando direto para fazer algo).
+
+- O AWS Lambda é o coração desse modelo: a maioria dos serviços da AWS gera eventos que atuam como fontes (event sources).
+O Lambda executa o código customizado em resposta a esses eventos e pode disparar novas ações em seguida.
