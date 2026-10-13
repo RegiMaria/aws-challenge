@@ -99,3 +99,89 @@ um item no carrinho de compras).
 
 - O AWS Lambda é o coração desse modelo: a maioria dos serviços da AWS gera eventos que atuam como fontes (event sources).
 O Lambda executa o código customizado em resposta a esses eventos e pode disparar novas ações em seguida.
+
+---
+
+## 7. O que é uma Função Lambda (Lambda Function)?
+
+Uma Função Lambda é o código que você roda no AWS Lambda.
+Pode ser vista como uma aplicação pequena e autônoma.
+
+- Estrutura: Inclui o seu código e as configurações associadas (nome da função, requisitos de recursos e permissões).
+
+- Stateless (Sem estado): Não possui vínculo fixo com a infraestrutura subjacente.
+a AWS lança quantas cópias forem necessárias em paralelo para acompanhar a taxa de eventos de entrada.
+
+- Fontes de Eventos (Event Sources): Após subir o código, você conecta gatilhos como uploads no Amazon S3,
+alterações em tabelas do Amazon DynamoDB, fluxos do Amazon Kinesis ou notificações do Amazon SNS.
+
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/a9b4bce0-60bf-4e23-bff4-9cfbb4505101"  width="600" alt="AWS Logo"/>
+
+</div>
+
+---
+
+## 8. Producers, routers, consumers
+Componentes da Arquitetura Orientada a Eventos (Event-Driven Architecture)
+
+Em uma arquitetura orientada a eventos no AWS Lambda, o fluxo de dados e ações é dividido em três papeis fundamentais:
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/e08659f0-976a-4e93-9c41-55428acacb8d"  width="600" alt="AWS Logo"/>
+
+</div>
+
+
+**1. Produtores de Eventos (Event Producers / Event Sources)**
+
+São os serviços, aplicações ou dispositivos que **geram o evento sempre que ocorre uma mudança de estado ou uma ação** no sistema.
+
+**O que fazem:** Detectam a alteração (ex: upload de um arquivo, novo registro no banco de dados, requisição HTTP)
+e publicam essa informação na forma de uma notificação de evento.
+
+Exemplos na AWS:
+
+- Amazon S3 (quando um novo arquivo é enviado);
+
+- Amazon DynamoDB (quando um item é inserido ou modificado via DynamoDB Streams);
+
+- Amazon API Gateway (quando uma requisição HTTP chega do cliente);
+
+- Dispositivos AWS IoT ou repositórios no AWS CodeCommit.
+
+**2. Roteadores / Intermediários de Eventos (Event Routers / Brokers)**
+
+São os serviços responsáveis por filtrar, rotear e entregar os eventos do Produtor para o Consumidor
+adequado de forma totalmente desacoplada.
+
+**O que fazem:** Garantem que os eventos cheguem ao destino correto sem que o Produtor precise saber quem vai processar a informação.
+
+Exemplos na AWS:
+
+- Amazon EventBridge: Barramento de eventos (event bus) que roteia eventos com base em regras personalizadas;
+
+- Amazon SNS: Envia notificações para múltiplos assinantes simultaneamente;
+
+- Amazon SQS: Armazena eventos em filas para serem processados em ordem e com tolerância a falhas.
+
+**3. Consumidores de Eventos (Event Consumers / Handlers)**
+
+São os serviços que recebem o evento, processam a informação e executam a regra de negócio.
+
+**O que fazem:** O AWS Lambda atua como o consumidor primário nesse modelo. 
+Quando o evento chega, o Lambda dispara a função customizada para processar os dados recebidos no payload.
+
+- Ações Subsequentes: Uma vez executada, a função Lambda pode responder ao cliente, salvar dados em um repositório ou gerar um novo evento, transformando-se também em um produtor para o próximo passo do fluxo.
+
+```dockerfile
+
+ ┌─────────────────┐       ┌─────────────────┐       ┌─────────────────┐
+ │   PRODUCERS     │ ────► │     ROUTERS     │ ────► │    CONSUMERS    │
+ │ (Event Sources) │       │ (Event Busses)  │       │ (AWS Lambda /   │
+ └─────────────────┘       └─────────────────┘       │  Event Handlers)│
+                                                     └─────────────────┘
+```
