@@ -209,6 +209,38 @@ devem ser colocadas fora da função Handler (no código estático/global).
 permitindo que todos os Warm Starts subsequentes reutilizem essas conexões e objetos já
 inicializados na memória instantaneamente!
 
+# Boas Práticas: Minimizando Cold Starts e Aproveitando Warm Starts
+
+A latência de inicialização de um ambiente de execução (Cold Start) ocorre quando uma função fica sem uso por um tempo, quando há um pico repentino de chamadas concorrentes ou quando o código da função é atualizado. 
+
+Para a maioria das aplicações isso não é um problema, mas para sistemas síncronos que exigem respostas ultra-rápidas, essa latência pode afetar o desempenho.
+
+---
+
+## 1. Mitigando Cold Starts com Provisioned Concurrency
+
+Além de otimizar a estrutura do código, a AWS oferece o recurso de **Concorrência Provisionada** (*Provisioned Concurrency*):
+
+* **Como funciona:** O Lambda aloca e prepara ambientes de execução concorrentes **antes** que as requisições cheguem.
+* **Benefício:** Garante latência mínima previsível, respondendo em **poucos milissegundos (duplo dígito de ms)** mesmo em grandes escalas.
+* **Diferença do modelo sob demanda:** Toda a etapa de *Setup* e execução do código de inicialização (*Init Phase*) é realizada previamente.
+
+---
+
+##  5 Boas Práticas para Aproveitar Warm Starts no Código
+
+Para garantir que as invocações seguintes (*Warm Starts*) sejam o mais rápidas e eficientes possível, siga estas recomendações na escrita do código:
+
+| N° | Boa Prática | Descrição |
+| :---: | :--- | :--- |
+| **1** | **Armazene e referencie dependências localmente** | Mantenha as bibliotecas necessárias junto ao pacote da função ou em Lambda Layers, evitando downloads ou buscas externas dinâmicas durante a execução. |
+| **2** | **Limite a re-inicialização de variáveis** | Declare e inicialize variáveis globais/estáticas (como SDKs e configurações) **fora do manipulador principal (*handler*)** para que sejam reutilizadas entre chamadas. |
+| **3** | **Verifique e reutilize conexões existentes** | Adicione código para checar se uma conexão com banco de dados ou cliente HTTP já está aberta antes de criar uma nova. |
+| **4** | **Use o espaço `/tmp` como cache transitório** | Utilize o armazenamento temporário em disco (`/tmp`) do ambiente de execução para guardar arquivos baixados ou dados intermediários reaproveitáveis. |
+| **5** | **Garanta que processos em segundo plano foram concluídos** | Certifique-se de que todas as *threads*, *promises* ou subprocessos assíncronos terminem antes de finalizar a execução do *handler*. |
+
+
+
 
 
 
