@@ -1,4 +1,6 @@
-# 02 - How AWS Lambda Works: Modelos de Invocação
+# 02 - How AWS Lambda Works
+
+## Modelos de Invocação
 
 Para entender a arquitetura orientada a eventos do AWS Lambda, 
 é essencial compreender como as fontes de eventos (event sources) iniciam as funções para executar o código.
@@ -84,3 +86,131 @@ Resumo Comparativo dos Modelos de Invocação
 | **Síncrono** | **SIM** | Não (gerenciado na aplicação) | API Gateway, Cognito, CloudFormation, Alexa |
 | **Assíncrono** | **NÃO** | Sim (gerenciado pelo Lambda) + *Destinations* | Amazon S3, SNS, EventBridge |
 | **Sondagem (Polling)** | **NÃO** (AWS faz a sondagem) | Depende da fonte de eventos | SQS, Kinesis, DynamoDB Streams, MSK |
+
+---
+
+## Ambiente de Execução do AWS Lambda & Otimização de Performance
+
+O AWS Lambda executa as suas funções dentro de um Ambiente de Execução (Execution Environment),
+que é um ambiente seguro, isolado e totalmente gerenciado.
+Ele é responsável por gerenciar os recursos de computação,
+o ciclo de vida do runtime (mecanismo de execução da linguagem) e as extensões externas associadas à função.
+
+
+1. O Ciclo de Vida do Ambiente de Execução
+
+O ciclo de vida do ambiente de execução do Lambda é dividido em 3 fases principais:
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/63866c2f-f773-47a0-ac9a-cba2ea84228e"   width="600" alt="AWS Logo"/>
+
+</div>
+
+---
+
+```Bash
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 1. INIT PHASE                                               │
+ │    Extension Init ──► Runtime Init ──► Function Init        │
+ └──────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 2. INVOKE PHASE                                             │
+ │    Executa o Handler da Função                              │
+ └──────────────────────────────┬──────────────────────────────┘
+                                │ (Inatividade)
+                                ▼
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 3. SHUTDOWN PHASE                                           │
+ │    Encerra Extensões ──► Encerra Runtime ──► Apaga Ambiente │
+ └─────────────────────────────────────────────────────────────┘
+
+
+```
+
+--- 
+
+### 1. Fase de Inicialização (Init Phase)
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/ab69a8a0-7bfa-47b7-a471-345662f5ec61"  width="600" alt="AWS Logo"/>
+
+</div>
+Ocorre quando o Lambda cria ou "descongela" um ambiente de execução com os recursos configurados (memória, variáveis de ambiente, permissões). É dividida em três subfases sequenciais:
+
+- Extension Init: Inicia todas as extensões externas configuradas.
+
+- Runtime Init: Inicializa o runtime da linguagem (ex: Node.js, Python, JVM).
+
+- Function Init: Executa o código estático/global da função (todo o código que fica fora do handler principal,
+como importação de bibliotecas e conexões com banco de dados).
+
+> A fase de Init ocorre na primeira invocação da função ou antecede as
+> chamadas caso o Provisioned Concurrency (Concorrência Provisionada) esteja ativado.
+
+---
+
+## 2. Fase de Invocação (Invoke Phase)
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/ca112081-d1f4-416b-bf9b-d7699d45f534"  width="600" alt="AWS Logo"/>
+
+</div>
+
+Nesta fase, o Lambda executa o manipulador (handler) da função.
+Após a conclusão do processamento do evento, o ambiente fica preparado e aguardando uma próxima invocação.
+
+
+---
+
+## 3. Fase de Encerramento (Shutdown Phase)
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/258eee0c-a327-4ecd-9931-48cd0e237b5c"  width="600" alt="AWS Logo"/>
+
+</div>
+
+Se a função passar um período de tempo sem receber novas invocações, esta fase é disparada:
+
+- O Lambda desliga o runtime.
+
+- Envia um sinal de encerramento para as extensões para que finalizem de forma limpa.
+
+- Remove e destrói o ambiente de execução.
+
+---
+## Otimização de Performance: Cold Start vs. Warm Start
+
+Como as aplicações serverless escalam dinamicamente,
+entender a diferença entre inicialização fria e quente é fundamental para reduzir latência
+e aumentar o rendimento (throughput).
+
+| Tipo de Inicialização | O que acontece nos bastidores? | Impacto na Latência |
+| :--- | :--- | :--- |
+| **Cold Start (Inicialização Fria)** | É necessário criar um **novo ambiente de execução**. A AWS precisa baixar o código da função, alocar memória, iniciar o *runtime*, carregar as extensões e rodar o código estático/global (*Init Phase*) antes de executar o *handler*. | **Maior latência** na primeira chamada ou durante picos repentinos de tráfego. |
+| **Warm Start (Inicialização Quente)** | A AWS **reaproveita o ambiente de execução** de uma chamada anterior que já estava pronto ("aquecido"). A execução pula toda a *Init Phase* e vai direto para a *Invoke Phase*. | **Resposta ultra-rápida** (poucos milissegundos). |
+
+<div align="center">
+
+<img src="https://github.com/user-attachments/assets/49353c47-0896-413b-afc5-7827ecafa396" width="600" alt="AWS Logo"/>
+
+</div>
+
+**Dica de Otimização Prática**
+
+- Código Fora do Handler: Todas as operações pesadas que não dependem
+do evento específico (como importar pacotes, inicializar SDKs e abrir conexões com banco de dados)
+devem ser colocadas fora da função Handler (no código estático/global).
+
+- Dessa forma, esses scripts rodam apenas uma única vez durante a Init Phase do Cold Start,
+permitindo que todos os Warm Starts subsequentes reutilizem essas conexões e objetos já
+inicializados na memória instantaneamente!
+
+
+
+
+Nesta fase, o Lambda executa o manipulador (handler) da função. Após a conclusão do processamento do evento, o ambiente fica preparado e aguardando uma próxima invocação.
+
