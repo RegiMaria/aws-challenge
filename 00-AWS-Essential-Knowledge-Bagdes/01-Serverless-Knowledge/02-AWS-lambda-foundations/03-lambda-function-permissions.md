@@ -124,3 +124,32 @@ Exemplo de Resource-Based Policy (Permissão para o Amazon S3):
 | **Evento associado** | Fontes do tipo *Push* (ex.: API Gateway, S3, SNS). | Fontes do tipo *Poll* ou ações internas do código (ex.: DynamoDB, SQS). |
 | **Ação padrão** | `lambda:InvokeFunction` | Ações de SDK/serviços (ex.: `s3:GetObject`, `dynamodb:PutItem`). |
 | **Requisito do Criador** | Requer permissões de gerenciamento na função. | Requer que o criador possua a permissão `iam:PassRole`. |
+
+---
+
+## 4. Acesso a Recursos dentro de uma VPC e Segurança Privada
+
+Por padrão, as funções Lambda são executadas em uma rede de sistema VPC isolada pela AWS.
+Se a sua função precisar acessar recursos internos de uma rede privada (como instâncias RDS, ElastiCache ou APIs privadas):
+
+**A. Configuração de VPC:**
+1. É necessário configurar os Subnet IDs e os Security Group IDs na função Lambda.
+
+2. A Execution Role precisa ter a política gerenciada `AWSLambdaVPCAccessExecutionRole`,
+que concede permissão para criar, descrever e excluir Interfaces de Rede Elásticas
+(ENIs - Elastic Network Interfaces) dentro da sua VPC.
+
+**B. AWS PrivateLink (Interface VPC Endpoints)**
+
+Para conectar instâncias da sua VPC privada às APIs do Lambda de forma segura sem tráfego pela internet:
+
+- Cria um Interface VPC Endpoint pelo AWS PrivateLink.
+
+- Não necessita de Internet Gateway, NAT Gateway, VPN ou Direct Connect.
+
+- O tráfego de rede nunca sai da rede privada da AWS.
+
+
+
+
+
