@@ -80,3 +80,39 @@ Exemplo de Estrutura de uma Execution Role:
 ```
 > Permite que o Lambda assuma a role para rodar o código
 
+---
+## 3. Resource-Based Policy (Política Baseada em Recurso)
+
+A Resource-Based Policy (também conhecida como Function Policy) define quais *principals*
+(usuários, roles, serviços AWS ou outras contas AWS) têm **autorização** para invocar a função Lambda.
+
+- **Modelos de Invocação Push:** Geralmente é criada automaticamente quando você adiciona um gatilho de origem (trigger) como Amazon API Gateway ou Amazon S3.
+
+- **Acesso Multi-Conta (Cross-Account):** Facilita a concessão de acesso a funções residentes em outras contas AWS.
+
+- **Limite de Tamanho:** As Resource Policies possuem um limite físico de tamanho em bytes.
+Se muitas contas precisarem disparar a mesma função e estourarem o limite, deve-se transitar para o uso de IAM Roles com permissão de `sts:AssumeRole`.
+
+Exemplo de Resource-Based Policy (Permissão para o Amazon S3):
+
+```JSON
+{
+  "Version": "2012-10-17",
+  "Id": "default",
+  "Statement": [
+    {
+      "Sid": "s3-invoke-permission",
+      "Effect": "Allow",
+      "Principal": {
+        "Service": "s3.amazonaws.com"
+      },
+      "Action": "lambda:InvokeFunction",
+      "Resource": "arn:aws:lambda:us-west-2:123456789012:function:my-s3-function"
+    }
+  ]
+}
+
+```
+> Concede ao serviço Amazon S3 autorização para executar a ação lambda:InvokeFunction na função `my-s3-function`
+
+
