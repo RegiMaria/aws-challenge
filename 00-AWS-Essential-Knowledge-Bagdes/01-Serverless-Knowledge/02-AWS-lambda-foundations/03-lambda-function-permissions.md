@@ -115,4 +115,12 @@ Exemplo de Resource-Based Policy (Permissão para o Amazon S3):
 ```
 > Concede ao serviço Amazon S3 autorização para executar a ação lambda:InvokeFunction na função `my-s3-function`
 
+## Tabela Comparativa: Resource Policy vs. Execution Role
 
+| **Característica** | **Resource-based Policy** | **IAM Execution Role** |
+|---|---|---|
+| **Foco principal** | Permissão para **INVOCAR** a função. | Permissão para a função **ATUAR** em outros serviços. |
+| **Criação / Associação** | Criada ao adicionar gatilhos (*triggers*) ou políticas personalizadas. | Criada ou selecionada no momento em que a função Lambda é criada. |
+| **Evento associado** | Fontes do tipo *Push* (ex.: API Gateway, S3, SNS). | Fontes do tipo *Poll* ou ações internas do código (ex.: DynamoDB, SQS). |
+| **Ação padrão** | `lambda:InvokeFunction` | Ações de SDK/serviços (ex.: `s3:GetObject`, `dynamodb:PutItem`). |
+| **Requisito do Criador** | Requer permissões de gerenciamento na função. | Requer que o criador possua a permissão `iam:PassRole`. |
