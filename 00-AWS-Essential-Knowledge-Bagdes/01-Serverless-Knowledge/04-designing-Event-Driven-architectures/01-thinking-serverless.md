@@ -50,4 +50,26 @@ com diversos outros serviços gerenciados:
 > de negócio, enquanto os serviços gerenciados da AWS assumem o "trabalho pesado não diferenciado"
 >  (undifferentiated heavy lifting) na integração entre os componentes.
 
+## 4. Padrão Serverless Simples (Comunicação Síncrona)
 
+Um padrão simples para processar pedidos em um fluxo de e-commerce é a RESTful Microservice clássica:
+
+```
+ ┌──────────┐ HTTP  ┌─────────────────┐       ┌───────────────┐       ┌─────────────────┐
+ │ Cliente  │ ────► │ Amazon API      │ ────► │ AWS Lambda    │ ────► │ Amazon          │
+ │          │       │ Gateway         │       │ (Lógica)      │       │ DynamoDB        │
+ └──────────┘       └─────────────────┘       └───────────────┘       └─────────────────┘
+
+ ```
+1. A informação do pedido chega via chamada API sobre HTTP
+2. O Amazon API Gateway gerencia as requisições e respostas da API.
+3. O AWS Lambda executa a lógica de negócio para validar e processar a chamada
+4. O Amazon DynamoDB armazena os dados do pedido de forma persistente.
+
+## O Desafio das APIs Síncronas
+
+Embora este padrão seja simples de implementar, APIs síncronas em arquiteturas
+serverless trazem desafios: aumentam o tempo de espera do usuário, criam acoplamento
+rígido entre os serviços e elevam o risco de timeouts ou acúmulo de requisições pendentes.
+Por isso, para criar sistemas altamente resilientes e escaláveis, o ideal é evoluir do padrão 
+síncrono para padrões assíncronos.
