@@ -129,7 +129,14 @@ utilizar WebSockets com GraphQL via AWS AppSync é o padrão ideal.
 - O cliente pode usar filtros nativos do GraphQL para receber estritamente as alterações de dados que necessita.
 
 
+**Comparativo: API Gateway vs. AWS AppSync para Status**
 
+| **Recurso**             | **Amazon API Gateway (REST/WebSocket)**                                     | **AWS AppSync (GraphQL)**                                                                |
+|-------------------------|-----------------------------------------------------------------------------|------------------------------------------------------------------------------------------|
+| **Padrão de API**       | REST / WebSockets tradicionais.                                             | GraphQL com Subscriptions nativas.                                                       |
+| **Inscrição em Dados**  | Requer gerenciamento manual de conexões em tabelas DynamoDB.                | Nativa — o cliente se inscreve e recebe atualizações de alterações de estado automaticamente. |
+| **Filtragem de Dados**  | Payload fixo retornado pelo endpoint.                                       | O cliente especifica exatamente os campos que deseja receber.                            |
+| **Controle de Tráfego** | Ideal para gerenciamento fino de APIs (Throttling, planos de uso, versões). | Excelente para UIs reativas e sincronização em tempo real.                              |
 
 
 
