@@ -45,3 +45,58 @@ O Client Polling é o método tradicional para consultar o status de transaçõe
 - Desperdício e Custo Elevação: Dezenas de requisições HTTP são enviadas sem alteração de estado, consumindo recursos e gerando
 custos desnecessários tanto no cliente quanto na AWS.
 
+---
+
+## 2. Padrão Webhooks com Amazon SNS
+Os Webhooks são retornos de chamada HTTP (user-defined HTTP callbacks) orientados a eventos, 
+eliminando a necessidade de o cliente ficar consultando o servidor.
+
+```
+
+ ┌─────────┐  1. Envia Pedido + URL do Webhook ──► ┌─────────────┐
+ │         │  ◄── Recebe ID ────────────────────── │ API Gateway │
+ │ Cliente │                                       └─────────────┘
+ │ (Servidor│  2. Notificação de Conclusão (Push)         ▲
+ │ Web)    │ ◄────────────────────────────── ┌─────┴─────┐ │ (Task
+ └─────────┘                                 │ Amazon SNS│ │  Complete)
+                                             └───────────┘ │
+                                                   │       │
+                                           ┌───────┴───────┴──────┐
+                                           │  AWS Step Functions  │
+                                           └──────────────────────┘
+
+```
+
+**Como Funciona:**
+
+- O cliente registra o seu próprio endpoint Webhook (ex: `[https://meu-site.com/api/callback](https://meu-site.com/api/callback)`).
+
+- O serviço backend processa a tarefa em segundo plano através do Step Functions.
+
+- Ao finalizar, o Step Functions aciona o Amazon SNS enviando uma mensagem.
+
+- O Amazon SNS realiza uma chamada HTTP/HTTPS para o Webhook do cliente enviando o payload com o status e os dados.
+
+
+**Tipos de Clientes:**
+
+- Trusted Clients (Clientes Confiáveis): Quando você gerencia ambos os lados do sistema.
+O uso do Amazon SNS com inscritos HTTP (HTTP Subscribers) fornece mecanismo nativo de retentativa
+e backoff exponencial caso o endpoint do cliente esteja fora do ar.
+
+- Untrusted Clients (Clientes Não Confiáveis/Externos): Exige um cadastro prévio do Webhook e acordos rígidos de SLA e janelas de expiração de retentativa.
+
+**Prós e Contras:**
+✅ Vantagens:
+
+- Muito mais eficiente computacionalmente- zero chamadas desnecessárias.
+
+- Notificação quase em tempo real.
+
+- O Amazon SNS gerencia retentativas automáticas e exponencial backoff em falhas de entrega.
+
+❌ Desvantagens:
+
+- Exige que o cliente mantenha e exponha um endpoint Web público ativo.
+
+- Maior complexidade na gestão de segurança (autenticação de requisições recebidas).
