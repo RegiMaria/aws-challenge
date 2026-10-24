@@ -138,8 +138,13 @@ utilizar WebSockets com GraphQL via AWS AppSync é o padrão ideal.
 | **Filtragem de Dados**  | Payload fixo retornado pelo endpoint.                                       | O cliente especifica exatamente os campos que deseja receber.                            |
 | **Controle de Tráfego** | Ideal para gerenciamento fino de APIs (Throttling, planos de uso, versões). | Excelente para UIs reativas e sincronização em tempo real.                              |
 
+**Resumo Comparativo dos 3 Padrões**
 
-
+| **Padrão**               | **Complexidade no Cliente**       | **Latência da Notificação**                | **Custo/Eficiência**                  | **Melhor Caso de Uso**                                     |
+|--------------------------|-----------------------------------|--------------------------------------------|---------------------------------------|------------------------------------------------------------|
+| **Client Polling**       | Baixa                             | Alta (limitada pelo intervalo de polling)  | Ineficiente (muitas chamadas vazias)  | Migração rápida de sistemas legados síncronos.             |
+| **Webhooks (SNS)**       | Média (precisa expor API)         | Baixa (notificação quase em tempo real)    | Alta eficiência                       | Integração entre sistemas backend e serviços de terceiros. |
+| **WebSockets (AppSync)** | Baixa/Média (usando SDK AppSync)  | Quase nula (comunicação contínua em tempo real) | Alta eficiência                  | Aplicações interativas, dashboards e sincronização em tempo real. |
 
 
 
