@@ -100,3 +100,45 @@ e backoff exponencial caso o endpoint do cliente esteja fora do ar.
 - Exige que o cliente mantenha e exponha um endpoint Web público ativo.
 
 - Maior complexidade na gestão de segurança (autenticação de requisições recebidas).
+
+# 3. Padrão WebSockets com AWS AppSync
+Para aplicações orientadas a dados e interfaces reativas em tempo real (como dashboards e aplicativos mobile),
+utilizar WebSockets com GraphQL via AWS AppSync é o padrão ideal.
+
+```
+
+ ┌─────────┐  1. Conexão Persistente / Inscrição GraphQL ──► ┌──────────────┐
+ │         │  ◄── Atualizações de Status em Tempo Real ────── │ AWS AppSync  │
+ │ Cliente │                                                 │ (GraphQL +   │
+ └─────────┘                                                 │  WebSockets) │
+                                                             └──────┬───────┘
+                                                                    │
+                                                             ┌──────┴───────┐
+                                                             │ AWS Step     │
+                                                             │ Functions    │
+                                                             └──────────────┘
+
+```
+
+**Como Funciona:**
+
+- O cliente estabelece uma conexão bidirecional WebSockets com o AWS AppSync utilizando Subscriptions do GraphQL.
+
+- À medida que o workflow no Step Functions/Lambda altera o estado dos dados, o AppSync notifica instantaneamente os clientes inscritos (*Subscribers*).
+
+- O cliente pode usar filtros nativos do GraphQL para receber estritamente as alterações de dados que necessita.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
