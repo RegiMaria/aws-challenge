@@ -61,3 +61,18 @@ A escolha entre Data Streams e Data Firehose depende do nível de controle e dos
 | Garantia de Ordem | Garantida dentro do shard (ordem exata e exactly-once). | Ordem não garantida; mensagens podem ser entregues mais de uma vez. |
 | Comportamento de Falha | Falhas bloqueiam o shard até que o erro seja corrigido ou o tempo de retenção expire. | Faz 3 tentativas e descarta/envia os registros com falha para uma pasta `processing_failed` no S3. |
 | Transformação de Dados | Requer código customizado no consumidor. | Permite transformação via Lambda ou conversão direta para Parquet / ORC antes de salvar. |
+
+
+**C. Análise em Tempo Real com Kinesis Data Analytics**
+
+O Kinesis Data Analytics permite executar consultas SQL ou aplicações Apache
+Flink diretamente sobre o fluxo de dados em movimento (sliding windows).
+
+- Pré-processamento: Pode acionar uma função Lambda para enriquecer, filtrar ou transformar os dados antes do SQL ser executado.
+
+- Fontes e Destinos: Aceita entradas vindas de Kinesis Data Streams ou Kinesis Data Firehose e pode enviar os
+resultados para esses mesmos serviços ou para uma função Lambda.
+
+---
+
+## 2. Filtros de Mensagens, Fan-out e Aplicações Aninhadas com Amazon SNS
