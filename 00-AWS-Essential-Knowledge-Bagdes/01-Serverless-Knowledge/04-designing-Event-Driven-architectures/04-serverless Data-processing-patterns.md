@@ -36,3 +36,28 @@ sequência única de registros identificados por um Sequence Number e organizado
 | --- | --- | --- |
 | Escrita (Writes / Put) | 1.000 registros por segundo | 1 MB por segundo |
 | Leitura (Reads / Get) | 5 transações por segundo (até 10.000 registros) | 2 MB por segundo |
+
+**B. Kinesis Data Streams vs. Kinesis Data Firehose**
+
+A escolha entre Data Streams e Data Firehose depende do nível de controle e dos destinos necessários:
+```
+
+┌───────────────────────────────┐               ┌───────────────────────────────┐
+│     Kinesis Data Streams      │               │     Kinesis Data Firehose     │
+├───────────────────────────────┤               ├───────────────────────────────┤
+│ • Controle manual de shards.  │               │ • Auto-managed (sem shards).  │
+│ • Múltiplos consumidores.     │               │ • Destino único por stream.   │
+│ • Ordem e Exactly-Once OK.    │               │ • Entrega direta em S3, Red-  │
+│ • Bloqueia o shard em erro.   │               │   shift, OpenSearch, Splunk.  │
+└───────────────────────────────┘               └───────────────────────────────┘
+
+
+```
+
+| Característica | Amazon Kinesis Data Streams | Amazon Kinesis Data Firehose |
+| --- | --- | --- |
+| Gerenciamento de Capacidade | Você define e gerencia o número de shards. | Totalmente gerenciado pela AWS com base no volume. |
+| Consumidores | Múltiplos consumidores e tipos simultâneos. | Destino único configurado na criação (S3, Redshift, OpenSearch, Splunk). |
+| Garantia de Ordem | Garantida dentro do shard (ordem exata e exactly-once). | Ordem não garantida; mensagens podem ser entregues mais de uma vez. |
+| Comportamento de Falha | Falhas bloqueiam o shard até que o erro seja corrigido ou o tempo de retenção expire. | Faz 3 tentativas e descarta/envia os registros com falha para uma pasta `processing_failed` no S3. |
+| Transformação de Dados | Requer código customizado no consumidor. | Permite transformação via Lambda ou conversão direta para Parquet / ORC antes de salvar. |
