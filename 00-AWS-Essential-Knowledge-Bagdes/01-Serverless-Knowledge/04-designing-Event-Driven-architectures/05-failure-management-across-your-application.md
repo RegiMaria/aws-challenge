@@ -169,3 +169,28 @@ Nos estados do tipo `Task` e `Parallel`, você pode configurar tratamento de err
 ```
 > Boa Prática: Todo código de produção no Step Functions que invoca uma função Lambda deve
 > tratar explicitamente as exceções de serviço do Lambda: `Lambda.ServiceException` e `Lambda.SdkClientException`
+
+
+**B. O Padrão SAGA (Saga Pattern) para Transações Distribuídas**
+
+Em arquiteturas de microsserviços, cada serviço possui seu próprio banco de dados, o que impede o uso
+de transações ACID tradicionais. O Padrão SAGA gerencia falhas em transações de longa duração executando transações
+compensatórias que desfazem os passos anteriores se um erro ocorrer no meio do caminho.
+
+Exemplo: Reserva de Viagem (Hotel + Vôo + Carro)
+
+```
+
+                    [ Fluxo Principal (Happy Path) ]
+  BookHotel ───────► BookFlight ───────► BookRental ───────► [Sucesso]
+      │                  │                   │
+      ▼ (Falha)          ▼ (Falha)           ▼ (Falha)
+  CancelHotel ◄──── CancelFlight ◄──── CancelRental
+                [ Transações Compensatórias ]
+
+```
+1. Tentativa: O fluxo tenta reservar o Hotel --> Vôo  -->  Carro de aluguel.
+2. Falha na Reserva do Carro: Se o estado BookRental falhar, o Step Functions ativa a captura de erro e executa CancelRental -->  CancelFlight -->  CancelHotel.
+3. Resultado: O sistema retorna ao estado consistente anterior sem deixar reservas parciais pendentes.
+
+
