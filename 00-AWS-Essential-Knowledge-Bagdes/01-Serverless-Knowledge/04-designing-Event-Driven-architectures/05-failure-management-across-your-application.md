@@ -19,3 +19,25 @@ para alarmes no CloudWatch.
 
 - Quando você gera o SDK a partir de um stage do Amazon API Gateway, o código gerado já inclui esses mecanismos de
 retentativa embutidos para facilitar a integração pelos clientes.
+
+---
+
+## 2. Tipos de Erros em Funções Lambda
+
+Quando uma chamada falha, o erro se enquadra em uma de duas categorias:
+```
+
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 1. FUNCTION ERROR (Erro de Função)                          │
+ │    O Lambda entregou o evento com sucesso, mas a função   │
+ │    lançou uma exceção/erro ou estourou o Timeout.           │
+ └──────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+ ┌────────────────────────────────────────────────────────────────┐
+ │ 2. INVOCATION ERROR (Erro de Invocação)                        │
+ │    A requisição foi rejeitada ANTES da função receber o        │
+ │    evento (Ex: payload gigante, sem permissão IAM, Throttling) │
+ └────────────────────────────────────────────────────────────────┘
+
+```
