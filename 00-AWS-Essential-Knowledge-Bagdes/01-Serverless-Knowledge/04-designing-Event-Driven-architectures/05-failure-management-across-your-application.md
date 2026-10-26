@@ -135,3 +135,37 @@ Destinations em vez de DLQs tradicionais.
 | **Amazon SNS / S3 (Assíncrono)** | 15 min (Lambda) | 2 retentativas automáticas (até 6h em fila). | **On-Failure Destination** (SQS, SNS, EventBridge, Lambda) ou DLQ. |
 | **Kinesis / DynamoDB Streams** | Retenção do Stream (ex.: 24h) | Repete até ter sucesso ou expirar o dado. | Usar **BisectBatch**, **MaxRetryAttempts** e **On-Failure Destination**. |
 | **Amazon SQS (Polling)** | 15 min (Lambda) | Repete até o `maxReceiveCount` ser atingido. | Configurar **DLQ na fila SQS de origem**. |
+
+---
+
+À medida que uma aplicação serverless se expande e se torna um sistema distribuído de microsserviços,
+a gestão de falhas precisa ir além de uma única função Lambda e cobrir o fluxo ponta a ponta da aplicação.
+
+## 1. AWS Step Functions para Gestão de Falhas
+
+Utilizar o AWS Step Functions permite orquestrar retentativas e tratamentos de erro de
+forma declarativa na Amazon States Language (ASL), eliminando a necessidade de escrever
+código manual de retry/backoff dentro das funções Lambda.
+
+**A. Campos Retry e Catch**
+
+Nos estados do tipo `Task` e `Parallel`, você pode configurar tratamento de erros nativo:
+
+```
+
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 1. RETRY (Tenta Novamente)                                  │
+  │    Configura tentativas com backoff exponencial e jitter    │
+  │    para erros transientes (Ex: Lambda.ServiceException).    │
+  └──────────────────────────────┬──────────────────────────────┘
+                                 │ (Se os retries falharem)
+                                 ▼
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 2. CATCH (Captura e Desvia)                                 │
+  │    Captura a exceção específica ou genérica (States.ALL)    │
+  │    e desvia o fluxo para um estado de Fallback/Compensação. │
+  └─────────────────────────────────────────────────────────────┘
+
+```
+> Boa Prática: Todo código de produção no Step Functions que invoca uma função Lambda deve
+> tratar explicitamente as exceções de serviço do Lambda: `Lambda.ServiceException` e `Lambda.SdkClientException`
