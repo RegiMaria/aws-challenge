@@ -114,7 +114,24 @@ sem que as mensagens fiquem visíveis para outros consumidores prematuramente.
 
 - Dead-Letter Queue (DLQ): Configure uma DLQ na fila SQS de origem com um `maxReceiveCount` para capturar mensagens com falhas persistentes.
 
+---
 
+## 4. On-Failure Destinations vs. Dead-Letter Queues (DLQ)
 
+Para fontes assíncronas e de stream, a AWS recomenda usar On-Failure
+Destinations em vez de DLQs tradicionais.
 
+| **Característica** | **Dead-Letter Queue (DLQ)** | **On-Failure Destination** |
+|---|---|---|
+| **Destinos Suportados** | SQS ou SNS | SQS, SNS, EventBridge ou outra função Lambda |
+| **Conteúdo do Payload** | Contém apenas o objeto do evento de entrada | Contém o evento de entrada + metadados detalhados de execução e stack trace de erro |
+| **Flexibilidade** | Configuração fixa, acoplada à versão da função | Permite roteamento flexível e configurações de On-Success e On-Failure sem alterar o código |
 
+**Tabela Resumo do Tratamento de Erros por Modelo**
+
+| **Modelo / Evento** | **Timeout Padrão / Máximo** | **Comportamento de Retentativa** | **Onde Tratar Falhas Persistentes?** |
+|---|---|---|---|
+| **API Gateway (Síncrono)** | 30s | **Nenhuma retentativa automática.** | Tratar no SDK / Código do Cliente. |
+| **Amazon SNS / S3 (Assíncrono)** | 15 min (Lambda) | 2 retentativas automáticas (até 6h em fila). | **On-Failure Destination** (SQS, SNS, EventBridge, Lambda) ou DLQ. |
+| **Kinesis / DynamoDB Streams** | Retenção do Stream (ex.: 24h) | Repete até ter sucesso ou expirar o dado. | Usar **BisectBatch**, **MaxRetryAttempts** e **On-Failure Destination**. |
+| **Amazon SQS (Polling)** | 15 min (Lambda) | Repete até o `maxReceiveCount` ser atingido. | Configurar **DLQ na fila SQS de origem**. |
