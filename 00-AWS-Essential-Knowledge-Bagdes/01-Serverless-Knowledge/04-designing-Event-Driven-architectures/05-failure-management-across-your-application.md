@@ -85,6 +85,35 @@ Para resolver isso, utilize os 4 recursos de gestão de falhas em streams:
 
 **Exemplo Prático de Divisão de Lotes (Bisect):**
 
+1. lote original de 10 registros falha na 3ª posição.
+
+2. O Lambda divide o lote em dois lotes de 5 e reseta os contadores de retry.
+
+3. O primeiro lote de 5 falha novamente; o Lambda o divide em um lote de 2 e outro de 3.
+
+4. O lote de 2 processa com sucesso! O lote de 3 falha e é dividido em 1 (o registro ruim) e 2.
+
+5. O registro ruim esgota o Maximum Retry Attempts e é enviado para a On-Failure Destination (SNS/SQS).
+
+6. O Lambda avança o ponteiro e processa os lotes restantes sem travar o stream.
+
+> ⚠️ Idempotência é Obrigatória: Como a divisão de lotes reprocessa registros válidos que estavam no mesmo lote original,
+> seu código deve ser idempotente (capaz de reprocessar o mesmo evento sem duplicar dados).
+
+**D. Eventos baseados em Filas (Ex: Amazon SQS)**
+
+- Visibilidade: Se a função falha ou estoura o timeout, o lote de mensagens volta a ficar visível na fila quando o Visibility Timeout expira.
+
+- Configuração Recomendada de Timeout:
+```
+Visibility Timeout do SQS = 6 x Timeout da Função Lambda
+
+```
+- Por que multiplicar por 6? Garante tempo suficiente para o Lambda tentar novamente em caso de throttling
+sem que as mensagens fiquem visíveis para outros consumidores prematuramente.
+
+- Dead-Letter Queue (DLQ): Configure uma DLQ na fila SQS de origem com um `maxReceiveCount` para capturar mensagens com falhas persistentes.
+
 
 
 
