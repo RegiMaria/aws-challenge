@@ -213,3 +213,21 @@ pré-construídas para backup, indexação e reprocessamento (replay) de eventos
 permitindo que esses eventos sejam reprocessados para outro ambiente em um cenário de recuperação de desastres (Disaster Recovery).
 
 ## 3. Rastreamento Distribuído com AWS X-Ray
+
+Em ecossistemas orientados a eventos, rastrear o caminho de uma requisição que passa por API Gateway, SQS,
+Lambda, Step Functions e DynamoDB pode ser um desafio. O AWS X-Ray fornece visibilidade distribuída ponta a ponta.
+
+```
+   
+ ┌─────────────┐     ┌──────────────┐     ┌──────────────┐     ┌──────────────┐
+ │ API Gateway │ ──► │  AWS Lambda  │ ──► │  Amazon SNS  │ ──► │ Amazon DynDB │
+ └─────────────┘     └──────────────┘     └──────────────┘     └──────────────┘
+  └──────────────────────────────────────────────────────────────────────────┘
+                         [ AWS X-Ray Trace ID (Header) ]
+
+
+```
+
+**A. Conceitos Fundamentais do X-Ray**
+
+
