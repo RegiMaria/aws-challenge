@@ -229,5 +229,13 @@ Lambda, Step Functions e DynamoDB pode ser um desafio. O AWS X-Ray fornece visib
 ```
 
 **A. Conceitos Fundamentais do X-Ray**
+- Trace ID: Um identificador único propagado nos cabeçalhos HTTP que acompanha a requisição através de todos os microsserviços.
 
+- Segments (Segmentos): Dados de performance e estado enviados pelos serviços AWS para o X-Ray.
+
+- Subsegments (Subsegmentos): Visibilidade granular dentro do código da aplicação (ex: tempo exato gasto em uma consulta SQL ou chamada de SDK).
+
+- Annotations (Anotações): Pares de chave-valor (ex: `OrderId: 1234`) indexados pelo X-Ray que permitem filtrar e pesquisar traces específicos no console.
+
+- Service Graph (Mapa de Serviços): Uma representação visual de todos os pontos de integração da aplicação, destacando automaticamente chamadas bem-sucedidas, lentas ou com falha.
 
