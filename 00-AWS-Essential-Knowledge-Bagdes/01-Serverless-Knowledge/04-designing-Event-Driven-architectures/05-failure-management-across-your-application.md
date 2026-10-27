@@ -193,4 +193,18 @@ Exemplo: Reserva de Viagem (Hotel + Vôo + Carro)
 2. Falha na Reserva do Carro: Se o estado BookRental falhar, o Step Functions ativa a captura de erro e executa CancelRental -->  CancelFlight -->  CancelHotel.
 3. Resultado: O sistema retorna ao estado consistente anterior sem deixar reservas parciais pendentes.
 
+## 2. Dead-Letter Queues (DLQ) & Event Replay Pipelines
 
+**A. Comparativo de DLQs: Lambda vs. Fila SQS de Origem**
+
+| **Característica** | **DLQ na Função Lambda** | **DLQ na Fila SQS de Origem** |
+|---|---|---|
+| **Onde é configurada?** | Diretamente na configuração da função Lambda. | Como parte da política da própria fila SQS (*Redrive Policy*). |
+| **Gatilho de Envio** | Mensagens que falham após as **2 retentativas automáticas** nativas das chamadas assíncronas. | Mensagens que atingem o limite de **`maxReceiveCount`** definido na política da fila. |
+| **Uso Principal** | Para fontes de evento **assíncronas** (ex.: S3, SNS). | Para fontes do tipo **Polling** (SQS). |
+| **Requisito do Sistema** | Ambas necessitam de um mecanismo para reprocessar (*redrive*) as mensagens de volta para a origem. | Ambas necessitam de um mecanismo para reprocessar (*redrive*) as mensagens de volta para a origem. |
+
+**B. AWS Event Fork Pipelines (Event Replay Pipeline)**
+
+Disponíveis no AWS Serverless Application Repository (SAR), os Event Fork Pipelines fornecem arquiteturas
+pré-construídas para backup, indexação e reprocessamento (replay) de eventos sem precisar recriar soluções do zero.
