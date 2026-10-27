@@ -208,3 +208,8 @@ Exemplo: Reserva de Viagem (Hotel + Vôo + Carro)
 
 Disponíveis no AWS Serverless Application Repository (SAR), os Event Fork Pipelines fornecem arquiteturas
 pré-construídas para backup, indexação e reprocessamento (replay) de eventos sem precisar recriar soluções do zero.
+
+- Event Replay Pipeline: Enfileira eventos de um tópico do Amazon SNS em uma fila SQS,
+permitindo que esses eventos sejam reprocessados para outro ambiente em um cenário de recuperação de desastres (Disaster Recovery).
+
+## 3. Rastreamento Distribuído com AWS X-Ray
