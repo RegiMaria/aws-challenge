@@ -45,3 +45,46 @@ Incorreto. Se o tamanho/acumulo da fila aumenta, o Lambda aumenta a concorrênci
 ❌ If the visibility timeout expires before the Lambda function processes the messages, messages will be deleted by the queue.
 
 Incorreto. Se o tempo de visibilidade expira antes do processamento terminar, as mensagens voltam a ficar visíveis na fila para serem lidas novamente por outros processos (o que gera reprocessamento ou duplicação). Elas não são deletadas.
+
+---
+
+## 2. A company owns an ecommerce website that sells dog pajamas.
+Whenever an order is placed for a product, the company wants to send an email alert to
+the customer and at the same time process the order and update the inventory database. After a popular talk show
+host talked about the website, the company is having issues processing orders as they come in.
+The company often creates duplicate orders for their customers.
+
+Which of the following architectures would meet the company's requirements and create a better customer experience?
+
+01. Use the claim check pattern. Add the order into an Amazon S3 bucket and create a presigned URL. Use an AWS Lambda function to send a message with that URL to
+a standard Amazon Simple Queue Service (Amazon SQS) queue. Use Lambda to poll the queue, filter the message, send an email to the customer, and update the database.
+
+02. Use the claim check pattern. Add the order into an Amazon S3 bucket and create a presigned URL. Use an AWS Lambda function to send a message with that URL
+to a First-In-First-Out (FIFO) Amazon Simple Queue Service (Amazon SQS) queue. Use Lambda to poll the queue, filter the message, send an email to the customer, and update the database.
+
+03. Use the Amazon Simple Notification Service (Amazon SNS) fan-out pattern. When the order is placed, send a message to the SNS topic, with customer email addresses and
+a standard Amazon Simple Queue Service (Amazon SQS) queue as the subscribers. Use AWS Lambda to poll the queue, filter the message, and update the database.
+
+04. Use the Amazon Simple Notification Service (Amazon SNS) fan-out pattern. When the order is placed, send a message to the SNS topic, with customer email
+addresses and a First-In-First-Out (FIFO) Amazon Simple Queue Service (Amazon SQS) queue as the subscribers. Use AWS Lambda to poll the queue, filter the message, and update the database.
+
+**A resposta correta é:**
+
+> Use the Amazon Simple Notification Service (Amazon SNS) fan-out pattern. When the order is placed, send a message to the SNS topic, with customer 
+> email addresses and a First-In-First-Out (FIFO) Amazon Simple Queue Service (Amazon SQS) queue as the subscribers. Use AWS Lambda to poll the queue,
+> filter the message, and update the database.
+
+
+1. Padrão Fan-Out (Amazon SNS):
+
+- A empresa precisa realizar duas ações simultâneas a partir de um único evento (pedido realizado): enviar o e-mail de confirmação ao cliente e processar
+a atualização do estoque no banco de dados.
+
+- O SNS Fan-Out publica a mensagem uma única vez no tópico e distribui a notificação em paralelo para múltiplos inscritos.
+
+2. Fila FIFO do Amazon SQS (Fim dos Pedidos Duplicados):
+
+- O enunciado destaca que a empresa está enfrentando um grande pico de tráfego e gerando pedidos duplicados para os clientes.
+
+- As filas FIFO (First-In-First-Out) do SQS garantem desduplicação exata (Exactly-once processing) e preservam a ordem exata das transações, eliminando
+a criação de pedidos duplicados sob alta carga.
