@@ -87,7 +87,7 @@ a criação de pedidos duplicados sob alta carga.
 
 ---
 
-03. A team of developers noticed that one of their AWS Lambda functions keeps failing. One of the team members wonders why the service did not retry the request.
+## 3. A team of developers noticed that one of their AWS Lambda functions keeps failing. One of the team members wonders why the service did not retry the request.
 
 Which of the following could explain why the function was not retried?
 
@@ -117,4 +117,30 @@ limites configurados (como maxReceiveCount no SQS ou Maximum Retry Attempts no K
 
 ---
 
+## 4. Which of these patterns for communicating status updates do you use to get status information on a long-running transaction?
 
+01. WebSockets with AWS AppSync
+
+02. Client polling pattern
+
+03. Saga pattern with AWS Step Functions
+
+04. Webhooks with Amazon Simple Notification Service (Amazon SNS)
+
+**A resposta correta é:**
+
+Client polling pattern
+
+
+Client Polling Pattern: É o padrão tradicional utilizado especificamente para consultar o status de transações de longa duração (long-running transactions). Nesse padrão, 
+o cliente recebe um Job ID inicial e faz requisições HTTP periódicas (a cada $X$ segundos) para um endpoint de status até que o processamento seja concluído.
+
+
+🔴 Por que as outras opções não são a resposta para essa pergunta?
+
+- Webhooks (Amazon SNS): É um modelo de Push (callback HTTP) onde o servidor notifica o cliente quando o trabalho é concluído, sem que o cliente precise ficar consultando (polling).
+
+- WebSockets (AWS AppSync): É um modelo de conexão persistente bidirecional em tempo real (via GraphQL Subscriptions), ideal para interfaces reativas orientadas a dados.
+
+- Saga Pattern (AWS Step Functions): É um padrão de gestão de falhas e transações distribuídas (usado para aplicar transações compensatórias em microsserviços), e não um padrão
+de comunicação de status com o cliente.
