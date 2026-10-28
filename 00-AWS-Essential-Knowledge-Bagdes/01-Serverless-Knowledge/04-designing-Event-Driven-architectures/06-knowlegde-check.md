@@ -144,3 +144,38 @@ o cliente recebe um Job ID inicial e faz requisições HTTP periódicas (a cada 
 
 - Saga Pattern (AWS Step Functions): É um padrão de gestão de falhas e transações distribuídas (usado para aplicar transações compensatórias em microsserviços), e não um padrão
 de comunicação de status com o cliente.
+
+
+---
+
+
+## 5. Which of the following are attributes of using streaming services for serverless data processing? (Select TWO.)
+
+01. With streaming services, data is deleted when it has been consumed.
+ 
+02. The data on the stream remains in the stream for a designated period of time and then is gone, regardless of consumer behavior.
+
+03. Each stream consumer needs to maintain a pointer to a particular position in the stream. After consuming the message, the consumer moves
+the pointer forward to the next record and processes it.
+
+5. With streaming services, you can configure retries up to a certain number of attempts, and dead-letter queues are built in to the service.
+
+6. With streaming services, the core entity is an individual message.
+
+
+**As duas respostas corretas são:**
+
+- The data on the stream remains in the stream for a designated period of time and then is gone, regardless of consumer behavior.
+
+- Each stream consumer needs to maintain a pointer to a particular position in the stream. After consuming the message,
+the consumer moves the pointer forward to the next record and processes it.
+
+**Explicação**
+🟢 The data on the stream remains in the stream for a designated period of time and then is gone, regardless of consumer behavior.
+
+Em serviços de streaming (como o Amazon Kinesis Data Streams), os dados ficam armazenados em um buffer temporário durante o período de retenção configurado (ex: 24 horas por padrão). Quando o tempo expira, os dados são apagados, independentemente de os consumidores terem lido ou não essa informação.
+
+🟢 Each stream consumer needs to maintain a pointer to a particular position in the stream. After consuming the message, the consumer moves the pointer forward to the next record and processes it.
+
+Cada consumidor do stream é responsável por controlar o seu próprio ponteiro de leitura (sequence number / offset) para saber exatamente qual foi o último registro lido e avançar para o próximo na sequência.
+
