@@ -2,11 +2,6 @@
 
 ## 1.Which of the following are true about Amazon Simple Queue Service (Amazon SQS) and AWS Lambda? (Select TWO.)
 
-
-Select the correct answers and choose SUBMIT. For keyboard only accessibility, press TAB to navigate to the correct answer, and press SPACEBAR to select.
-Repeat the step until all correct responses are checked, then press ENTER to submit.
-
-
 01 - A best practice is to set the visibility timeout to 3 times the timeout you configure for your Lambda function.
 
 
@@ -88,3 +83,38 @@ a atualização do estoque no banco de dados.
 
 - As filas FIFO (First-In-First-Out) do SQS garantem desduplicação exata (Exactly-once processing) e preservam a ordem exata das transações, eliminando
 a criação de pedidos duplicados sob alta carga.
+
+
+---
+
+03. A team of developers noticed that one of their AWS Lambda functions keeps failing. One of the team members wonders why the service did not retry the request.
+
+Which of the following could explain why the function was not retried?
+
+01. The team is using an asynchronous event source to invoke their function, which has no built-in retries for a failed or throttled request.
+
+02. The team is invoking their function to poll an Amazon Simple Queue Service (Amazon SQS) queue, which has no built-in retries for a failed or throttled request.
+
+03. The team is using a synchronous event source to invoke their function, which has no built-in retries for a failed or throttled request.
+
+04. The team is using a streaming service, like Amazon Kinesis Data Streams, to invoke the function, which has no built-in retries for a failed or throttled request.
+
+**A resposta correta é:**
+
+The team is using a synchronous event source to invoke their function, which has no built-in retries for a failed or throttled request.
+
+- Invocação Síncrona (Synchronous Invocation): Quando uma função Lambda é chamada de forma síncrona (como via Amazon API Gateway ou chamadas diretas com InvocationType=RequestResponse), 
+
+o serviço Lambda executa o código e retorna a resposta/erro diretamente para o chamador sem realizar retentativas automáticas embutidas.
+A responsabilidade de tratar erros e tentar novamente é inteiramente do código do cliente.
+
+🔴 Por que as outras estão erradas?
+- Assíncrona: Fontes assíncronas possuem retentativas automáticas (por padrão, 2 retentativas para erros de função e até 6 horas de fila para throttling).
+
+- SQS / Streaming (Kinesis): Fontes baseadas em polling/streaming possuem retentativas automáticas e contínuas até que a mensagem expire ou atinja os
+limites configurados (como maxReceiveCount no SQS ou Maximum Retry Attempts no Kinesis).
+
+
+---
+
+
