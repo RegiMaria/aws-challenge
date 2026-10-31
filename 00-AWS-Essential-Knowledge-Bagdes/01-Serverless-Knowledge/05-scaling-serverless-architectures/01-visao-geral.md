@@ -1,11 +1,12 @@
 # 05 - Thinking Serverless at Scale
 
- ## 1. Visão Geral e Objetivos do Curso
+ ## 1. Visão geral e objetivos do curso
  
 Este curso é voltado para a criação de arquiteturas serverless capazes de crescer de forma confiável — seja por
 crescimento orgânico contínuo ou por picos repentinos de uso (como cenários de fusões e aquisições ou eventos de alta demanda).
 
-## Objetivos de Aprendizagem:
+## Objetivos de aprendizagem:
+
 - Métricas de Escala: Comparar arquiteturas baseadas em AWS Lambda com arquiteturas de nuvem tradicionais em termos de o que e como medir para suportar o tráfego.
 
 - Otimização de Desempenho: Aplicar boas práticas para otimizar o tempo de execução de funções Lambda (Cold e Warm Starts).
@@ -22,3 +23,22 @@ crescimento orgânico contínuo ou por picos repentinos de uso (como cenários d
 
 Enquanto em arquiteturas tradicionais a escalabilidade exige o provisionamento de instâncias
 e balanceadores de carga, no modelo serverless o foco muda para a análise de limites e comportamento de eventos.
+
+```
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 1. TRADICIONAL (Amazon EC2 + Auto Scaling)                  │
+  │    • Exige configuração de subredes, grupos de Auto Scaling │
+  │      e instâncias EC2/RDS.                                  │
+  │    • Foco na capacidade de instâncias e recursos ociosos.   │
+  └──────────────────────────────┬──────────────────────────────┘
+                                 │
+                                 ▼
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 2. SERVERLESS (AWS Lambda + Serviços Gerenciados)          │
+  │    • Escala horizontal automática e alta disponibilidade    │
+  │      nativas.                                               │
+  │    • Foco na concorrência, no volume de eventos e nos       │
+  │      limites operacionais de serviço end-to-end.            │
+  └─────────────────────────────────────────────────────────────┘
+
+```
