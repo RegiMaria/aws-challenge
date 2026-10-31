@@ -42,3 +42,11 @@ e balanceadores de carga, no modelo serverless o foco muda para a análise de li
   └─────────────────────────────────────────────────────────────┘
 
 ```
+## Quadro de conceitos
+
+| **Conceito**              | **Arquiteturas Tradicionais (EC2)**                      | **Arquiteturas Serverless (Lambda)**                                  |
+| ------------------------- | -------------------------------------------------------- | --------------------------------------------------------------------- |
+| **Mecanismo de Escala**    | Auto Scaling Groups (métrica de CPU/Memória/Rede).       | Escalonamento horizontal automático orientado a eventos.              |
+| **Gerenciamento de Host**  | Manual (atualização de SO, segurança, *health checks*).  | Totalmente abstraído pela AWS.                                        |
+| **Custo de Ociosidade**    | Alto (paga pelas instâncias paradas aguardando tráfego). | **Zero** (paga apenas enquanto o código é executado).                 |
+| **Gargalos Principais**    | Limites físicos da instância / tempo de provisionamento.| Limites de concorrência da conta/função e conexões a bancos de dados. |
