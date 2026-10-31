@@ -23,3 +23,13 @@ Fórmula de Cálculo da Concorrência (Síncrona / Assíncrona):
 > Para fontes de streaming como Kinesis e DynamoDB Streams, é possível
 > configurar um fator de paralelização para permitir mais de uma invocação
 > concorrente por Shard (dividindo o processamento por Partition Key).
+
+
+
+## 5. Recursos Adicionais (Documentação e Artigos)
+
+| **Tipo** | **Recurso** | **Descrição** |
+|---|---|---|
+| 📖 **Documentação** | [Managing Lambda reserved concurrency](https://docs.aws.amazon.com/lambda/latest/dg/configuration-concurrency.html) | Guia oficial sobre como configurar a concorrência reservada em funções Lambda. |
+| 📰 **Blog Post** | [AWS Lambda Supports Parallelization Factor for Kinesis and DynamoDB Event Sources](https://aws.amazon.com/blogs/compute/new-aws-lambda-scaling-controls-for-kinesis-and-dynamodb-event-sources/) | Explicação sobre como aumentar o throughput de streams com o fator de paralelização. |
+| 📰 **Blog Post** | [New AWS Lambda Scaling Controls for Kinesis and DynamoDB Event Sources](https://aws.amazon.com/blogs/compute/new-aws-lambda-scaling-controls-for-kinesis-and-dynamodb-event-sources/) | Detalhes sobre os controles de escalonamento para fontes de eventos em fluxo. |
