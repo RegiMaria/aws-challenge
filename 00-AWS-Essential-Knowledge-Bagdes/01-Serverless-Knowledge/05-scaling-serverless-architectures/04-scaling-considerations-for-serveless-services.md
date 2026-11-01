@@ -67,12 +67,27 @@ Se você utiliza um Lambda Authorizer para autenticação customizada (ex: valid
 
 - Solução de Mitigação (Auth Caching): Ative o cache de autorização (Authorization Caching). O resultado da autorização fica em cache por um período configurável (de 5 minutos a 1 hora), evitando chamadas repetidas à função autorizadora para o mesmo usuário.
 
+## 3. Decisões Arquiteturais e Trade-offs
 
+Ao projetar arquiteturas serverless, você deve ponderar entre simplicidade e capacidade de escala:
 
+```
+Opção A: Integração com Fila (Maior Desacoplamento)
+┌─────────────┐       ┌────────────┐       ┌──────────────┐       ┌────────────────┐
+│ API Gateway │ ───►  │ Amazon SQS │ ───►  │  AWS Lambda  │ ───►  │ Step Functions │
+└─────────────┘       └────────────┘       └──────────────┘       └────────────────┘
 
+Opção B: Integração Direta (Menor Complexidade)
+┌─────────────┐       ┌────────────────┐
+│ API Gateway │ ───►  │ Step Functions │
+└─────────────┘       └────────────────┘
+```
 
+- Direct Service Integrations (Integrações Diretas): Conectar o API Gateway diretamente ao AWS Step Functions (removendo SQS e Lambda da intermediação) reduz a complexidade da arquitetura.
 
+- Trade-off de Vazão: No entanto, essa abordagem direta exige verificar se a API de destino (ex: StartExecution do Step Functions) suporta o volume de requisições por segundo que o API Gateway enviará.
 
+- Princípio Arquitetural: "Conheça os direcionadores reais do seu negócio e construa o que você precisa, em vez de projetar para uma escala infinita."
 
 
 
