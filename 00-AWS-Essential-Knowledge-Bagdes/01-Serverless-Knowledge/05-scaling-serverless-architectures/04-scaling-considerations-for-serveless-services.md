@@ -89,6 +89,25 @@ Opção B: Integração Direta (Menor Complexidade)
 
 - Princípio Arquitetural: "Conheça os direcionadores reais do seu negócio e construa o que você precisa, em vez de projetar para uma escala infinita."
 
+## 4. Compatibilidade de Limites de Payload (Payload Size)
+
+Ao conectar serviços em uma esteira serverless, o menor limite de payload entre os serviços conectados dita o limite máximo da sua integração:
+
+| **Serviço AWS**        | **Limite Máximo de Payload**                            |
+| ---------------------- | ------------------------------------------------------- |
+| **Amazon API Gateway** | **10 MB**                                               |
+| **Amazon SQS**         | **256 KB**                                              |
+| **AWS Lambda**         | **6 MB** (Invocação Síncrona) / **256 KB** (Assíncrona) |
+
+
+> ⚠️ Atenção: Em uma integração direta do API Gateway (10 MB) para uma fila Amazon SQS (256 KB),
+> o limite efetivo da sua API passa a ser 256 KB. Tentar enviar um payload maior que 256 KB resultará
+> em erro na integração.
+
+
+
+
+
 
 
 
