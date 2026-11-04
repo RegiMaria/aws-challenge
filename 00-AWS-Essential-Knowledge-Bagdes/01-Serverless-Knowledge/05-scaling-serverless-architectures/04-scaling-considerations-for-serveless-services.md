@@ -167,3 +167,4 @@ Uma função de teste "desgovernada" pode derrubar a produção.
 é adotar uma estratégia multi-conta, isolando ambientes em contas AWS separadas 
 organizadas hierarquicamente.
 
+**B. Comportamento sob Picos Repentinos de Tráfego (Burst Behavior)**
