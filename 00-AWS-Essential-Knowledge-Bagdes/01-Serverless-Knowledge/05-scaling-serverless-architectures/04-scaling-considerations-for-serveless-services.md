@@ -104,12 +104,25 @@ Ao conectar serviços em uma esteira serverless, o menor limite de payload entre
 > o limite efetivo da sua API passa a ser 256 KB. Tentar enviar um payload maior que 256 KB resultará
 > em erro na integração.
 
+## 4. Scaling Considerations for Amazon SQS & AWS Lambda
 
+1. Considerações de Escala no Amazon SQS
 
+Quando o Amazon SQS é configurado como fonte de eventos do AWS Lambda, 
+a própria AWS gerencia os processos de consulta (pollers), mas cabe a você ajustar 
+as configurações para otimizar o desempenho e evitar gargalos.
 
+**Comportamento de Escalonamento Automático do Polling**
 
+- Início do Polling: Por padrão, o serviço do Lambda inicia com 5 processos paralelos fazendo polling na fila SQS.
 
+- Crescimento Automático: Se a fila cresce, o Lambda adiciona até 60 novos pollers por minuto, atingindo no máximo
+1.000 lotes simultâneos (ou até o limite de concorrência da conta/função).
 
+- Redução em Erros (Back-off): Se a função Lambda começar a retornar erros, a AWS diminui automaticamente a taxa de polling para evitar sobrecarregar os sistemas downstream.
+
+> ⚠️ Atenção aos Métricas: Se os logs mostrarem um aumento no tamanho da fila (QueueDepth) acompanhado por uma queda nas invocações do Lambda, isso indica que o Lambda está
+> desacelerando o polling devido a erros na função.
 
 
 
