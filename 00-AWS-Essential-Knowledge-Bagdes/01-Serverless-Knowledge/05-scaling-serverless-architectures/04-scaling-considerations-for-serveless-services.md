@@ -104,7 +104,7 @@ Ao conectar serviços em uma esteira serverless, o menor limite de payload entre
 > o limite efetivo da sua API passa a ser 256 KB. Tentar enviar um payload maior que 256 KB resultará
 > em erro na integração.
 
-## 4. Scaling Considerations for Amazon SQS & AWS Lambda
+## 5. Scaling Considerations for Amazon SQS & AWS Lambda
 
 1. Considerações de Escala no Amazon SQS
 
@@ -140,8 +140,30 @@ as configurações para otimizar o desempenho e evitar gargalos.
 | **Timeout da Função**              | 1s a 15 minutos                            | Configurado na função Lambda.                                                       |
 
 
+**2. Considerações de Escala no AWS Lambda**
 
+A. Limites de Concorrência e Estratégia Multi-Conta
 
+```
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 1. RESERVED CONCURRENCY (Concorrência Reservada)            │
+  │    • Garante uma quantia fixa de concorrência para a função.│
+  │    • Impede que a função estoure os recursos da conta.      │
+  └──────────────────────────────┬──────────────────────────────┘
+                                 │
+                                 ▼
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 2. EMERGENCY BRAKE (Freio de Emergência)                    │
+  │    • Definir a concorrência para 0 BLOQUEIA imediatamente   │
+  │      qualquer invocação da função em caso de desastre.      │
+  └─────────────────────────────────────────────────────────────┘
+```
 
+- Segregação por Contas AWS: Manter ambientes de desenvolvimento, 
+teste e produção na mesma conta cria competição por concorrência. 
+Uma função de teste "desgovernada" pode derrubar a produção.
 
+- AWS Organizations & Control Tower: A boa prática para evitar essa competição
+é adotar uma estratégia multi-conta, isolando ambientes em contas AWS separadas 
+organizadas hierarquicamente.
 
