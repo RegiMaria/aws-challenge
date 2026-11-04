@@ -124,6 +124,21 @@ as configurações para otimizar o desempenho e evitar gargalos.
 > ⚠️ Atenção aos Métricas: Se os logs mostrarem um aumento no tamanho da fila (QueueDepth) acompanhado por uma queda nas invocações do Lambda, isso indica que o Lambda está
 > desacelerando o polling devido a erros na função.
 
+**Tabela de Parâmetros: SQS como Fonte de Evento do Lambda**
+
+### Tabela de Parâmetros: SQS como Fonte de Evento do Lambda
+
+| **Parâmetro**                      | **Valor ou Limite**                        | **Quem/Como é Configurado**                                                         |
+| ---------------------------------- | ------------------------------------------ | ----------------------------------------------------------------------------------- |
+| **Tamanho do Lote (*Batch Size*)** | 1 a 10 mensagens                           | Configurado no gatilho da função Lambda.                                            |
+| **Pollers Iniciais Padrão**        | 5 processos paralelos                      | Gerenciado automaticamente pelo Lambda.                                             |
+| **Taxa de Incremento de Pollers**  | Até 60 por minuto                          | Gerenciado automaticamente pelo Lambda.                                             |
+| **Lotes Simultâneos Máximos**      | Até 1.000                                  | Gerenciado automaticamente pelo Lambda.                                             |
+| **Concorrência Máxima de Funções** | Menor valor entre 1.000 ou limite da conta | Definido via *Reserved Concurrency* na função.                                      |
+| **Visibility Timeout**             | 0s a 12 horas                              | Configurado na **fila SQS** (Boa prática: **$6 \times \text{Timeout da Função}$**). |
+| **Número de Retentativas**         | 1 a 1.000 (`maxReceiveCount`)              | Configurado na *Redrive Policy* da **fila SQS**.                                    |
+| **Timeout da Função**              | 1s a 15 minutos                            | Configurado na função Lambda.                                                       |
+
 
 
 
