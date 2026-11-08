@@ -168,3 +168,8 @@ Uma função de teste "desgovernada" pode derrubar a produção.
 organizadas hierarquicamente.
 
 **B. Comportamento sob Picos Repentinos de Tráfego (Burst Behavior)**
+
+Toda a concorrência da sua conta não fica disponível instantaneamente:
+
+1.Aumento Imediato (Immediate Burst): Em um pico repentino de tráfego, o Lambda eleva a
+concorrência instantaneamente até o limite da região.
