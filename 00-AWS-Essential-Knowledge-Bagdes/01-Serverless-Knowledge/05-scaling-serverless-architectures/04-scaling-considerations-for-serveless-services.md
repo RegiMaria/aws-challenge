@@ -173,3 +173,6 @@ Toda a concorrência da sua conta não fica disponível instantaneamente:
 
 1.Aumento Imediato (Immediate Burst): Em um pico repentino de tráfego, o Lambda eleva a
 concorrência instantaneamente até o limite da região.
+
+2. Escalonamento Gradual: Após o limite inicial, o Lambda adiciona 500 invocações por
+minuto até atender a demanda ou atingir o limite da conta.
