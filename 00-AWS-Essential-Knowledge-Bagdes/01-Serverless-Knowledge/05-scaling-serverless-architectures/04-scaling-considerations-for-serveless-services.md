@@ -176,3 +176,8 @@ concorrência instantaneamente até o limite da região.
 
 2. Escalonamento Gradual: Após o limite inicial, o Lambda adiciona 500 invocações por
 minuto até atender a demanda ou atingir o limite da conta.
+
+**C. Alocação de Memória e Otimização de Custos (AWS Lambda Power Tuning)**
+
+A memória RAM é a única variável que você configura para ajustar o desempenho de uma função
+Lambda, pois a capacidade de CPU e E/S (Network/Disk I/O) escalam linearmente com a memória.
