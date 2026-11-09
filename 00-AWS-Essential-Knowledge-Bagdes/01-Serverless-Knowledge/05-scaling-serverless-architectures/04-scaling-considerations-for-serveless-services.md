@@ -181,3 +181,15 @@ minuto até atender a demanda ou atingir o limite da conta.
 
 A memória RAM é a única variável que você configura para ajustar o desempenho de uma função
 Lambda, pois a capacidade de CPU e E/S (Network/Disk I/O) escalam linearmente com a memória.
+
+Função de 256 MB RAM = 2 x CPU  e E/S de uma Função de 128 MB RAM
+
+```
+  ┌─────────────────────────────────────────────────────────────┐
+  │ 💡 MITO: "Menos memória é sempre mais barato."              │
+  │                                                             │
+  │ 🚀 REALIDADE: Dar MAIS memória pode fazer a função rodar   │
+  │    muito mais rápido, RESULTANDO EM UM CUSTO TOTAL MENOR!   │
+  └─────────────────────────────────────────────────────────────┘
+
+```
