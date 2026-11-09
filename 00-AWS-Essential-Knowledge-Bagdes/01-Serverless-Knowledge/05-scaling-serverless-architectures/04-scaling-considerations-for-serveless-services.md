@@ -193,3 +193,9 @@ Função de 256 MB RAM = 2 x CPU  e E/S de uma Função de 128 MB RAM
   └─────────────────────────────────────────────────────────────┘
 
 ```
+**Ferramenta: AWS Lambda Power Tuning**
+
+Um projeto open-source baseado em AWS Step Functions que executa a sua função
+sob várias configurações de memória (ex: 128MB, 256MB, 512MB, 1024MB...) 
+para gerar um gráfico comparando Tempo de Execução vs. Custo, ajudando você 
+a encontrar a melhor relação custo-benefício.
