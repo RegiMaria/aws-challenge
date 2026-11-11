@@ -43,7 +43,15 @@ Processos pendentes serão pausados no fim da execução e retomados no próximo
 O Amazon DynamoDB é a escolha primária para arquiteturas serverless devido à sua capacidade de escala horizontal
 e latência de milissegundos de um único dígito.
 
+### Comparativo: Modo On-Demand vs. Modo Provisioned
 
+| **Característica** | **Modo On-Demand** | **Modo Provisioned** |
+|:---|:---|:---|
+| **Escalonamento** | Automático com base nos picos anteriores. | Definido via **RCUs** (Read Capacity Units) e **WCUs** (Write Capacity Units). |
+| **Comportamento de Pico** | Suporta instantaneamente **até o dobro do pico anterior** de tráfego. | Limitado aos valores alocados; exceder a capacidade gera **Throttling**. |
+| **Modelo de Cobrança** | Pago por requisição individual de leitura/escrita. | Valor fixo mensal/horário baseado na capacidade provisionada. |
+| **Gestão de Custos** | Simplifica o cálculo de custos por transação. | Requer planejamento de capacidade ou uso de Auto Scaling. |
+| **Caso de Uso Ideal** | Cargas imprevisíveis, microsserviços serverless ou início de projetos. | Cargas de trabalho consistentes e altamente previsíveis. |
 
 
 
