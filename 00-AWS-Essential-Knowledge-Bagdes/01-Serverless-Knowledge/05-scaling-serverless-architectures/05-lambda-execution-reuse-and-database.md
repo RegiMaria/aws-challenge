@@ -38,6 +38,12 @@ fora da função manipuladora (handler). A busca ocorre na inicialização (Init
 5. Concluir Processos em Segundo Plano: Garantir que todas as promises, threads ou callbacks terminem antes da saída do código.
 Processos pendentes serão pausados no fim da execução e retomados no próximo Warm Start.
 
+## 2. Escalonamento de Bancos de Dados Serverless: Amazon DynamoDB
+
+O Amazon DynamoDB é a escolha primária para arquiteturas serverless devido à sua capacidade de escala horizontal
+e latência de milissegundos de um único dígito.
+
+
 
 
 
