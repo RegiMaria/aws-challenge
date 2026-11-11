@@ -53,8 +53,23 @@ e latência de milissegundos de um único dígito.
 | **Gestão de Custos** | Simplifica o cálculo de custos por transação. | Requer planejamento de capacidade ou uso de Auto Scaling. |
 | **Caso de Uso Ideal** | Cargas imprevisíveis, microsserviços serverless ou início de projetos. | Cargas de trabalho consistentes e altamente previsíveis. |
 
+**DynamoDB Auto Scaling (no Modo Provisioned)**
 
+- Permite definir limites mínimos e máximos de capacidade e uma meta de utilização (entre 20% e 90%).
 
+- O Auto Scaling ajusta as RCUs/WCUs quando a carga permanece elevada ou baixa por alguns minutos.
+
+**Amazon DynamoDB Accelerator (DAX)**
+
+- O que é: Um cache em memória totalmente gerenciado e altamente disponível criado especificamente para o DynamoDB.
+
+- Casos de Uso: Aplicações com leitura intensa (read-heavy) e requisitos de latência em sub-milissegundos
+(ex: leilões em tempo real, jogos, sistemas financeiros).
+
+- Requisito de Rede: O DAX deve ser instalado dentro de uma VPC. Com as melhorias no Lambda que eliminaram a
+penalidade de Cold Start em VPCs, o uso do DAX com o Lambda tornou-se uma opção altamente eficiente.
+
+## Serverless scaling with traditional relational databases
 
 
 
