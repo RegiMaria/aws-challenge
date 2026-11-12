@@ -137,3 +137,15 @@ Referências:
 |---|---|
 | 🔗 [**Pricing for On-Demand Capacity**](https://aws.amazon.com/dynamodb/pricing/on-demand/) | Detalhes sobre cobrança por requisição de leitura e escrita no modo sob demanda. |
 | 🔗 [**Pricing for Provisioned Capacity**](https://aws.amazon.com/dynamodb/pricing/provisioned/) | Estrutura de custos e alocação de RCUs e WCUs no modo provisionado. |
+
+## Scaling Considerations for Step Functions, Amazon SNS & Kinesis Data Streams
+
+Este módulo aborda como dimensionar corretamente serviços de orquestração, 
+publicação/assinatura e processamento de fluxos contínuos (streams), evitando bloqueios, 
+estrangulamentos (throttling) e custos desnecessários.
+
+**1. Considerações de Escala no AWS Step Functions**
+
+O AWS Step Functions ajuda a gerenciar o escalonamento orquestrando tarefas de longa duração
+(como AWS Fargate, AWS Batch ou recursos on-premises) sem manter funções Lambda ociosas aguardando respostas.
+
