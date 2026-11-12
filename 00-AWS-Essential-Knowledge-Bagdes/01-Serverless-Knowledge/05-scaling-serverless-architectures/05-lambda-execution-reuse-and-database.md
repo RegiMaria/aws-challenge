@@ -110,3 +110,8 @@ a AWS recicla um ambiente Lambda, as conexões ficam abertas até o término do 
 3. Limitação de Concorrência do Lambda: Limitar a concorrência reservada (Reserved Concurrency) na função reduz o
 número de conexões simultâneas que o Lambda tenta abrir, mas limita a escala da aplicação e adiciona complexidade ao
 gerenciamento de contas.
+
+**2. Boas Práticas e Soluções para Gerenciamento de Conexões**
+
+Para contornar o limite de conexões de bancos de dados relacionais em 
+arquiteturas serverless, a boa prática é implementar um mecanismo externo de gerenciamento de pool de conexões.
