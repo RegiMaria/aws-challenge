@@ -149,3 +149,16 @@ estrangulamentos (throttling) e custos desnecessários.
 O AWS Step Functions ajuda a gerenciar o escalonamento orquestrando tarefas de longa duração
 (como AWS Fargate, AWS Batch ou recursos on-premises) sem manter funções Lambda ociosas aguardando respostas.
 
+**Boas Práticas para Escalar o Step Functions:**
+
+- Definição Explícita de Timeouts (TimeoutSeconds): O Step Functions não define um timeout padrão. 
+Se um activity worker falhar ao responder, a execução ficará travada indefinidamente. 
+Sempre configure TimeoutSeconds na Amazon States Language (ASL).
+
+- Padrão Claim Check com Amazon S3 para Payloads Grandes: O Step Functions possui limite no tamanho 
+dos dados passados entre os estados (atualmente 256 KB). Se o payload puder exceder esse limite, 
+salve os dados em um bucket do Amazon S3 e passe apenas o ARN/URI do objeto entre os estados.
+
+- Limites da API (StartExecution): A API de inicialização possui um limite de requisições por
+segundo por conta/região. Realize testes de carga para garantir que chamadas diretas (ex: vindas do API Gateway)
+não ultrapassem essa taxa e gerem throttling.
