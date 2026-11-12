@@ -115,3 +115,9 @@ gerenciamento de contas.
 
 Para contornar o limite de conexões de bancos de dados relacionais em 
 arquiteturas serverless, a boa prática é implementar um mecanismo externo de gerenciamento de pool de conexões.
+
+**A. Uso de um Proxy Database (Amazon RDS Proxy)**
+
+- Um pool de conexões intermediário (proxy) fica posicionado entre as funções Lambda e o banco de dados relacional.
+
+- O proxy gerencia as conexões que chegam do Lambda e mantém um pool persistente e reutilizável com o banco de dados.
