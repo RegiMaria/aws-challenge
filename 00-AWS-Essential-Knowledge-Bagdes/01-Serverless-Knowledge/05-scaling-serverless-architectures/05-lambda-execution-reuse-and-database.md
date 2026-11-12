@@ -71,5 +71,30 @@ penalidade de Cold Start em VPCs, o uso do DAX com o Lambda tornou-se uma opçã
 
 ## Serverless scaling with traditional relational databases
 
+Integrar funções efêmeras do AWS Lambda com bancos de dados relacionais tradicionais 
+(como MySQL, PostgreSQL ou Amazon RDS) apresenta desafios inerentes de arquitetura devido
+à diferença entre o ciclo de vida sem estado do Lambda e o modelo de conexões persistentes dos bancos relacionais.
 
-
+**1. Os Desafios do Lambda com Bancos Relacionais**
+```
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 1. AMBIENTES EFÊMEROS & SEM HOOK DE DESTRUIÇÃO                  │
+ │    • O Lambda cria e destrói ambientes automaticamente.         │
+ │    • Não existe evento/hook para fechar conexões explicitamente.│
+ └──────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 2. SEM COMPARTILHAMENTO DE CONEXÕES                          │
+ │    • Um ambiente de execução só roda UMA função por vez.    │
+ │    • Conexões ociosas em um ambiente NÃO podem ser reusadas │
+ │      por outras funções Lambda.                             │
+ └──────────────────────────────┬──────────────────────────────┘
+                                │
+                                ▼
+ ┌─────────────────────────────────────────────────────────────┐
+ │ 3. RISCO DE VAZAMENTO DE SESSÕES (Connection Exhaustion)     │
+ │    • Picos de tráfego criam centenas de ambientes Lambda,   │
+ │      esgotando o pool de conexões do banco relacional.      │
+ └─────────────────────────────────────────────────────────────┘
+```
