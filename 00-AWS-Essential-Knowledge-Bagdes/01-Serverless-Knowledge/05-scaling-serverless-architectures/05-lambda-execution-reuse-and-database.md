@@ -162,3 +162,14 @@ salve os dados em um bucket do Amazon S3 e passe apenas o ARN/URI do objeto entr
 - Limites da API (StartExecution): A API de inicialização possui um limite de requisições por
 segundo por conta/região. Realize testes de carga para garantir que chamadas diretas (ex: vindas do API Gateway)
 não ultrapassem essa taxa e gerem throttling.
+
+**2. Considerações de Escala no Amazon SNS**
+
+O Amazon SNS oferece conexões assíncronas e execução paralela massiva 
+(padrão fan-out) para funções Lambda ou aplicações aninhadas.
+
+- AWS Event Fork Pipelines: Utilize os modelos pré-construídos disponíveis
+no Serverless Application Repository para modelar pipelines paralelos de backup, indexação e replay de eventos.
+
+- Limite de Políticas de Filtro (Filter Policies): Por padrão, o Amazon SNS permite até 200 políticas
+de filtro por conta e por região AWS aplicadas a um tópico.
