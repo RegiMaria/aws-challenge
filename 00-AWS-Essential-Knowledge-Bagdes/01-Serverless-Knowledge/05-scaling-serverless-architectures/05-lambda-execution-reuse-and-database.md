@@ -98,3 +98,15 @@ Integrar funções efêmeras do AWS Lambda com bancos de dados relacionais tradi
  │      esgotando o pool de conexões do banco relacional.      │
  └─────────────────────────────────────────────────────────────┘
 ```
+**Principais Problemas:**
+
+1. Inicialização de Conexão: Inicializar conexões fora do handler reaproveita a
+conexão em warm starts, mas nunca inicialize mais de uma conexão por ambiente, pois o ambiente nunca
+executará duas funções concorrentemente.
+
+2. Conexões Ociosas e Vazamento (Session Leakage): Como não há um gancho (hook) de encerramento quando
+a AWS recicla um ambiente Lambda, as conexões ficam abertas até o término do tempo de vida (TTL) no banco de dados.
+
+3. Limitação de Concorrência do Lambda: Limitar a concorrência reservada (Reserved Concurrency) na função reduz o
+número de conexões simultâneas que o Lambda tenta abrir, mas limita a escala da aplicação e adiciona complexidade ao
+gerenciamento de contas.
