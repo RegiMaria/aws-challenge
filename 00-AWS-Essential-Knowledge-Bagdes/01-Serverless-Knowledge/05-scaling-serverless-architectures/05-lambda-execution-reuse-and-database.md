@@ -121,3 +121,19 @@ arquiteturas serverless, a boa prática é implementar um mecanismo externo de g
 - Um pool de conexões intermediário (proxy) fica posicionado entre as funções Lambda e o banco de dados relacional.
 
 - O proxy gerencia as conexões que chegam do Lambda e mantém um pool persistente e reutilizável com o banco de dados.
+
+**B. Gerenciamento Dinâmico de Conexões (Dynamic Connections Management)**
+
+- Abordagem onde uma tabela do Amazon DynamoDB é usada para rastrear as conexões permitidas e em uso em tempo real.
+
+- Uma função auxiliar empacotada como uma Lambda Layer incrementa e decrementa a contagem antes de estabelecer novas conexões com o banco.
+
+Referências:
+## Referências e Recursos Adicionais
+
+### 💰 Documentação do Amazon DynamoDB (Precificação)
+
+| **Recurso** | **Descrição** |
+|---|---|
+| 🔗 [**Pricing for On-Demand Capacity**](https://aws.amazon.com/dynamodb/pricing/on-demand/) | Detalhes sobre cobrança por requisição de leitura e escrita no modo sob demanda. |
+| 🔗 [**Pricing for Provisioned Capacity**](https://aws.amazon.com/dynamodb/pricing/provisioned/) | Estrutura de custos e alocação de RCUs e WCUs no modo provisionado. |
