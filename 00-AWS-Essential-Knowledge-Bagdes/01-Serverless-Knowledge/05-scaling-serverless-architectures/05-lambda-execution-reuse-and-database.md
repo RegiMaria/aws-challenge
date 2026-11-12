@@ -173,3 +173,5 @@ no Serverless Application Repository para modelar pipelines paralelos de backup,
 
 - Limite de Políticas de Filtro (Filter Policies): Por padrão, o Amazon SNS permite até 200 políticas
 de filtro por conta e por região AWS aplicadas a um tópico.
+
+**3. Considerações de Escala no Amazon Kinesis Data Streams**
