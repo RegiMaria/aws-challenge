@@ -178,4 +178,11 @@ de filtro por conta e por região AWS aplicadas a um tópico.
 
 O processamento em fluxos contínuos é diretamente governado pelo número de shards configurados no stream.
 
+**Limites Operacionais por Shard:**
+
+Consumidores Padrão (Standard) vs. Enhanced Fan-Out
+
+Quando múltiplos consumidores padrão (até o limite de 5) leem o mesmo shard, 
+eles dividem a banda de 2 MB/s e as 5 leituras/segundo, o que aumenta a latência.
+O Enhanced Fan-Out resolve esse gargalo:
 
