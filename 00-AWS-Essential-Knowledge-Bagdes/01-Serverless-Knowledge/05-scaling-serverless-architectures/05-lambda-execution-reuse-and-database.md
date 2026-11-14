@@ -188,3 +188,12 @@ O Enhanced Fan-Out resolve esse gargalo:
 
 **Troubleshooting e Rebalanceamento (Resharding)**
 
+1. Bloqueio de Shard e Métrica IteratorAge:
+
+- Se uma função Lambda falhar ao processar um registro, 
+o shard inteiro fica bloqueado até que o erro seja resolvido ou o dado expire.
+
+- Monitore a métrica `IteratorAge` no CloudWatch: se ela começar a subir continuamente,
+significa que o consumidor não está acompanhando a velocidade de entrada dos dados.
+
+2. Resharding (Divisão/Aumento de Shards):
