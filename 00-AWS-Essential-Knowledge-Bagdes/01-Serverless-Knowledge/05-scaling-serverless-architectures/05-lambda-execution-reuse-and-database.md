@@ -175,3 +175,7 @@ no Serverless Application Repository para modelar pipelines paralelos de backup,
 de filtro por conta e por região AWS aplicadas a um tópico.
 
 **3. Considerações de Escala no Amazon Kinesis Data Streams**
+
+O processamento em fluxos contínuos é diretamente governado pelo número de shards configurados no stream.
+
+
