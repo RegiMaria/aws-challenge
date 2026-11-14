@@ -186,3 +186,5 @@ Quando múltiplos consumidores padrão (até o limite de 5) leem o mesmo shard,
 eles dividem a banda de 2 MB/s e as 5 leituras/segundo, o que aumenta a latência.
 O Enhanced Fan-Out resolve esse gargalo:
 
+**Troubleshooting e Rebalanceamento (Resharding)**
+
