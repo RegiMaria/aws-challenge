@@ -199,3 +199,6 @@ significa que o consumidor não está acompanhando a velocidade de entrada dos d
 2. Resharding (Divisão/Aumento de Shards):
 
 - Permite adicionar mais shards para absorver o aumento do fluxo de dados.
+  
+- Atenção: Registros antigos que já estavam nos shards originais permanecem neles até serem consumidos;
+apenas os novos registros são distribuídos entre os novos shards com base nas Partition Keys.
