@@ -197,3 +197,5 @@ o shard inteiro fica bloqueado até que o erro seja resolvido ou o dado expire.
 significa que o consumidor não está acompanhando a velocidade de entrada dos dados.
 
 2. Resharding (Divisão/Aumento de Shards):
+
+- Permite adicionar mais shards para absorver o aumento do fluxo de dados.
