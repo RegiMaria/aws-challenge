@@ -37,3 +37,17 @@ brutas para entender o impacto real nos usuários.
 - Orçamento de Erros (Error Budget): Construa mecanismos de tratamento de falhas para lidar com exceções
 fora da curva (outliers). Saiba qual é a margem de erro tolerável pelo negócio e use o teste de carga para
 comprovar que suas retentativas e DLQs funcionam sob estresse.
+
+
+## 2. Boas Práticas e Dicas para Testes de Carga Serverless
+
+Boas Práticas Gerais:
+
+- Use dados e padrões de acesso autênticos: Simule payloads reais e a distribuição geográfica/temporal esperada dos clientes.
+
+- Resolva gargalos de ponta a ponta (End-to-End): Ao otimizar a integração entre dois serviços, verifique se
+você não está apenas empurrando o gargalo para o próximo serviço da fila.
+
+- Mantenha os direcionadores de negócio em mente: Faça trade-offs que entreguem a melhor relação custo-benefício e a melhor experiência para o cliente.
+
+- Valide a gestão de falhas: Teste cenários de *throttling* e falhas parciais para garantir que o sistema se recupera sem perda de dados.
