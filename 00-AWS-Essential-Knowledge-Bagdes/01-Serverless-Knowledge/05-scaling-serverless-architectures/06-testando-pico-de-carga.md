@@ -51,3 +51,23 @@ você não está apenas empurrando o gargalo para o próximo serviço da fila.
 - Mantenha os direcionadores de negócio em mente: Faça trade-offs que entreguem a melhor relação custo-benefício e a melhor experiência para o cliente.
 
 - Valide a gestão de falhas: Teste cenários de *throttling* e falhas parciais para garantir que o sistema se recupera sem perda de dados.
+
+**Dicas Práticas de Execução:**
+
+1. Fique de olho nos limites de serviço (Service Quotas): Limites existem para proteger contra uso indevido. 
+Muitos são soft limits (podem ser aumentados via suporte AWS), mas se não forem monitorados antes do teste, causarão degradação e throttling.
+
+2. Use todas as ferramentas de observabilidade: Habilite métricas detalhadas, alarmes no Amazon CloudWatch e rastreamento
+no AWS X-Ray durante os testes, exatamente como fará em produção.
+
+3. Não faça mock de serviços que você não controla: Execute testes de integração e carga diretamente na nuvem AWS,
+em um ambiente espelho da produção, para observar o comportamento real de rede, limites de API e cold starts.
+
+4. Prepare a capacidade do Amazon DynamoDB: Antes de iniciar o teste de estresse, configure a tabela para o modo *On-Demand* ou ative
+o Auto Scaling com capacidade inicial suficiente para absorver o ciclo do teste sem throttling prematuro.
+
+> A Regra de Ouro: Nenhuma dica se aplica 100% a todas as situações. Mergulhe fundo na sua carga de
+> trabalho específica, teste e monitore em condições reais de produção.
+
+## 3. Recursos Adicionais e Referências
+
