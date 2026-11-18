@@ -71,3 +71,8 @@ o Auto Scaling com capacidade inicial suficiente para absorver o ciclo do teste 
 
 ## 3. Recursos Adicionais e Referências
 
+🔗 [AWS Serverless Computing](https://aws.amazon.com/pt/serverless/) (Página Oficial) — Portal central de computação serverless na AWS.
+
+🔗[ Whitepaper: Serverless Application Lens - AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/welcome.html) — Guia oficial de melhores práticas arquiteturais para aplicações serverless.
+
+
