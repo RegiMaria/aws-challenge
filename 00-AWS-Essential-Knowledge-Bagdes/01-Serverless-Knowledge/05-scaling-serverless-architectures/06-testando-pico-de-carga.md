@@ -75,4 +75,10 @@ o Auto Scaling com capacidade inicial suficiente para absorver o ciclo do teste 
 
 🔗[ Whitepaper: Serverless Application Lens - AWS Well-Architected Framework](https://docs.aws.amazon.com/wellarchitected/latest/serverless-applications-lens/welcome.html) — Guia oficial de melhores práticas arquiteturais para aplicações serverless.
 
+Blogs Técnicos da AWS
 
+- [AWS Architecture Blog: 10 Things Serverless Architects Should Know](https://aws.amazon.com/pt/blogs/architecture/ten-things-serverless-architects-should-know/) — Os 10 fundamentos essenciais para arquitetos serverless.
+
+- [AWS Compute Blog: AWS Lambda](https://aws.amazon.com/pt/blogs/compute/category/compute/aws-lambda/) — Novidades, padrões de design e otimizações do AWS Lambda.
+
+- [AWS Compute Blog: Amazon API Gateway](https://www.google.com/search?q=https://aws.amazon.com/blogs/compute/category/networking-content-delivery/amazon-api-gateway/) — Boas práticas e recursos avançados do API Gateway.
