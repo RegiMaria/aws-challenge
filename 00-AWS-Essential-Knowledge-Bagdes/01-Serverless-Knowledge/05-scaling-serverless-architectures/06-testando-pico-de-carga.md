@@ -82,3 +82,9 @@ Blogs Técnicos da AWS
 - [AWS Compute Blog: AWS Lambda](https://aws.amazon.com/pt/blogs/compute/category/compute/aws-lambda/) — Novidades, padrões de design e otimizações do AWS Lambda.
 
 - [AWS Compute Blog: Amazon API Gateway](https://www.google.com/search?q=https://aws.amazon.com/blogs/compute/category/networking-content-delivery/amazon-api-gateway/) — Boas práticas e recursos avançados do API Gateway.
+
+Palestras Gravadas (Recorded Talks)
+
+🎬 [2021 re:Invent Playlist for Serverless Breakout Sessions](https://www.youtube.com/results?search_query=AWS+reInvent+2021+Serverless+breakout+sessions) - Gravações das sessões do re:Invent focadas em arquiteturas serverless.
+
+🎬[ AWS Lambda Customer Talks](https://www.youtube.com/results?search_query=AWS+Lambda+Customer+Talks) - Casos reais de clientes resolvendo desafios de escala e negócio com AWS Lambda.
