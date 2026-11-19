@@ -32,3 +32,5 @@ Recursos principais para salvar e revisar:
 - OWASP Secure Coding Practices Quick Reference Guide (Guia de Referência Rápida de Práticas de Codificação Segura da OWASP)
 
 - Antes de mergulhar em como proteger suas arquiteturas serverless, é importante entender o que a AWS gerencia e pelo que você é responsável.
+
+Modelo de Responsabilidade Compartilhada (Shared Responsibility Model)
