@@ -34,3 +34,13 @@ Recursos principais para salvar e revisar:
 - Antes de mergulhar em como proteger suas arquiteturas serverless, é importante entender o que a AWS gerencia e pelo que você é responsável.
 
 Modelo de Responsabilidade Compartilhada (Shared Responsibility Model)
+
+O modelo de responsabilidade compartilhada define os aspectos gerenciados 
+pela AWS e os aspectos gerenciados por você (cliente). A divisão muda entre a
+perspectiva de serviços de infraestrutura e a perspectiva de serviços gerenciados (abstraídos):
+
+Perspectiva de serviços de infraestrutura
+- Responsabilidades do cliente (Segurança NA Nuvem / Security IN the Cloud): Dados do cliente;
+Gerenciamento de Plataforma e Aplicação; Configuração de Sistema Operacional, Rede e Firewall;
+Criptografia de Dados no Lado do Cliente; Criptografia de Dados no Lado do Servidor; Proteção de Tráfego de Rede;
+e Controle de Acesso do Cliente.
