@@ -49,3 +49,9 @@ e Controle de Acesso do Cliente.
 - Responsabilidades da AWS (Segurança DA Nuvem / Security OF the Cloud): Serviços Fundamentais
 da AWS (Computação, Armazenamento, Banco de Dados, Rede); Infraestrutura Global da AWS (Zonas de
 Disponibilidade, Regiões, Edge Locations); Endpoints da AWS; e AWS IAM.
+
+Perspectiva de serviços abstraídos (Serverless / Gerenciados):
+
+- As responsabilidades da AWS sobem no gráfico, passando a englobar
+também a configuração de sistema operacional, rede e firewall, bem como o gerenciamento de
+plataforma e aplicação.
