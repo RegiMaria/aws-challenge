@@ -55,3 +55,10 @@ Perspectiva de serviços abstraídos (Serverless / Gerenciados):
 - As responsabilidades da AWS sobem no gráfico, passando a englobar
 também a configuração de sistema operacional, rede e firewall, bem como o gerenciamento de
 plataforma e aplicação.
+
+Esse é um dos grandes benefícios das arquiteturas serverless: ao utilizar serviços gerenciados 
+da AWS, você transfere uma fatia maior da responsabilidade operacional para a AWS. Você continua 
+enfrentando os mesmos desafios de segurança, mas a AWS gerencia grande parte deles em seu nome. 
+Por exemplo, no AWS Lambda, você não é responsável pelo sistema operacional ou configuração de rede 
+onde suas funções são executadas, nem pelo gerenciamento dos runtimes (a menos que você desenvolva 
+custom runtimes).
