@@ -62,3 +62,19 @@ enfrentando os mesmos desafios de segurança, mas a AWS gerencia grande parte de
 Por exemplo, no AWS Lambda, você não é responsável pelo sistema operacional ou configuração de rede 
 onde suas funções são executadas, nem pelo gerenciamento dos runtimes (a menos que você desenvolva 
 custom runtimes).
+
+Três Melhores Práticas de Segurança
+
+As três práticas fundamentais de segurança pelas quais você é responsável são:
+
+1.Seguir o princípio do menor privilégio (Follow the principle of least privilege).
+
+2.Proteger dados em repouso e em trânsito (Protect data at rest and in transit).
+
+3.Auditar seu sistema em busca de alterações, acessos inesperados, padrões incomuns ou erros 
+(Audit your system for changes, unexpected access, unusual patterns, or errors).
+
+*(Em outras palavras: deixe entrar apenas quem você convidou, tranque as coisas privadas
+e garanta que ninguém esteja fazendo nada inesperado durante a visita.)*
+
+
