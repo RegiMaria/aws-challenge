@@ -90,3 +90,5 @@ Você possui três opções principais para autorizar o acesso às suas APIs atr
 AWS ou que podem obter credenciais temporárias do IAM para acessar o ambiente. Adicione permissões restritas (least privilege) à respectiva IAM Role para invocar a API com segurança.
 
 - Amazon Cognito: Fornece um serviço gerenciado com recursos nativos de cadastro e login (sign-in/sign-up) ou atua como um Provedor de Identidade (IdP) em cenários de identidade federada (ideal para aplicações web e mobile quando você ainda não possui um IdP).
+
+- Lambda Authorizers: Invocam uma função Lambda para autenticar e validar um usuário contra um Provedor de Identidade (IdP) existente (como OAuth ou SAML) ou executar lógica adicional de autenticação. Também são úteis para centralizar o acesso a APIs entre múltiplas contas.
