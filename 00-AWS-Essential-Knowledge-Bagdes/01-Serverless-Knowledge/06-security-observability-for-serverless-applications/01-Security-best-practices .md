@@ -81,3 +81,10 @@ e garanta que ninguém esteja fazendo nada inesperado durante a visita.)*
 
 O Amazon API Gateway é a porta de entrada para sua aplicação, 
 sendo o ponto ideal para impedir acessos não autorizados às suas APIs.
+
+Limitando o acesso às APIs no API Gateway
+
+Você possui três opções principais para autorizar o acesso às suas APIs através do API Gateway:
+
+- AWS Identity and Access Management (IAM): Melhor opção para clientes que já estão dentro do seu ambiente
+AWS ou que podem obter credenciais temporárias do IAM para acessar o ambiente. Adicione permissões restritas (least privilege) à respectiva IAM Role para invocar a API com segurança.
