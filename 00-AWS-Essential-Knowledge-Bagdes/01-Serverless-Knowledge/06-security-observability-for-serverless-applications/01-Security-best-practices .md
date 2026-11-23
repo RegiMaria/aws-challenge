@@ -88,3 +88,5 @@ Você possui três opções principais para autorizar o acesso às suas APIs atr
 
 - AWS Identity and Access Management (IAM): Melhor opção para clientes que já estão dentro do seu ambiente
 AWS ou que podem obter credenciais temporárias do IAM para acessar o ambiente. Adicione permissões restritas (least privilege) à respectiva IAM Role para invocar a API com segurança.
+
+- Amazon Cognito: Fornece um serviço gerenciado com recursos nativos de cadastro e login (sign-in/sign-up) ou atua como um Provedor de Identidade (IdP) em cenários de identidade federada (ideal para aplicações web e mobile quando você ainda não possui um IdP).
