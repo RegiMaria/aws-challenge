@@ -92,3 +92,7 @@ AWS ou que podem obter credenciais temporárias do IAM para acessar o ambiente. 
 - Amazon Cognito: Fornece um serviço gerenciado com recursos nativos de cadastro e login (sign-in/sign-up) ou atua como um Provedor de Identidade (IdP) em cenários de identidade federada (ideal para aplicações web e mobile quando você ainda não possui um IdP).
 
 - Lambda Authorizers: Invocam uma função Lambda para autenticar e validar um usuário contra um Provedor de Identidade (IdP) existente (como OAuth ou SAML) ou executar lógica adicional de autenticação. Também são úteis para centralizar o acesso a APIs entre múltiplas contas.
+
+> Nota de escala: Quanto maior o ecossistema de APIs usando um Lambda Authorizer,
+> maior será o número de invocações concorrentes daquela função. Utilize o cache de
+> autorização (authorizer caching) (de 5 minutos a 1 hora) para reduzir o número de invocações repetidas.
