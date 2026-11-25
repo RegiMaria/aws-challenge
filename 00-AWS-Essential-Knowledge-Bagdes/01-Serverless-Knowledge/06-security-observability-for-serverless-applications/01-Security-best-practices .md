@@ -107,3 +107,6 @@ ou componentes externos, proteja as fronteiras usando Security Groups e Network 
 - Endpoints Otimizados para Borda (Edge-Optimized Endpoints): Fornecem automaticamente uma distribuição gerenciada
 do Amazon CloudFront na frente da API, ajudando a mitigar ataques de negação de serviço (DDoS). Em regional endpoints,
 você pode adicionar sua própria distribuição CloudFront.
+
+- Validação de Requisições (Request Validation): Use o API Gateway para validar a estrutura do payload
+recebido antes mesmo de invocar o backend, mitigando vulnerabilidades comuns da OWASP.
