@@ -110,3 +110,5 @@ você pode adicionar sua própria distribuição CloudFront.
 
 - Validação de Requisições (Request Validation): Use o API Gateway para validar a estrutura do payload
 recebido antes mesmo de invocar o backend, mitigando vulnerabilidades comuns da OWASP.
+
+- Políticas de Recursos (Resource Policies): Restrinja ou permita o acesso à API por conta AWS, faixa de IP ou VPC Endpoint.
