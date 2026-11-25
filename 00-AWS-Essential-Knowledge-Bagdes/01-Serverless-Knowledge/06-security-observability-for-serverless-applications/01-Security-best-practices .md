@@ -115,3 +115,6 @@ recebido antes mesmo de invocar o backend, mitigando vulnerabilidades comuns da 
 
 - Planos de Uso e Chaves de API (Usage Plans & API Keys): Regule o volume de requisições feitas por clientes específicos
 aplicando throttling. (Importante: nunca dependa exclusivamente de API Keys como mecanismo de segurança/autenticação).
+
+> Ao autenticar via API Gateway e utilizá-lo como proxy para outros serviços da AWS, você reduz o esforço
+> de proteger seus serviços internos contra clientes não autorizados.
