@@ -96,3 +96,8 @@ AWS ou que podem obter credenciais temporárias do IAM para acessar o ambiente. 
 > Nota de escala: Quanto maior o ecossistema de APIs usando um Lambda Authorizer,
 > maior será o número de invocações concorrentes daquela função. Utilize o cache de
 > autorização (authorizer caching) (de 5 minutos a 1 hora) para reduzir o número de invocações repetidas.
+
+Camadas adicionais de proteção na borda e rede
+
+- Fronteiras de rede (VPC): Se sua função Lambda se conectar a uma VPC
+ou componentes externos, proteja as fronteiras usando Security Groups e Network ACLs (NACLs).
