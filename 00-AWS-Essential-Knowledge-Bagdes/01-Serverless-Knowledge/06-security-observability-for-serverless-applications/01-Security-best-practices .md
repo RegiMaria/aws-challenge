@@ -112,3 +112,6 @@ você pode adicionar sua própria distribuição CloudFront.
 recebido antes mesmo de invocar o backend, mitigando vulnerabilidades comuns da OWASP.
 
 - Políticas de Recursos (Resource Policies): Restrinja ou permita o acesso à API por conta AWS, faixa de IP ou VPC Endpoint.
+
+- Planos de Uso e Chaves de API (Usage Plans & API Keys): Regule o volume de requisições feitas por clientes específicos
+aplicando throttling. (Importante: nunca dependa exclusivamente de API Keys como mecanismo de segurança/autenticação).
