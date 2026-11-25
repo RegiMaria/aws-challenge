@@ -101,3 +101,5 @@ Camadas adicionais de proteção na borda e rede
 
 - Fronteiras de rede (VPC): Se sua função Lambda se conectar a uma VPC
 ou componentes externos, proteja as fronteiras usando Security Groups e Network ACLs (NACLs).
+
+- AWS WAF: Para APIs públicas, implemente o AWS WAF na frente do API Gateway para bloquear ataques comuns da web.
