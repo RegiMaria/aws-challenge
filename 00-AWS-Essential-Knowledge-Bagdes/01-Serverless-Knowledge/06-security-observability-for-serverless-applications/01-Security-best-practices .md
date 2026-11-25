@@ -103,3 +103,7 @@ Camadas adicionais de proteção na borda e rede
 ou componentes externos, proteja as fronteiras usando Security Groups e Network ACLs (NACLs).
 
 - AWS WAF: Para APIs públicas, implemente o AWS WAF na frente do API Gateway para bloquear ataques comuns da web.
+
+- Endpoints Otimizados para Borda (Edge-Optimized Endpoints): Fornecem automaticamente uma distribuição gerenciada
+do Amazon CloudFront na frente da API, ajudando a mitigar ataques de negação de serviço (DDoS). Em regional endpoints,
+você pode adicionar sua própria distribuição CloudFront.
