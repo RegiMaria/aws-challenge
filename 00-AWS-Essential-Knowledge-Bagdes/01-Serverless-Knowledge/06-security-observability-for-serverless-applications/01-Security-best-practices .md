@@ -139,3 +139,10 @@ s e acabar expostas em logs.
 na Execution Policy / Role (que define o que a função tem permissão para fazer).
 
 - Crie funções menores com escopo bem definido e não compartilhe IAM Roles entre funções diferentes.
+
+**Passagem de Dados e Segredos para Funções Lambda:**
+
+Existem três opções principais, e todas suportam criptografia com 
+chaves gerenciadas pela AWS ou pelo cliente via AWS KMS:
+
+1.Variáveis de Ambiente (Environment Variables): Escopadas para uma única função Lambda.
