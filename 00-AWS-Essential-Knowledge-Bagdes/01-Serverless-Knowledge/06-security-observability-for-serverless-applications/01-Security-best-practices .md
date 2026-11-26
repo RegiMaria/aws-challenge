@@ -118,3 +118,10 @@ aplicando throttling. (Importante: nunca dependa exclusivamente de API Keys como
 
 > Ao autenticar via API Gateway e utilizá-lo como proxy para outros serviços da AWS, você reduz o esforço
 > de proteger seus serviços internos contra clientes não autorizados.
+
+2. Proteger seus Dados em Trânsito e em Repouso (Protect Data End to End)
+Proteja seus dados de ponta a ponta enquanto entram, são processados ou armazenados na sua aplicação:
+
+- Criptografia em Trânsito e Lado do Cliente:
+O API Gateway se comunica via HTTPS, mas você ainda deve criptografar o payload no lado do cliente (client-side),
+pois informações enviadas no caminho da requisição (request path) ou query strings da URL podem não ser criptografadas e acabar expostas em logs.
