@@ -122,6 +122,13 @@ aplicando throttling. (Importante: nunca dependa exclusivamente de API Keys como
 2. Proteger seus Dados em Trânsito e em Repouso (Protect Data End to End)
 Proteja seus dados de ponta a ponta enquanto entram, são processados ou armazenados na sua aplicação:
 
-- Criptografia em Trânsito e Lado do Cliente:
-O API Gateway se comunica via HTTPS, mas você ainda deve criptografar o payload no lado do cliente (client-side),
-pois informações enviadas no caminho da requisição (request path) ou query strings da URL podem não ser criptografadas e acabar expostas em logs.
+**Criptografia em Trânsito e Lado do Cliente:**
+
+- O API Gateway se comunica via HTTPS, mas você ainda deve criptografar o payload no lado do cliente (client-side),
+pois informações enviadas no caminho da requisição (request path) ou query strings da URL podem não ser criptografada
+s e acabar expostas em logs.
+
+- Para manter a criptografia de ponta a ponta, dados sensíveis devem ser criptografados antes de qualquer processamento ou manipulação.
+
+- Nunca envie, registre em log ou armazene dados sensíveis não criptografados (seja na URL,
+  em query strings ou na saída padrão stdout de uma função Lambda). Criptografe o que você escreve (Encrypt what you write).
