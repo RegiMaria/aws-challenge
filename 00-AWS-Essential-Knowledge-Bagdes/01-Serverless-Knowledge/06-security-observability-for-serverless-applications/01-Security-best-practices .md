@@ -132,3 +132,10 @@ s e acabar expostas em logs.
 
 - Nunca envie, registre em log ou armazene dados sensíveis não criptografados (seja na URL,
   em query strings ou na saída padrão stdout de uma função Lambda). Criptografe o que você escreve (Encrypt what you write).
+
+**Permissões e Funções Granulares no Lambda:**
+
+- Restrinja as permissões na Resource Policy (que define quem pode invocar a função) e
+na Execution Policy / Role (que define o que a função tem permissão para fazer).
+
+- Crie funções menores com escopo bem definido e não compartilhe IAM Roles entre funções diferentes.
