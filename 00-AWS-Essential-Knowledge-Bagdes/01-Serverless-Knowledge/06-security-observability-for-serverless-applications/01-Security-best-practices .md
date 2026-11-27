@@ -151,3 +151,11 @@ chaves gerenciadas pela AWS ou pelo cliente via AWS KMS:
 
 3.AWS Secrets Manager: Valores podem ser compartilhados entre múltiplas aplicações, com o benefício adicional de rotação 
 automática de segredos e acesso entre contas (cross-account).
+
+Opções de Criptografia em Repouso para Armazenamento de Dados AWS
+
+| **Armazenamento de Dados (Data Store)** | **Criptografia em Repouso (Encryption at Rest)** |
+|---|---|
+| **Amazon Simple Storage Service (Amazon S3)** | Configure a criptografia no lado do servidor (*Server-Side Encryption*) usando uma das opções:<br><br>• Chaves gerenciadas pelo Amazon S3 (**SSE-S3**).<br>• Chaves do AWS KMS armazenadas no AWS KMS (**SSE-KMS**).<br>• Chaves fornecidas pelo cliente (**SSE-C**).<br><br>**Nota:** Não é possível aplicar tipos diferentes de criptografia server-side ao mesmo objeto S3 simultaneamente. |
+| **Amazon DynamoDB** | Todos os dados são totalmente criptografados em repouso por padrão, usando chaves armazenadas no AWS KMS (chaves de serviço da AWS ou chaves gerenciadas pelo cliente na criação da tabela). |
+| **Amazon ElastiCache for Redis** | Aplique criptografia opcional usando criptografia gerenciada pelo serviço ou chaves gerenciadas pelo cliente via AWS KMS. |
