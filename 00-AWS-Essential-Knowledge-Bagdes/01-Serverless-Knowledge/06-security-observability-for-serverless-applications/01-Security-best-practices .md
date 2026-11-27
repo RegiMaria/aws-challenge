@@ -159,3 +159,7 @@ Opções de Criptografia em Repouso para Armazenamento de Dados AWS
 | **Amazon Simple Storage Service (Amazon S3)** | Configure a criptografia no lado do servidor (*Server-Side Encryption*) usando uma das opções:<br><br>• Chaves gerenciadas pelo Amazon S3 (**SSE-S3**).<br>• Chaves do AWS KMS armazenadas no AWS KMS (**SSE-KMS**).<br>• Chaves fornecidas pelo cliente (**SSE-C**).<br><br>**Nota:** Não é possível aplicar tipos diferentes de criptografia server-side ao mesmo objeto S3 simultaneamente. |
 | **Amazon DynamoDB** | Todos os dados são totalmente criptografados em repouso por padrão, usando chaves armazenadas no AWS KMS (chaves de serviço da AWS ou chaves gerenciadas pelo cliente na criação da tabela). |
 | **Amazon ElastiCache for Redis** | Aplique criptografia opcional usando criptografia gerenciada pelo serviço ou chaves gerenciadas pelo cliente via AWS KMS. |
+
+Melhores Práticas de Proteção de Dados Serverless (Resumo)
+
+Aproveite os serviços gerenciados da AWS para reduzir sua carga de gerenciamento de segurança.
