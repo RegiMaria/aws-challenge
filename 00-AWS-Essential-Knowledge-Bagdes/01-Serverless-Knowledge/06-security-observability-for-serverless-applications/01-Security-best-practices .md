@@ -146,3 +146,8 @@ Existem três opções principais, e todas suportam criptografia com
 chaves gerenciadas pela AWS ou pelo cliente via AWS KMS:
 
 1.Variáveis de Ambiente (Environment Variables): Escopadas para uma única função Lambda.
+
+2.AWS Systems Manager Parameter Store: Valores podem ser compartilhados entre múltiplas aplicações e funções.
+
+3.AWS Secrets Manager: Valores podem ser compartilhados entre múltiplas aplicações, com o benefício adicional de rotação 
+automática de segredos e acesso entre contas (cross-account).
